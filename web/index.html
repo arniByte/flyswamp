@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flyswamp</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+</head>
+<body>
+<div id="app">
+  <canvas id="view" aria-label="3D-сцена: муха на болоте"></canvas>
+
+  <header class="label" id="specimen">
+    <h1><i>Flyswamp</i></h1>
+    <p class="mono">Drosophila melanogaster ♂ · MaleCNS v1.0</p>
+    <p class="mono dim" id="spec-counts">в симуляции: — нейронов</p>
+    <p class="state"><span class="dot" id="state-dot"></span><span id="state-text">загрузка</span><span class="mono dim" id="clock">00:00</span></p>
+    <div class="energy" title="Энергия: падает в полёте, растёт от еды"><span id="energy-bar"></span></div>
+  </header>
+
+  <section class="panel left" id="panel-left" aria-label="Память и мозг">
+    <h2>Что муха помнит</h2>
+    <div class="mem" id="mem">
+      <div class="mem-row" data-k="fruit"><span class="swatch fruit"></span><span class="name">гнилой фрукт</span><span class="bar"><i></i></span><span class="val mono"></span><small class="split mono"></small></div>
+      <div class="mem-row" data-k="sundew"><span class="swatch sundew"></span><span class="name">росянка</span><span class="bar"><i></i></span><span class="val mono"></span><small class="split mono"></small></div>
+      <div class="mem-row" data-k="frog"><span class="swatch frog"></span><span class="name">лягушка</span><span class="bar"><i></i></span><span class="val mono"></span><small class="split mono"></small></div>
+    </div>
+    <p class="note">Влечение = врождённое (латеральный рог, заданно) + выученное грибовидным телом (MBON после дофамина).</p>
+
+    <h2>Мозг сейчас</h2>
+    <dl class="readout mono">
+      <div><dt>KC активны</dt><dd><span id="kc-pct">—</span><span class="meter kc"><i id="kc-bar"></i></span></dd></div>
+      <div><dt>MBON «к»</dt><dd><span id="mbon-app">—</span><span class="meter app"><i id="app-bar"></i></span></dd></div>
+      <div><dt>MBON «от»</dt><dd><span id="mbon-av">—</span><span class="meter av"><i id="av-bar"></i></span></dd></div>
+      <div><dt>PAM · награда</dt><dd><span id="pam">—</span><span class="meter pam"><i id="pam-bar"></i></span></dd></div>
+      <div><dt>PPL1 · наказание</dt><dd><span id="ppl">—</span><span class="meter ppl"><i id="ppl-bar"></i></span></dd></div>
+      <div><dt>решение</dt><dd id="drive">—</dd></div>
+    </dl>
+    <div class="counts mono">
+      <span><b id="c-eaten">0</b> съедено</span>
+      <span><b id="c-trapped">0</b> в росянке</span>
+      <span><b id="c-strikes">0</b> атак лягушки</span>
+    </div>
+  </section>
+
+  <section class="panel right" id="panel-right" aria-label="Обучение и события">
+    <h2>Кривая обучения</h2>
+    <canvas id="chart" width="560" height="260" aria-label="Влечение к запахам во времени"></canvas>
+    <div class="legend mono"><span class="fruit">фрукт</span><span class="sundew">росянка</span><span class="frog">лягушка</span><span class="mimic">сходство росянки с фруктом</span></div>
+    <h2>События</h2>
+    <ol class="log" id="log"></ol>
+  </section>
+
+  <div class="brain-legend" id="brain-legend" hidden></div>
+  <div class="tooltip mono" id="tooltip" hidden></div>
+  <div class="pip-label mono" id="pip-label">мозг · live</div>
+
+  <nav class="toolbar" aria-label="Управление">
+    <div class="seg" role="radiogroup" aria-label="Камера" id="cam-seg">
+      <button role="radio" data-cam="follow" aria-checked="true" title="Клавиша 1">Полёт</button>
+      <button role="radio" data-cam="xray" aria-checked="false" title="Клавиша 2">Рентген</button>
+      <button role="radio" data-cam="brain" aria-checked="false" title="Клавиша 3">Мозг</button>
+      <button role="radio" data-cam="map" aria-checked="false" title="Клавиша 4">Карта</button>
+    </div>
+    <div class="group" aria-label="Поставить на болото">
+      <button data-place="fruit" title="Кликни по воде, чтобы положить фрукт"><span class="swatch fruit"></span>Фрукт</button>
+      <button data-place="sundew" title="Кликни по воде, чтобы посадить росянку"><span class="swatch sundew"></span>Росянка</button>
+      <button data-place="frog" title="Кликни по воде, чтобы посадить лягушку"><span class="swatch frog"></span>Лягушка</button>
+    </div>
+    <div class="group" aria-label="Учить муху">
+      <button id="btn-sugar" title="Дофамин PAM прямо сейчас: запомнит то, что нюхает"><span class="swatch pam"></span>Сахар</button>
+      <button id="btn-shock" title="Дофамин PPL1 прямо сейчас: запах вокруг станет неприятным"><span class="swatch ppl"></span>Удар</button>
+    </div>
+    <div class="group" aria-label="Симуляция">
+      <button id="btn-speed" title="Скорость времени">×1</button>
+      <button id="btn-arms" aria-pressed="false" title="Росянки эволюционируют запах под память мухи">Гонка вооружений</button>
+      <button id="btn-plumes" aria-pressed="true" title="Показывать шлейфы запаха">Запахи</button>
+      <button id="btn-wind" title="Повернуть ветер">Ветер</button>
+      <button id="btn-reset" title="Стереть выученное (синапсы KC→MBON)">Сбросить память</button>
+      <button id="btn-about" aria-expanded="false" aria-controls="about">Что здесь настоящее?</button>
+    </div>
+  </nav>
+
+  <aside class="about" id="about" hidden>
+    <h2>Что здесь настоящее</h2>
+    <ul>
+      <li><b>Проводка.</b> 5 614 нейронов и их синапсы взяты из коннектома MaleCNS v1.0 (FlyEM/Janelia, Cambridge, MRC LMB, Google Research): ORN→PN→KC→MBON, APL, дофаминовые PAM и PPL1. Веса — реальное число синапсов.</li>
+      <li><b>Анатомия.</b> Скелеты нейронов, нейропили, гломерулы и компартменты грибовидного тела — реальная геометрия, вставленная в голову и грудь в натуральном масштабе.</li>
+      <li><b>Тело.</b> Анатомическая модель мухи flybody (TuragaLab).</li>
+      <li><b>Модель, не биология.</b> Динамика — упрощённая rate-модель, вспышки спайков лишь визуализация. Пластичность — депрессия KC→MBON под дофамином; «куда» (PAM/PPL1 → компартмент) берётся из проводки, знак MBON — из правила Aso 2014. Запахи — стилизованные паттерны по гломерулам. Моторные DN подсвечиваются контроллером поведения, а не считаются по коннектому.</li>
+    </ul>
+    <button id="btn-about-close">Понятно</button>
+  </aside>
+
+  <div class="loading" id="loading">
+    <p class="title"><i>Flyswamp</i></p>
+    <p class="mono" id="loading-text">загружаю коннектом…</p>
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

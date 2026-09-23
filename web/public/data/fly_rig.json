@@ -1,0 +1,1332 @@
+{
+ "source": "flybody (TuragaLab), Apache-2.0, https://github.com/TuragaLab/flybody",
+ "frame": "MuJoCo: x forward, y left, z up; millimetres",
+ "joints": [
+  {
+   "name": "head_abduct",
+   "body": "head",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.2,
+    0.2
+   ]
+  },
+  {
+   "name": "head_twist",
+   "body": "head",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -3.0,
+    3.0
+   ]
+  },
+  {
+   "name": "head",
+   "body": "head",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.5,
+    0.3
+   ]
+  },
+  {
+   "name": "rostrum",
+   "body": "rostrum",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.24,
+    0.183
+   ]
+  },
+  {
+   "name": "haustellum_abduct",
+   "body": "haustellum",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.0873,
+    0.0873
+   ]
+  },
+  {
+   "name": "haustellum",
+   "body": "haustellum",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.59,
+    0.7
+   ]
+  },
+  {
+   "name": "labrum_left",
+   "body": "labrum_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.00524,
+    1.05
+   ]
+  },
+  {
+   "name": "labrum_right",
+   "body": "labrum_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.00524,
+    1.05
+   ]
+  },
+  {
+   "name": "antenna_abduct_left",
+   "body": "antenna_left",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.4,
+    0.8
+   ]
+  },
+  {
+   "name": "antenna_twist_left",
+   "body": "antenna_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.1,
+    0.09
+   ]
+  },
+  {
+   "name": "antenna_left",
+   "body": "antenna_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    0.5
+   ]
+  },
+  {
+   "name": "antenna_abduct_right",
+   "body": "antenna_right",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.4,
+    0.8
+   ]
+  },
+  {
+   "name": "antenna_twist_right",
+   "body": "antenna_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.1,
+    0.09
+   ]
+  },
+  {
+   "name": "antenna_right",
+   "body": "antenna_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    0.5
+   ]
+  },
+  {
+   "name": "wing_yaw_left",
+   "body": "wing_left",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "name": "wing_roll_left",
+   "body": "wing_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.5
+   ]
+  },
+  {
+   "name": "wing_pitch_left",
+   "body": "wing_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.27,
+    2.92
+   ]
+  },
+  {
+   "name": "wing_yaw_right",
+   "body": "wing_right",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -1.5,
+    1.5
+   ]
+  },
+  {
+   "name": "wing_roll_right",
+   "body": "wing_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.5
+   ]
+  },
+  {
+   "name": "wing_pitch_right",
+   "body": "wing_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.27,
+    2.92
+   ]
+  },
+  {
+   "name": "abdomen_abduct",
+   "body": "abdomen",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen",
+   "body": "abdomen",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_abduct_2",
+   "body": "abdomen_2",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_2",
+   "body": "abdomen_2",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_abduct_3",
+   "body": "abdomen_3",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_3",
+   "body": "abdomen_3",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_abduct_4",
+   "body": "abdomen_4",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_4",
+   "body": "abdomen_4",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_abduct_5",
+   "body": "abdomen_5",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_5",
+   "body": "abdomen_5",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_abduct_6",
+   "body": "abdomen_6",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_6",
+   "body": "abdomen_6",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_abduct_7",
+   "body": "abdomen_7",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "abdomen_7",
+   "body": "abdomen_7",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.1
+   ]
+  },
+  {
+   "name": "haltere_left",
+   "body": "haltere_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    0.2
+   ]
+  },
+  {
+   "name": "haltere_right",
+   "body": "haltere_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    0.2
+   ]
+  },
+  {
+   "name": "coxa_abduct_T1_left",
+   "body": "coxa_T1_left",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -1.0,
+    0.7
+   ]
+  },
+  {
+   "name": "coxa_twist_T1_left",
+   "body": "coxa_T1_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "name": "coxa_T1_left",
+   "body": "coxa_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    1.7
+   ]
+  },
+  {
+   "name": "femur_twist_T1_left",
+   "body": "femur_T1_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "femur_T1_left",
+   "body": "femur_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    2.0
+   ]
+  },
+  {
+   "name": "tibia_T1_left",
+   "body": "tibia_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.35,
+    1.3
+   ]
+  },
+  {
+   "name": "tarsus_T1_left",
+   "body": "tarsus_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.7,
+    1.2
+   ]
+  },
+  {
+   "name": "tarsus2_T1_left",
+   "body": "tarsus2_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus3_T1_left",
+   "body": "tarsus3_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus4_T1_left",
+   "body": "tarsus4_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus5_T1_left",
+   "body": "claw_T1_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "coxa_abduct_T1_right",
+   "body": "coxa_T1_right",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -1.0,
+    0.7
+   ]
+  },
+  {
+   "name": "coxa_twist_T1_right",
+   "body": "coxa_T1_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "name": "coxa_T1_right",
+   "body": "coxa_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    1.7
+   ]
+  },
+  {
+   "name": "femur_twist_T1_right",
+   "body": "femur_T1_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "femur_T1_right",
+   "body": "femur_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    2.0
+   ]
+  },
+  {
+   "name": "tibia_T1_right",
+   "body": "tibia_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.35,
+    1.3
+   ]
+  },
+  {
+   "name": "tarsus_T1_right",
+   "body": "tarsus_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.7,
+    1.2
+   ]
+  },
+  {
+   "name": "tarsus2_T1_right",
+   "body": "tarsus2_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus3_T1_right",
+   "body": "tarsus3_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus4_T1_right",
+   "body": "tarsus4_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus5_T1_right",
+   "body": "claw_T1_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "coxa_abduct_T2_left",
+   "body": "coxa_T2_left",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.5,
+    0.3
+   ]
+  },
+  {
+   "name": "coxa_twist_T2_left",
+   "body": "coxa_T2_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.75,
+    0.8
+   ]
+  },
+  {
+   "name": "coxa_T2_left",
+   "body": "coxa_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    0.9
+   ]
+  },
+  {
+   "name": "femur_twist_T2_left",
+   "body": "femur_T2_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "femur_T2_left",
+   "body": "femur_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    2.0
+   ]
+  },
+  {
+   "name": "tibia_T2_left",
+   "body": "tibia_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.35,
+    1.3
+   ]
+  },
+  {
+   "name": "tarsus_T2_left",
+   "body": "tarsus_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.8
+   ]
+  },
+  {
+   "name": "tarsus2_T2_left",
+   "body": "tarsus2_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus3_T2_left",
+   "body": "tarsus3_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus4_T2_left",
+   "body": "tarsus4_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus5_T2_left",
+   "body": "claw_T2_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "coxa_abduct_T2_right",
+   "body": "coxa_T2_right",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.5,
+    0.3
+   ]
+  },
+  {
+   "name": "coxa_twist_T2_right",
+   "body": "coxa_T2_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.75,
+    0.8
+   ]
+  },
+  {
+   "name": "coxa_T2_right",
+   "body": "coxa_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.2,
+    0.9
+   ]
+  },
+  {
+   "name": "femur_twist_T2_right",
+   "body": "femur_T2_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "femur_T2_right",
+   "body": "femur_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    2.0
+   ]
+  },
+  {
+   "name": "tibia_T2_right",
+   "body": "tibia_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.35,
+    1.3
+   ]
+  },
+  {
+   "name": "tarsus_T2_right",
+   "body": "tarsus_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.8
+   ]
+  },
+  {
+   "name": "tarsus2_T2_right",
+   "body": "tarsus2_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus3_T2_right",
+   "body": "tarsus3_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus4_T2_right",
+   "body": "tarsus4_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus5_T2_right",
+   "body": "claw_T2_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "coxa_abduct_T3_left",
+   "body": "coxa_T3_left",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.9,
+    0.25
+   ]
+  },
+  {
+   "name": "coxa_twist_T3_left",
+   "body": "coxa_T3_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.8
+   ]
+  },
+  {
+   "name": "coxa_T3_left",
+   "body": "coxa_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.3,
+    1.3
+   ]
+  },
+  {
+   "name": "femur_twist_T3_left",
+   "body": "femur_T3_left",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "femur_T3_left",
+   "body": "femur_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.7,
+    1.5
+   ]
+  },
+  {
+   "name": "tibia_T3_left",
+   "body": "tibia_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.35,
+    1.3
+   ]
+  },
+  {
+   "name": "tarsus_T3_left",
+   "body": "tarsus_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.8,
+    1.2
+   ]
+  },
+  {
+   "name": "tarsus2_T3_left",
+   "body": "tarsus2_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus3_T3_left",
+   "body": "tarsus3_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus4_T3_left",
+   "body": "tarsus4_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus5_T3_left",
+   "body": "claw_T3_left",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "coxa_abduct_T3_right",
+   "body": "coxa_T3_right",
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "range": [
+    -0.9,
+    0.25
+   ]
+  },
+  {
+   "name": "coxa_twist_T3_right",
+   "body": "coxa_T3_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -0.15,
+    0.8
+   ]
+  },
+  {
+   "name": "coxa_T3_right",
+   "body": "coxa_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.3,
+    1.3
+   ]
+  },
+  {
+   "name": "femur_twist_T3_right",
+   "body": "femur_T3_right",
+   "axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "range": [
+    -1.0,
+    1.0
+   ]
+  },
+  {
+   "name": "femur_T3_right",
+   "body": "femur_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.7,
+    1.5
+   ]
+  },
+  {
+   "name": "tibia_T3_right",
+   "body": "tibia_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -1.35,
+    1.3
+   ]
+  },
+  {
+   "name": "tarsus_T3_right",
+   "body": "tarsus_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.8,
+    1.2
+   ]
+  },
+  {
+   "name": "tarsus2_T3_right",
+   "body": "tarsus2_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus3_T3_right",
+   "body": "tarsus3_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus4_T3_right",
+   "body": "tarsus4_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  },
+  {
+   "name": "tarsus5_T3_right",
+   "body": "claw_T3_right",
+   "axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "range": [
+    -0.36,
+    0.36
+   ]
+  }
+ ]
+}
