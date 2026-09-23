@@ -7,10 +7,9 @@ neuron is described by its synapse counts to and from anchors, and its 783 match
 candidate with the most similar description (cosine). A match is kept only if it is clearly better than
 the runner-up and no other target claims the same neuron.
 
-usage: SHIU_REPO=... FLYWIRE_ANNOTATIONS=... python map_630_to_783.py [out.json]
+usage: python map_630_to_783.py [out.json]
 """
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -18,8 +17,10 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-REPO = Path(os.environ["SHIU_REPO"])
-ANN = Path(os.environ["FLYWIRE_ANNOTATIONS"]) / "supplemental_files" / "Supplemental_file1_neuron_annotations.tsv"
+from refs import FLYWIRE_ANNOTATIONS, SHIU_REPO
+
+REPO = SHIU_REPO
+ANN = FLYWIRE_ANNOTATIONS / "supplemental_files" / "Supplemental_file1_neuron_annotations.tsv"
 HERE = Path(__file__).resolve().parent
 MIN_COSINE, MIN_MARGIN = 0.5, 0.1
 

@@ -6,10 +6,9 @@ grouped by partner cell type (FlyWire cell_type; MaleCNS flywireType, which name
 Every MaleCNS candidate neuron is compared (cosine) with the mean profile of each FlyWire set and joins
 the best set if it is clearly ahead of the runner-up.
 
-usage: SHIU_REPO=... FLYWIRE_ANNOTATIONS=... python map_flywire_to_malecns.py [out.json]
+usage: python map_flywire_to_malecns.py [out.json]
 """
 import json
-import os
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -24,8 +23,10 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "pipeline"))
 from common import ANNOTATIONS, WEIGHTS, flat  # noqa: E402
 
-REPO = Path(os.environ["SHIU_REPO"])
-ANN = Path(os.environ["FLYWIRE_ANNOTATIONS"]) / "supplemental_files" / "Supplemental_file1_neuron_annotations.tsv"
+from refs import FLYWIRE_ANNOTATIONS, SHIU_REPO  # noqa: E402
+
+REPO = SHIU_REPO
+ANN = FLYWIRE_ANNOTATIONS / "supplemental_files" / "Supplemental_file1_neuron_annotations.tsv"
 SETS = ["neu_sugar", "neu_water", "neu_bitter", "neu_ir94e", "ids_mn9"]
 MIN_COSINE, MIN_MARGIN = 0.5, 0.05
 

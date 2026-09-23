@@ -2,6 +2,8 @@
 
 Плодовая мушка с настоящей проводкой мозга живёт на ночном болоте. Она ищет по запаху гнилые фрукты и учится не садиться на росянку, которая пахнет почти как еда. Обучение идёт через реальный грибовидный мозг (mushroom body) из коннектома **MaleCNS v1.0**: дофамин меняет синапсы KC→MBON. В режиме «рентген» видно, какие нейроны сейчас работают: 5 614 реальных нейронов с настоящей анатомией внутри головы и груди мухи.
 
+О проекте целиком (зачем, данные, инструменты, что наше): [docs/PROJECT.md](docs/PROJECT.md). Научный реестр с проверками: [docs/SCIENCE.md](docs/SCIENCE.md). План по фазам: [docs/ROADMAP.md](docs/ROADMAP.md).
+
 ![Полёт](docs/img/follow.png)
 ![Мозг](docs/img/brain.png)
 
@@ -11,7 +13,7 @@
 cd web
 npm install
 npm run dev        # http://localhost:5173
-npm test           # 8 тестов: цепь, обучение, контроли, мир
+npm test           # 13 тестов: спайковый движок, цепь, обучение, контроли, мир
 npm run build      # статическая сборка в web/dist
 ```
 
@@ -98,11 +100,14 @@ pipeline/            Python: данные → web/public/data
   build_circuit.py   цепь из MaleCNS (feather-таблицы из gs://flyem-male-cns)
   build_fly.py       flybody (MJCF через mujoco) → fly.glb + суставы
   build_anatomy.py   ROI-объёмы → меши, SWC-скелеты → neurons.bin, сомы → somas.bin
-web/src/sim/         модель: brain.js (MB), world.js (болото), odors.js, activity.js
+  build_graph.py     граф всего CNS MaleCNS для спайкового движка (.cache/graphs)
+web/src/sim/         модель: lif.js + graph.js (спайковый движок), brain.js (MB), world.js (болото), odors.js, activity.js
 web/src/render/      three.js: fly, brain (рентген), swamp, props, plumes, cameras
 web/src/ui/          HUD
 web/test/            node --test
-scripts/             experiment.mjs (headless-эксперименты), shot.mjs (скриншоты), artifact.mjs
+scripts/             experiment.mjs (headless-эксперименты), shot.mjs (скриншоты), artifact.mjs, setup.sh (эталоны, данные, графы)
+validation/          сверка движка с эталоном Shiu et al. 2024 и бенчмарки на MaleCNS
+docs/                PROJECT.md, SCIENCE.md, ROADMAP.md
 web/dev/             стенды: риг мухи и рентген отдельно
 ```
 

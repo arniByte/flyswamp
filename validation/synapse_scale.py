@@ -5,10 +5,9 @@ reports systematically more synapses per connection (different detection, more c
 the same w_syn drives every neuron harder. The ratio of median input synapses per neuron, over cell
 types matched by name (FlyWire cell_type = MaleCNS flywireType), gives the rescaling without fitting.
 
-usage: SHIU_REPO=... FLYWIRE_ANNOTATIONS=... python synapse_scale.py [out.json]
+usage: python synapse_scale.py [out.json]
 """
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -21,8 +20,10 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "pipeline"))
 from common import ANNOTATIONS, WEIGHTS, flat  # noqa: E402
 
-REPO = Path(os.environ["SHIU_REPO"])
-ANN = Path(os.environ["FLYWIRE_ANNOTATIONS"]) / "supplemental_files" / "Supplemental_file1_neuron_annotations.tsv"
+from refs import FLYWIRE_ANNOTATIONS, SHIU_REPO  # noqa: E402
+
+REPO = SHIU_REPO
+ANN = FLYWIRE_ANNOTATIONS / "supplemental_files" / "Supplemental_file1_neuron_annotations.tsv"
 MIN_INPUT = 50  # ignore types whose neurons have almost no inputs in either dataset
 
 

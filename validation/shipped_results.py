@@ -1,22 +1,22 @@
 """Convert the spike tables the authors ship in the Shiu et al. 2024 repo (results/example/*.parquet)
 into our per-trial count schema, so they can be compared with compare.mjs like any other run.
 
-usage: SHIU_REPO=... python shipped_results.py <name> <poisson_hz> <out.json>
+usage: python shipped_results.py <name> <poisson_hz> <out.json>
 
 sugarR.parquet was run at 200 Hz, not the 150 Hz default in model.py: its sugar GRNs fire at ~197 Hz, which
 is what 200 Hz Poisson input gives after the events lost in spike steps, and our engine at 200 Hz matches
 it neuron by neuron (validation/results/lif_vs_shipped_sugarR.json). sugarR_100Hz.parquet is 100 Hz.
 """
 import json
-import os
 import sys
 from pathlib import Path
 
 import pandas as pd
 
+from refs import SHIU_REPO
 from shiu_reference import MN9, SUGAR
 
-REPO = Path(os.environ["SHIU_REPO"])
+REPO = SHIU_REPO
 
 
 def main():

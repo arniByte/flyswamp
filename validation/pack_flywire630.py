@@ -1,9 +1,8 @@
 """Pack the FlyWire 630 graph shipped with Shiu et al. 2024 into our CSR format, unchanged:
 same neuron order as their completeness csv, weight = their "Excitatory x Connectivity" column.
 
-usage: SHIU_REPO=... python pack_flywire630.py [out_prefix]   (default .cache/graphs/flywire630)
+usage: python pack_flywire630.py [out_prefix]   (default .cache/graphs/flywire630)
 """
-import os
 import sys
 from pathlib import Path
 
@@ -13,7 +12,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 from common import CACHE  # noqa: E402
 from csr import write_csr  # noqa: E402
 
-REPO = Path(os.environ["SHIU_REPO"])
+from refs import SHIU_REPO  # noqa: E402
+
+REPO = SHIU_REPO
 
 
 def main():

@@ -42,12 +42,11 @@
 
 Скрипты: `validation/shiu_reference.py` (эталон), `validation/run_lif.mjs` (наш движок), `validation/compare.mjs` (статистика).
 
-Воспроизвести (нужен клон репозитория Shiu в `$SHIU_REPO`; Brian2 2.9 требует numpy < 2.3):
+Воспроизвести. `scripts/setup.sh` клонирует эталонные репозитории в `.cache/ref`, ставит `.venv-ref` (Brian2 2.9 требует numpy < 2.3) и собирает графы:
 
 ```bash
-python -m venv .venv-ref && .venv-ref/bin/pip install brian2==2.9.0 "numpy<2.3" pandas pyarrow joblib
+scripts/setup.sh
 cd validation
-../.venv-ref/bin/python pack_flywire630.py                                   # граф → .cache/graphs/flywire630
 ../.venv-ref/bin/python shiu_reference.py sugar 30 3 reference/sugar_100hz.json 100   # ~13 мин на 3 ядрах
 node run_lif.mjs ../.cache/graphs/flywire630 reference/sugar_100hz.json results/lif_sugar_100hz.json
 node compare.mjs results/lif_sugar_100hz.json reference/sugar_100hz.json

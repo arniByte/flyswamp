@@ -4,11 +4,10 @@ Uses model.py from https://github.com/philshiu/Drosophila_brain_model (cloned, p
 on its own FlyWire 630 connectivity, and writes per-trial spike counts for every neuron that fired, so the JS engine can be compared
 neuron by neuron and against the reference's own trial-to-trial noise.
 
-usage: SHIU_REPO=... python shiu_reference.py <experiment> <n_trials> <n_proc> <out.json> [poisson_hz]
+usage: python shiu_reference.py <experiment> <n_trials> <n_proc> <out.json> [poisson_hz]
 experiments: sugar (the 21 sugar GRNs from the repo's example notebook; Poisson rate defaults to the model's 150 Hz)
 """
 import json
-import os
 import sys
 import time
 from pathlib import Path
@@ -16,7 +15,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-REPO = Path(os.environ["SHIU_REPO"])
+from refs import SHIU_REPO
+
+REPO = SHIU_REPO
 sys.path.insert(0, str(REPO))
 from model import default_params, run_trial  # noqa: E402
 from brian2 import Hz  # noqa: E402
