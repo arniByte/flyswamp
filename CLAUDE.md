@@ -72,6 +72,11 @@ LIF_PARAMS='{"wSyn":0.2}' ...                        # параметры дви
 
 ## Коннекторы и сеть
 
-- Не подключены: PubMed, bioRxiv, [VFB3-MCP](https://vfb3-mcp.virtualflybrain.org/) (custom connector). Подключаются на https://claude.ai/customize/connectors, после этого нужна новая сессия.
+- Подключены (claude.ai): PubMed, bioRxiv, alphaXiv, Elicit, Hugging Face. Литературу для бенчмарков и решений ищем через них; в документах указываем PMID или DOI из ответа инструмента.
+  - PubMed — рецензированные статьи.
+  - bioRxiv — препринты: поиск только по датам и категориям, без ключевых слов.
+  - alphaXiv — arXiv: методы и модели, не биомедицина.
+  - Elicit — обзоры по вопросу.
+- Не подключены: [VFB3-MCP](https://vfb3-mcp.virtualflybrain.org/) (custom connector, кнопка + Add на https://claude.ai/customize/connectors) и Context7. После подключения нужна новая сессия.
 - Сетевая политика блокирует neuprint.janelia.org, vfb3-mcp.virtualflybrain.org, codex.flywire.ai, zenodo.org, api.biorxiv.org, eutils.ncbi.nlm.nih.gov.
 - Работают GitHub и `storage.googleapis.com` (бакет MaleCNS).

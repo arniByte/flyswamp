@@ -108,6 +108,6 @@
 | GitHub-репозитории Shiu, fly-brain, DoOR, flybody, flywire_annotations | эталоны, данные, типы FlyWire | работает |
 | Brian2 | эталон P1 | `.venv-ref` |
 | Virtual Fly Brain MCP (vfb3-mcp.virtualflybrain.org) | типы нейронов, онтология, связи | заблокирован прокси, нужен custom connector |
-| PubMed, bioRxiv (коннекторы claude.ai) | поиск источников для бенчмарков и запахов | не подключены |
+| PubMed, bioRxiv, alphaXiv, Elicit, Hugging Face (коннекторы claude.ai) | поиск источников для бенчмарков и запахов, модели и датасеты | подключены |
 | neuPrint (neuprint.janelia.org) | запросы к MaleCNS по ROI и синапсам | заблокирован прокси |
 | Codex FlyWire | аннотации FlyWire для сопоставления типов | заблокирован прокси |
