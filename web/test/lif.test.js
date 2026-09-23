@@ -104,3 +104,60 @@ test('silencing a neuron removes its synaptic output', () => {
   assert.ok(net.counts[0] > 100);
   assert.equal(net.counts[1], 0);
 });
+
+test('adaptation is off by default: adaptB 0 gives the same spikes as the plain port', () => {
+  const graph = randomGraph(300, 50, 11);
+  const run = (params) => {
+    const net = new LIFNetwork(graph, params);
+    net.setPoisson([0, 5, 9, 17], 150);
+    net.reset(5);
+    net.run(300);
+    return Array.from(net.counts);
+  };
+  assert.deepEqual(run({}), run({ adaptB: 0, tauAdapt: 50 }));
+});
+
+test('adaptation current follows the exact solution of the linear system', () => {
+  const tauAdapt = 150;
+  const net = new LIFNetwork(makeGraph(1, []), { adaptB: 1, tauAdapt });
+  const { vRest, tauMem: tm, tauSyn: ts, dt } = SHIU_2024;
+  const g0 = 4, u0 = 1.5, a0 = 3;
+  net.v[0] = vRest + u0; net.g[0] = g0; net.adapt[0] = a0; net._activate(0);
+  for (let k = 1; k <= 300; k++) {
+    net.step();
+    const t = k * dt, K = (g0 * ts) / (ts - tm), Ka = (a0 * tauAdapt) / (tauAdapt - tm);
+    const u = u0 * Math.exp(-t / tm) + K * (Math.exp(-t / ts) - Math.exp(-t / tm)) - Ka * (Math.exp(-t / tauAdapt) - Math.exp(-t / tm));
+    assert.ok(Math.abs(net.v[0] - vRest - u) < 1e-12, `step ${k}`);
+    assert.ok(Math.abs(net.adapt[0] - a0 * Math.exp(-t / tauAdapt)) < 1e-12);
+  }
+});
+
+test('adaptation slows a driven neuron, but not the neuron with the Poisson input', () => {
+  const graph = makeGraph(2, [[0, 1, 40]]);
+  const run = (params) => {
+    const net = new LIFNetwork(graph, params);
+    net.setPoisson([0], 200);
+    net.reset(9);
+    net.run(1000);
+    return Array.from(net.counts);
+  };
+  const plain = run({}), adapted = run({ adaptB: 2, tauAdapt: 200 });
+  assert.equal(adapted[0], plain[0], 'the stimulated neuron keeps the stimulus rate');
+  assert.ok(adapted[1] < 0.8 * plain[1], `neuron 1: ${adapted[1]} vs ${plain[1]}`);
+});
+
+test('sparse update gives the same spikes as updating every neuron, with adaptation on', () => {
+  const graph = randomGraph(400, 60, 7);
+  const drive = Array.from({ length: 20 }, (_, i) => i * 7);
+  const run = (dense) => {
+    const net = new LIFNetwork(graph, { adaptB: 1, tauAdapt: 200 });
+    net.dense = dense;
+    net.setPoisson(drive, 150);
+    net.reset(42);
+    net.run(500);
+    return Array.from(net.counts);
+  };
+  const sparse = run(false);
+  assert.ok(sparse.reduce((a, b) => a + b) > 1000, 'network is active');
+  assert.deepEqual(sparse, run(true));
+});

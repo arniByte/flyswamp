@@ -11,6 +11,12 @@
 // Only neurons away from rest are updated. A neuron whose |v - v_0| and |g| both fall below
 // `restEpsilon` is put back exactly at rest; this is the one deviation from the reference and is
 // checked by test/lif.test.js (dense and sparse runs give identical spikes).
+//
+// Optional extension, off by default so the default engine stays the exact port (EXTENSIONS):
+//   spike-frequency adaptation, adaptB > 0: an adaptation current a in voltage units,
+//   dv/dt = (v_0 - v + g - a) / t_mbr, da/dt = -a / tauAdapt, a += adaptB at each spike.
+//   a keeps decaying during the refractory period (it stands for a K current, not the membrane), and
+//   neurons with Poisson input do not adapt: their rate is the stimulus. Still exact for the linear system.
 import { mulberry32 } from './rng.js';
 
 export const SHIU_2024 = {
@@ -27,20 +33,31 @@ export const SHIU_2024 = {
   restEpsilon: 1e-6, // mV, see header
 };
 
+// Extensions beyond Shiu et al. 2024; the defaults switch them off
+export const EXTENSIONS = {
+  adaptB: 0, // mV added to the adaptation current per spike; 0 = no adaptation
+  tauAdapt: 200, // ms, decay of the adaptation current
+};
+
 export class LIFNetwork {
   constructor(graph, params = {}) {
-    this.p = { ...SHIU_2024, ...params };
+    this.p = { ...SHIU_2024, ...EXTENSIONS, ...params };
     const p = this.p;
     this.graph = graph;
     const n = (this.n = graph.n);
     this.A = Math.exp(-p.dt / p.tauMem);
     this.C = Math.exp(-p.dt / p.tauSyn);
     this.B = (p.tauSyn / (p.tauSyn - p.tauMem)) * (this.C - this.A);
+    this.sfa = p.adaptB > 0;
+    if (this.sfa && Math.abs(p.tauAdapt - p.tauMem) < 1e-9) throw new Error('tauAdapt must differ from tauMem');
+    this.E = Math.exp(-p.dt / p.tauAdapt);
+    this.D = (p.tauAdapt / (p.tauAdapt - p.tauMem)) * (this.E - this.A);
     this.delaySteps = Math.round(p.delay / p.dt);
     this.refSteps = Math.round(p.tRefractory / p.dt);
     if (this.delaySteps < 1) throw new Error('delay must be at least one step');
     this.v = new Float64Array(n);
     this.g = new Float64Array(n);
+    this.adapt = new Float64Array(n);
     this.lastSpike = new Int32Array(n);
     this.refractory = new Int32Array(n);
     this.silenced = new Uint8Array(n);
@@ -62,6 +79,7 @@ export class LIFNetwork {
     this.rand = mulberry32(seed);
     this.v.fill(p.vRest);
     this.g.fill(0);
+    this.adapt.fill(0);
     this.lastSpike.fill(-(1 << 30));
     this.refractory.fill(this.refSteps);
     for (const i of this.poisson.ids) this.refractory[i] = 0;
@@ -101,8 +119,8 @@ export class LIFNetwork {
   }
 
   step() {
-    const { v, g, lastSpike, refractory, active, inActive, pinned, spikes, A, B, C } = this;
-    const { vRest, vReset, vThresh, restEpsilon, wSyn } = this.p;
+    const { v, g, adapt, lastSpike, refractory, active, inActive, pinned, spikes, A, B, C, D, E, sfa } = this;
+    const { vRest, vReset, vThresh, restEpsilon, wSyn, adaptB } = this.p;
     const s = this.stepIndex;
     if (this.dense && this.nActive < this.n) for (let i = 0; i < this.n; i++) this._activate(i);
 
@@ -112,12 +130,14 @@ export class LIFNetwork {
       const i = active[a];
       if (s - lastSpike[i] >= refractory[i]) {
         const u = v[i] - vRest, gi = g[i];
-        v[i] = vRest + u * A + gi * B;
+        v[i] = sfa ? vRest + u * A + gi * B - adapt[i] * D : vRest + u * A + gi * B;
         g[i] = gi * C;
         if (v[i] > vThresh) { spikes[ns++] = i; lastSpike[i] = s; }
       }
-      if (!this.dense && !pinned[i] && Math.abs(v[i] - vRest) < restEpsilon && Math.abs(g[i]) < restEpsilon) {
-        v[i] = vRest; g[i] = 0; inActive[i] = 0;
+      if (sfa) adapt[i] *= E;
+      if (!this.dense && !pinned[i] && Math.abs(v[i] - vRest) < restEpsilon && Math.abs(g[i]) < restEpsilon &&
+          (!sfa || Math.abs(adapt[i]) < restEpsilon)) {
+        v[i] = vRest; g[i] = 0; adapt[i] = 0; inActive[i] = 0;
       } else active[keep++] = i;
     }
     this.nActive = keep;
@@ -150,6 +170,7 @@ export class LIFNetwork {
     for (let k = 0; k < ns; k++) {
       const i = spikes[k];
       v[i] = vReset; g[i] = 0;
+      if (sfa && !pinned[i]) adapt[i] += adaptB;
       counts[i]++;
     }
     this.nSpikes = ns;

@@ -4,13 +4,19 @@ Uses model.py from https://github.com/philshiu/Drosophila_brain_model (cloned, p
 on its own FlyWire 630 connectivity, and writes per-trial spike counts for every neuron that fired, so the JS engine can be compared
 neuron by neuron and against the reference's own trial-to-trial noise.
 
-usage: python shiu_reference.py <experiment> <n_trials> <n_proc> <out.json> [poisson_hz]
+usage: python shiu_reference.py <experiment> <n_trials> <n_proc> <out.json> [poisson_hz] [--sfa B_MV,TAU_MS]
 experiments: sugar (the 21 sugar GRNs from the repo's example notebook; Poisson rate defaults to the model's 150 Hz)
+
+--sfa adds the adaptation current of our engine's optional extension (web/src/sim/lif.js) to the same
+model.py equations, for checking that extension against Brian2: v gets "- a", da/dt = -a / tau_a with no
+refractory clamp, and the reset adds b_a. Poisson targets are the neurons with rfc = 0 in model.py; they
+do not adapt, as in our engine.
 """
 import json
 import sys
 import time
 from pathlib import Path
+from textwrap import dedent
 
 import numpy as np
 import pandas as pd
@@ -20,7 +26,7 @@ from refs import SHIU_REPO
 REPO = SHIU_REPO
 sys.path.insert(0, str(REPO))
 from model import default_params, run_trial  # noqa: E402
-from brian2 import Hz  # noqa: E402
+from brian2 import Hz, mV, ms  # noqa: E402
 from joblib import Parallel, delayed  # noqa: E402
 
 # From the repo's example.ipynb ("neu_sugar"), FlyWire 630 root ids
@@ -33,10 +39,25 @@ MN9 = 720575940660219265
 EXPERIMENTS = {"sugar": SUGAR}
 
 def main():
-    exp, n_trials, n_proc, out = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
+    args = sys.argv[1:]
+    sfa = None
+    if "--sfa" in args:
+        k = args.index("--sfa")
+        sfa = [float(x) for x in args[k + 1].split(",")]
+        del args[k:k + 2]
+    exp, n_trials, n_proc, out = args[0], int(args[1]), int(args[2]), args[3]
     params = dict(default_params)
-    if len(sys.argv) > 5:
-        params["r_poi"] = float(sys.argv[5]) * Hz
+    if len(args) > 4:
+        params["r_poi"] = float(args[4]) * Hz
+    if sfa:
+        params["b_a"], params["tau_a"] = sfa[0] * mV, sfa[1] * ms
+        params["eqs"] = dedent("""
+                    dv/dt = (v_0 - v + g - a) / t_mbr : volt (unless refractory)
+                    dg/dt = -g / tau               : volt (unless refractory)
+                    da/dt = -a / tau_a             : volt
+                    rfc                            : second
+                    """)
+        params["eq_rst"] = "v = v_rst; w = 0; g = 0 * mV; a += b_a * int(rfc > 0 * ms)"
     comp = REPO / "2023_03_23_completeness_630_final.csv"
     con = REPO / "2023_03_23_connectivity_630_final.parquet"
     ids = pd.read_csv(comp, index_col=0).index.to_list()
@@ -51,7 +72,10 @@ def main():
         for i, times in spk.items():
             counts.setdefault(int(i), np.zeros(n_trials))[trial] = len(times)
     counts = {str(ids[i]): c.astype(int).tolist() for i, c in counts.items()}
-    meta = {"source": "Shiu et al. 2024 model.py, unmodified", "dataset": "FlyWire 630 (repo files)", "experiment": exp,
+    source = "Shiu et al. 2024 model.py, unmodified"
+    if sfa:
+        source = f"Shiu et al. 2024 model.py plus adaptation current b_a {sfa[0]} mV, tau_a {sfa[1]} ms"
+    meta = {"source": source, "dataset": "FlyWire 630 (repo files)", "experiment": exp, "sfa": sfa,
             "stimulated": [str(f) for f in EXPERIMENTS[exp]], "poisson_rate_hz": float(params["r_poi"]), "t_run_s": t_run,
             "n_trials": n_trials, "dt_s": 1e-4, "elapsed_s": elapsed, "mn9": str(MN9)}
     Path(out).write_text(json.dumps({"meta": meta, "counts": counts}))
