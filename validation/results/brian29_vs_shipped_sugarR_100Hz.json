@@ -1,0 +1,34 @@
+{
+ "a": "Shiu et al. 2024 model.py, unmodified",
+ "b": "authors' shipped results, results/example/sugarR_100Hz.parquet",
+ "neurons": 425,
+ "active_1hz": {
+  "a": 345,
+  "b": 347
+ },
+ "pearson_means": 0.9995750410124365,
+ "split_half": {
+  "within": 0.9991959951370311,
+  "cross": 0.9991765583007536
+ },
+ "mn9": {
+  "a": [
+   68.06666666666666,
+   4.615814892999586
+  ],
+  "b": [
+   67.03333333333333,
+   6.7081182588496935
+  ],
+  "z": 0.6950711203581232
+ },
+ "bonferroni_z": 3.8510680581559193,
+ "outliers": 0,
+ "top_outliers": [],
+ "gates": {
+  "mn9_z_below_3": true,
+  "cross_ge_within_minus_0_02": true,
+  "outliers_le_1pct": true
+ },
+ "pass": true
+}

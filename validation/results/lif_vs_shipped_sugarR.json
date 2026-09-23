@@ -1,0 +1,34 @@
+{
+ "a": "flyswamp web/src/sim/lif.js",
+ "b": "authors' shipped results, results/example/sugarR.parquet",
+ "neurons": 455,
+ "active_1hz": {
+  "a": 392,
+  "b": 389
+ },
+ "pearson_means": 0.9997222322002964,
+ "split_half": {
+  "within": 0.9996209033286718,
+  "cross": 0.9995324460939607
+ },
+ "mn9": {
+  "a": [
+   92.76666666666667,
+   4.368250129674617
+  ],
+  "b": [
+   93.26666666666667,
+   3.2048813344359717
+  ],
+  "z": -0.505481563070525
+ },
+ "bonferroni_z": 3.867740273136037,
+ "outliers": 0,
+ "top_outliers": [],
+ "gates": {
+  "mn9_z_below_3": true,
+  "cross_ge_within_minus_0_02": true,
+  "outliers_le_1pct": true
+ },
+ "pass": true
+}
