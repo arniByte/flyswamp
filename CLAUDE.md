@@ -48,6 +48,9 @@ node validation/run_lif.mjs .cache/graphs/flywire630 validation/reference/sugar_
 node validation/compare.mjs a.json b.json            # статистическое сравнение, гейты P1
 node validation/offset_test.mjs .cache/graphs/malecns_min1 malecns out.json 5    # бенчмарк затухания
 DENSE=1 node validation/malecns_sugar.mjs .cache/graphs/malecns_min1 150 5 out.json   # сахар → MN9 на MaleCNS
+LIF_PARAMS='{"wSyn":0.22}' node validation/loop_anatomy.mjs .cache/graphs/malecns_min1 2 out.json   # какая петля держит активность после стимула
+python3 validation/loop_nt.py out.json               # NT и взаимные синапсы типов петель в MaleCNS
+LIF_PARAMS='{"wSyn":0.2}' node validation/p2_bench.mjs .cache/graphs/malecns_min1 malecns 1-5 out.json [--shuffle 1]   # набор бенчмарков P2 (эталон: ... flywire630 flywire 1-5)
 LIF_PARAMS='{"wSyn":0.2}' ...                        # параметры движка для любого скрипта validation/
 ```
 
@@ -57,16 +60,12 @@ LIF_PARAMS='{"wSyn":0.2}' ...                        # параметры дви
 - **P2 в работе**, подробности — в `docs/SCIENCE.md`, раздел P2.
   - Сделано: граф MaleCNS (`pipeline/build_graph.py`), знаки NT по конвенции Shiu, перенос наборов экспериментов на MaleCNS (`validation/map_flywire_to_malecns.py`), бенчмарк затухания, развёртка `w_syn`.
   - Сахар → MN9 воспроизводится: 65–97 Hz против 59–83 Hz у FlyWire.
-  - Затухание не проходит: петли VNC защёлкиваются стохастически при любом `w_syn`, где MN9 отвечает. Это IN10B003 ↔ IN08B004 и DNg33 ↔ AN27X013/AN09A005 → DLMn.
+  - Затухание не проходит: петли VNC защёлкиваются стохастически при любом `w_syn`, где MN9 отвечает. Это IN10B003 ↔ IN08B004 (0,18) и пара DNg33_L ↔ DNg33_R (0,22; 773/723 синапса, 26 mV на спайк). AN27X013/AN09A005 — ведомые: без консенсуса NT их выходы удалены. `validation/loop_anatomy.mjs` находит петлю по сиду.
   - Мозг без VNC срывается целиком при `w_syn` 0,275.
-- **Ждём решения пользователя** по варианту P2 (`docs/ROADMAP.md`):
-  1. мозг и VNC раздельно;
-  2. адаптация спайков (SFA) с совместной калибровкой и hold-out — рекомендовано;
-  3. conductance-синапсы и масштаб по объёму нейрона;
-  4. проверить по литературе, не реальные ли это бистабильные модули.
-- **Следующие шаги после решения:**
-  - набор бенчмарков: горькое гасит сахар через `neu_bitter` со второй частотой Poisson; вода; затухание по сидам;
-  - контроль с перемешанной проводкой при сохранении степеней;
+- **Решение пользователя по P2 (2026-09-23):** SFA опциональным параметром `lif.js`, выключенным по умолчанию. Вариант 4 (бистабильные модули) проверен по VFB и PubMed — не подтвердился (`docs/SCIENCE.md`). Риск: пара DNg33 получает 26,8 mV на спайк, SFA может не справиться — тогда кандидат кратковременная депрессия, решение за пользователем.
+- **Следующие шаги:**
+  - набор бенчмарков и контроль с перемешанной проводкой готовы (`validation/p2_bench.mjs`). Вода → MN9 на MaleCNS не воспроизводится ни при каком `w_syn` — разобрать путь до калибровки;
+  - калибровка `w_syn` и SFA по плану из `docs/ROADMAP.md`, после ок пользователя;
   - WASM SIMD или WebGPU для скорости.
 - **Игра пока на прототипной rate-модели** (`web/src/sim/brain.js`). Спайковый движок подключается в фазах P4–P5.
 

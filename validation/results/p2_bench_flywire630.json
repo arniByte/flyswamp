@@ -1,0 +1,472 @@
+{
+ "graph": "FlyWire 630 as shipped with Shiu et al. 2024 (github.com/philshiu/Drosophila_brain_model)",
+ "prefix": "flywire630",
+ "which": "flywire",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shuffle_seed": null,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "dense": false,
+ "poisson_hz": 150,
+ "bitter_hz": 100,
+ "water_hz": 200,
+ "stimulus_sizes": {
+  "sugar": 21,
+  "bitter": 21,
+  "water": 18
+ },
+ "benchmarks": {
+  "sugar": {
+   "mn9": {
+    "MN9_R": [
+     86.2,
+     3.63318042491699
+    ],
+    "MN9_L": [
+     55.8,
+     5.761944116355173
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_R",
+    "hz": [
+     86.2,
+     3.63318042491699
+    ]
+   },
+   "responding": [
+    382.4,
+    3.4351128074635335
+   ],
+   "total_spikes": [
+    13516.2,
+    355.9904493100903
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 82,
+      "MN9_L": 49
+     },
+     "responding": 381,
+     "spikes": 13053
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 86,
+      "MN9_L": 56
+     },
+     "responding": 379,
+     "spikes": 13403
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 92,
+      "MN9_L": 58
+     },
+     "responding": 380,
+     "spikes": 13389
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 85,
+      "MN9_L": 52
+     },
+     "responding": 385,
+     "spikes": 13779
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 86,
+      "MN9_L": 64
+     },
+     "responding": 387,
+     "spikes": 13957
+    }
+   ]
+  },
+  "sugar_bitter": {
+   "mn9": {
+    "MN9_R": [
+     28.4,
+     4.722287581247038
+    ],
+    "MN9_L": [
+     25,
+     3.6742346141747673
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_R",
+    "hz": [
+     28.4,
+     4.722287581247038
+    ]
+   },
+   "responding": [
+    363,
+    4.69041575982343
+   ],
+   "total_spikes": [
+    13050.2,
+    355.1685515357462
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 24,
+      "MN9_L": 22
+     },
+     "responding": 364,
+     "spikes": 12783
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 24,
+      "MN9_L": 23
+     },
+     "responding": 356,
+     "spikes": 12734
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 31,
+      "MN9_L": 31
+     },
+     "responding": 369,
+     "spikes": 13627
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 28,
+      "MN9_L": 26
+     },
+     "responding": 364,
+     "spikes": 13038
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 35,
+      "MN9_L": 23
+     },
+     "responding": 362,
+     "spikes": 13069
+    }
+   ]
+  },
+  "bitter": {
+   "mn9": {
+    "MN9_R": [
+     0,
+     0
+    ],
+    "MN9_L": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_R",
+    "hz": [
+     0,
+     0
+    ]
+   },
+   "responding": [
+    53.8,
+    2.16794833886788
+   ],
+   "total_spikes": [
+    2801,
+    65.36053855347276
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 0,
+      "MN9_L": 0
+     },
+     "responding": 51,
+     "spikes": 2754
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 0,
+      "MN9_L": 0
+     },
+     "responding": 52,
+     "spikes": 2747
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 0,
+      "MN9_L": 0
+     },
+     "responding": 55,
+     "spikes": 2826
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 0,
+      "MN9_L": 0
+     },
+     "responding": 56,
+     "spikes": 2904
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 0,
+      "MN9_L": 0
+     },
+     "responding": 55,
+     "spikes": 2774
+    }
+   ]
+  },
+  "water": {
+   "mn9": {
+    "MN9_R": [
+     30.8,
+     5.932958789676531
+    ],
+    "MN9_L": [
+     11.6,
+     3.7815340802378077
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_R",
+    "hz": [
+     30.8,
+     5.932958789676531
+    ]
+   },
+   "responding": [
+    249.6,
+    40.8387071293889
+   ],
+   "total_spikes": [
+    7486.4,
+    243.90018450177521
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 30,
+      "MN9_L": 9
+     },
+     "responding": 220,
+     "spikes": 7250
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 22,
+      "MN9_L": 9
+     },
+     "responding": 239,
+     "spikes": 7235
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 38,
+      "MN9_L": 18
+     },
+     "responding": 321,
+     "spikes": 7805
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 30,
+      "MN9_L": 12
+     },
+     "responding": 227,
+     "spikes": 7610
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 34,
+      "MN9_L": 10
+     },
+     "responding": 241,
+     "spikes": 7532
+    }
+   ]
+  },
+  "offset": {
+   "runs": [
+    {
+     "seed": 1,
+     "spikes_per_100ms": [
+      1147,
+      1481,
+      1209,
+      1169,
+      1424,
+      1376,
+      1382,
+      1133,
+      1427,
+      1305,
+      179,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "quiet_at_end": true
+    },
+    {
+     "seed": 2,
+     "spikes_per_100ms": [
+      1280,
+      1180,
+      1526,
+      1406,
+      1345,
+      1290,
+      1413,
+      1499,
+      1114,
+      1350,
+      83,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "quiet_at_end": true
+    },
+    {
+     "seed": 3,
+     "spikes_per_100ms": [
+      1342,
+      1358,
+      1436,
+      1364,
+      1417,
+      1253,
+      1201,
+      1372,
+      1412,
+      1234,
+      225,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "quiet_at_end": true
+    },
+    {
+     "seed": 4,
+     "spikes_per_100ms": [
+      1280,
+      1108,
+      1554,
+      1332,
+      1504,
+      1301,
+      1482,
+      1366,
+      1386,
+      1466,
+      195,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "quiet_at_end": true
+    },
+    {
+     "seed": 5,
+     "spikes_per_100ms": [
+      1227,
+      1421,
+      1179,
+      1513,
+      1488,
+      1590,
+      1336,
+      1349,
+      1608,
+      1246,
+      329,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "quiet_at_end": true
+    }
+   ],
+   "quiet_seeds": 5,
+   "n_seeds": 5
+  }
+ },
+ "bitter_suppression": 0.6705336426914154,
+ "wall_s": 29.262443425,
+ "wall_s_per_sim_s": 0.9754147808333333
+}

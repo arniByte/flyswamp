@@ -1,0 +1,114 @@
+{
+ "graph": "FlyWire 630 as shipped with Shiu et al. 2024 (github.com/philshiu/Drosophila_brain_model)",
+ "prefix": "flywire630",
+ "which": "flywire",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shuffle_seed": null,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "dense": false,
+ "poisson_hz": 150,
+ "bitter_hz": 100,
+ "water_hz": 260,
+ "stim_side": "L",
+ "stimulus_sizes": {
+  "sugar": 21,
+  "bitter": 21,
+  "water": 18
+ },
+ "benchmarks": {
+  "water": {
+   "mn9": {
+    "MN9_R": [
+     53.2,
+     7.08519583356734
+    ],
+    "MN9_L": [
+     24.8,
+     5.974947698515862
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_R",
+    "hz": [
+     53.2,
+     7.08519583356734
+    ]
+   },
+   "responding": [
+    320.4,
+    11.588787684654509
+   ],
+   "total_spikes": [
+    10262.6,
+    371.4960295884735
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 47,
+      "MN9_L": 17
+     },
+     "responding": 315,
+     "spikes": 9993
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 45,
+      "MN9_L": 20
+     },
+     "responding": 328,
+     "spikes": 9780
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 61,
+      "MN9_L": 31
+     },
+     "responding": 324,
+     "spikes": 10401
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 59,
+      "MN9_L": 28
+     },
+     "responding": 332,
+     "spikes": 10709
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 54,
+      "MN9_L": 28
+     },
+     "responding": 303,
+     "spikes": 10430
+    }
+   ]
+  }
+ },
+ "wall_s": 7.481369195,
+ "wall_s_per_sim_s": 1.496273839
+}
