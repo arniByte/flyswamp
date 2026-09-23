@@ -77,6 +77,7 @@ LIF_PARAMS='{"wSyn":0.2}' ...                        # параметры дви
   - bioRxiv — препринты: поиск только по датам и категориям, без ключевых слов.
   - alphaXiv — arXiv: методы и модели, не биомедицина.
   - Elicit — обзоры по вопросу.
-- Не подключены: [VFB3-MCP](https://vfb3-mcp.virtualflybrain.org/) (custom connector, кнопка + Add на https://claude.ai/customize/connectors) и Context7. После подключения нужна новая сессия.
-- Сетевая политика блокирует neuprint.janelia.org, vfb3-mcp.virtualflybrain.org, codex.flywire.ai, zenodo.org, api.biorxiv.org, eutils.ncbi.nlm.nih.gov.
+  - Virtual Fly Brain (VFB3-MCP) — онтология типов, известные и предсказанные NT, связность между классами нейронов сразу по нескольким коннектомам. Символы датасетов: `mc` (MaleCNS v1.0), `mv` (MANC 1.2.1), `BANC` (мозг и тяж самки, v888), `fw` (FlyWire 783), `hb`, `ol`, `fafb`, `l1em`. Главное применение — проверка воспроизводимости: есть ли та же связь у других особей.
+- Не подключён Context7 (документация библиотек). Новые коннекторы подхватываются только при старте сессии.
+- Сетевая политика контейнера блокирует прямые запросы к neuprint.janelia.org, vfb3-mcp.virtualflybrain.org, codex.flywire.ai, zenodo.org, api.biorxiv.org, eutils.ncbi.nlm.nih.gov. Коннекторы claude.ai работают в обход контейнера.
 - Работают GitHub и `storage.googleapis.com` (бакет MaleCNS).
