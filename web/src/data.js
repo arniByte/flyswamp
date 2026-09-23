@@ -1,11 +1,22 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const BASE = `${import.meta.env?.BASE_URL ?? '/'}data/`;
+// Hosts that serve no binary types (claude.ai artifacts) get binaries as base64 text; see scripts/artifact.mjs.
+const B64 = globalThis.FLYSWAMP_B64 === true;
+
+function fromBase64(text) {
+  if (Uint8Array.fromBase64) return Uint8Array.fromBase64(text.trim()).buffer;
+  const s = atob(text.trim());
+  const out = new Uint8Array(s.length);
+  for (let i = 0; i < s.length; i++) out[i] = s.charCodeAt(i);
+  return out.buffer;
+}
 
 async function get(name, kind, onProgress) {
-  const r = await fetch(BASE + name);
+  const b64 = kind === 'bin' && B64;
+  const r = await fetch(BASE + name + (b64 ? '.b64.txt' : ''));
   if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);
-  const v = kind === 'json' ? await r.json() : await r.arrayBuffer();
+  const v = kind === 'json' ? await r.json() : b64 ? fromBase64(await r.text()) : await r.arrayBuffer();
   onProgress?.(name);
   return v;
 }

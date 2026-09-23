@@ -21,6 +21,8 @@ html = html
   .trim();
 const title = html.match(/<title>.*?<\/title>/)[0];
 html = `${title}\n${html.replace(title, '')}`;
+// Artifacts serve no binary types: ship .bin/.glb as base64 text and tell data.js to decode them.
+html = html.replace('<script type="module"', '<script>window.FLYSWAMP_B64 = true;</script>\n  <script type="module"');
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
@@ -30,8 +32,11 @@ for (const dir of ['assets', 'data']) {
   for (const f of fs.readdirSync(path.join(dist, dir))) {
     if (f.endsWith('.css')) continue;
     fs.mkdirSync(path.join(out, dir), { recursive: true });
-    fs.copyFileSync(path.join(dist, dir, f), path.join(out, dir, f));
-    files[`${dir}/${f}`] = path.relative(root, path.join(out, dir, f));
+    const binary = /\.(bin|glb)$/.test(f);
+    const name = binary ? `${f}.b64.txt` : f;
+    if (binary) fs.writeFileSync(path.join(out, dir, name), fs.readFileSync(path.join(dist, dir, f)).toString('base64'));
+    else fs.copyFileSync(path.join(dist, dir, f), path.join(out, dir, name));
+    files[`${dir}/${name}`] = path.relative(root, path.join(out, dir, name));
   }
 }
 console.log(JSON.stringify(files, null, 1));
