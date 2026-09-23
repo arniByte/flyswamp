@@ -1,0 +1,472 @@
+{
+ "graph": "MaleCNS v1.0 connectome (FlyEM/HHMI Janelia, University of Cambridge, MRC LMB, Google Research), CC-BY 4.0, https://male-cns.janelia.org/; Traced neurons, synapse confidence >= 0.5, >= 1 synapses per connection",
+ "prefix": "malecns_min1",
+ "which": "malecns",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shuffle_seed": null,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "dense": false,
+ "poisson_hz": 150,
+ "bitter_hz": 100,
+ "water_hz": 200,
+ "stimulus_sizes": {
+  "sugar": 22,
+  "bitter": 18,
+  "water": 12
+ },
+ "benchmarks": {
+  "sugar": {
+   "mn9": {
+    "MN9_L": [
+     76.2,
+     3.7682887362833544
+    ],
+    "MN9_R": [
+     13,
+     1.7320508075688772
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     76.2,
+     3.7682887362833544
+    ]
+   },
+   "responding": [
+    4520,
+    1198.6652994059684
+   ],
+   "total_spikes": [
+    69041.8,
+    9325.910046746108
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 76,
+      "MN9_R": 14
+     },
+     "responding": 4825,
+     "spikes": 68569
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 72,
+      "MN9_R": 10
+     },
+     "responding": 4875,
+     "spikes": 69338
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 74,
+      "MN9_R": 14
+     },
+     "responding": 4664,
+     "spikes": 67690
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 82,
+      "MN9_R": 14
+     },
+     "responding": 5728,
+     "spikes": 82932
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 77,
+      "MN9_R": 13
+     },
+     "responding": 2508,
+     "spikes": 56680
+    }
+   ]
+  },
+  "sugar_bitter": {
+   "mn9": {
+    "MN9_L": [
+     12.8,
+     11.819475453673906
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     12.8,
+     11.819475453673906
+    ]
+   },
+   "responding": [
+    9594.2,
+    5975.20118489746
+   ],
+   "total_spikes": [
+    434419,
+    369154.9414967921
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 19,
+      "MN9_R": 0
+     },
+     "responding": 14340,
+     "spikes": 713717
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 21,
+      "MN9_R": 0
+     },
+     "responding": 13914,
+     "spikes": 644783
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 2593,
+     "spikes": 29167
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 24,
+      "MN9_R": 0
+     },
+     "responding": 13586,
+     "spikes": 749320
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 3538,
+     "spikes": 35108
+    }
+   ]
+  },
+  "bitter": {
+   "mn9": {
+    "MN9_L": [
+     17.8,
+     10.305338422390601
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     17.8,
+     10.305338422390601
+    ]
+   },
+   "responding": [
+    11846.2,
+    5118.1289745374725
+   ],
+   "total_spikes": [
+    545614.2,
+    296853.03438856744
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 2718,
+     "spikes": 22563
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 24,
+      "MN9_R": 0
+     },
+     "responding": 13864,
+     "spikes": 686154
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 18,
+      "MN9_R": 0
+     },
+     "responding": 14588,
+     "spikes": 590612
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 25,
+      "MN9_R": 0
+     },
+     "responding": 13627,
+     "spikes": 723601
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 22,
+      "MN9_R": 0
+     },
+     "responding": 14434,
+     "spikes": 705141
+    }
+   ]
+  },
+  "water": {
+   "mn9": {
+    "MN9_L": [
+     9.6,
+     12.033287165193057
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     9.6,
+     12.033287165193057
+    ]
+   },
+   "responding": [
+    6803.8,
+    3918.2558237052363
+   ],
+   "total_spikes": [
+    128826.2,
+    204623.88764682386
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 5,
+      "MN9_R": 0
+     },
+     "responding": 4721,
+     "spikes": 31737
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 31,
+      "MN9_R": 0
+     },
+     "responding": 13753,
+     "spikes": 494689
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 5,
+      "MN9_R": 0
+     },
+     "responding": 5165,
+     "spikes": 35210
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 2,
+      "MN9_R": 0
+     },
+     "responding": 5856,
+     "spikes": 48240
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 5,
+      "MN9_R": 0
+     },
+     "responding": 4524,
+     "spikes": 34255
+    }
+   ]
+  },
+  "offset": {
+   "runs": [
+    {
+     "seed": 1,
+     "spikes_per_100ms": [
+      4272,
+      8802,
+      6680,
+      6807,
+      7219,
+      6727,
+      7374,
+      6673,
+      7037,
+      6978,
+      5222,
+      5394,
+      5355,
+      5145,
+      5211,
+      4970,
+      4671,
+      4974,
+      5032,
+      4863
+     ],
+     "quiet_at_end": false
+    },
+    {
+     "seed": 2,
+     "spikes_per_100ms": [
+      3648,
+      10628,
+      7759,
+      6593,
+      6630,
+      7054,
+      7099,
+      6627,
+      6657,
+      6643,
+      5557,
+      4725,
+      4872,
+      4853,
+      4693,
+      4817,
+      4818,
+      4567,
+      4988,
+      4648
+     ],
+     "quiet_at_end": false
+    },
+    {
+     "seed": 3,
+     "spikes_per_100ms": [
+      2318,
+      3296,
+      10046,
+      8005,
+      7198,
+      7145,
+      7289,
+      7301,
+      7294,
+      7798,
+      5552,
+      5217,
+      5259,
+      5432,
+      5014,
+      5180,
+      5251,
+      5266,
+      5318,
+      5320
+     ],
+     "quiet_at_end": false
+    },
+    {
+     "seed": 4,
+     "spikes_per_100ms": [
+      4147,
+      12977,
+      7584,
+      8327,
+      7992,
+      10730,
+      7925,
+      8026,
+      7289,
+      7935,
+      6222,
+      5027,
+      5617,
+      5252,
+      5344,
+      5295,
+      5209,
+      5340,
+      5097,
+      5295
+     ],
+     "quiet_at_end": false
+    },
+    {
+     "seed": 5,
+     "spikes_per_100ms": [
+      3252,
+      5105,
+      5865,
+      5461,
+      5479,
+      5917,
+      6456,
+      6607,
+      6139,
+      6399,
+      4552,
+      4106,
+      4390,
+      4290,
+      4184,
+      3928,
+      4300,
+      4045,
+      4045,
+      3967
+     ],
+     "quiet_at_end": false
+    }
+   ],
+   "quiet_seeds": 0,
+   "n_seeds": 5
+  }
+ },
+ "bitter_suppression": 0.8320209973753281,
+ "wall_s": 508.445209749,
+ "wall_s_per_sim_s": 16.9481736583
+}

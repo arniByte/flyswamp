@@ -1,0 +1,189 @@
+{
+ "graph": "FlyWire 630 as shipped with Shiu et al. 2024 (github.com/philshiu/Drosophila_brain_model)",
+ "prefix": "flywire630",
+ "which": "flywire",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shuffle_seed": null,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "dense": false,
+ "poisson_hz": 150,
+ "bitter_hz": 150,
+ "water_hz": 200,
+ "stim_side": "L",
+ "stimulus_sizes": {
+  "sugar": 21,
+  "bitter": 21,
+  "water": 18
+ },
+ "benchmarks": {
+  "sugar": {
+   "mn9": {
+    "MN9_R": [
+     86.2,
+     3.63318042491699
+    ],
+    "MN9_L": [
+     55.8,
+     5.761944116355173
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_R",
+    "hz": [
+     86.2,
+     3.63318042491699
+    ]
+   },
+   "responding": [
+    382.4,
+    3.4351128074635335
+   ],
+   "total_spikes": [
+    13516.2,
+    355.9904493100903
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 82,
+      "MN9_L": 49
+     },
+     "responding": 381,
+     "spikes": 13053
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 86,
+      "MN9_L": 56
+     },
+     "responding": 379,
+     "spikes": 13403
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 92,
+      "MN9_L": 58
+     },
+     "responding": 380,
+     "spikes": 13389
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 85,
+      "MN9_L": 52
+     },
+     "responding": 385,
+     "spikes": 13779
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 86,
+      "MN9_L": 64
+     },
+     "responding": 387,
+     "spikes": 13957
+    }
+   ]
+  },
+  "sugar_bitter": {
+   "mn9": {
+    "MN9_R": [
+     9,
+     4.242640687119285
+    ],
+    "MN9_L": [
+     13.8,
+     3.03315017762062
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     13.8,
+     3.03315017762062
+    ]
+   },
+   "responding": [
+    347.2,
+    19.485892332659546
+   ],
+   "total_spikes": [
+    13338,
+    320.1038893859305
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_R": 10,
+      "MN9_L": 10
+     },
+     "responding": 371,
+     "spikes": 13112
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_R": 6,
+      "MN9_L": 15
+     },
+     "responding": 322,
+     "spikes": 13059
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_R": 6,
+      "MN9_L": 12
+     },
+     "responding": 346,
+     "spikes": 13769
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_R": 7,
+      "MN9_L": 14
+     },
+     "responding": 361,
+     "spikes": 13160
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_R": 16,
+      "MN9_L": 18
+     },
+     "responding": 336,
+     "spikes": 13590
+    }
+   ]
+  }
+ },
+ "bitter_suppression": 0.8955916473317865,
+ "wall_s": 13.760474515,
+ "wall_s_per_sim_s": 1.3760474515
+}
