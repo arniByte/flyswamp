@@ -121,12 +121,13 @@ python build_circuit.py && python build_fly.py && python build_anatomy.py
 
 ## Атрибуция
 
-- **MaleCNS v1.0** — FlyEM (HHMI Janelia), University of Cambridge (Dept. of Zoology), MRC Laboratory of Molecular Biology, Google Research. Лицензия CC-BY 4.0. Как цитировать: https://male-cns.janelia.org/. Извлечённый подграф в `web/public/data` распространяется на тех же условиях.
+- **MaleCNS v1.0** — FlyEM (HHMI Janelia), University of Cambridge (Dept. of Zoology), MRC Laboratory of Molecular Biology, Google Research. Лицензия CC-BY 4.0. Статья: Berg et al. 2026, Cell, PMID 42691995, doi:10.1016/j.cell.2026.08.015; как цитировать данные: https://male-cns.janelia.org/. Извлечённый подграф в `web/public/data` распространяется на тех же условиях.
 - **flybody** — TuragaLab, Apache-2.0, https://github.com/TuragaLab/flybody.
-- Литература, на которую опираются допущения:
-  - Aso et al. 2014, eLife — валентность MBON;
-  - Olsen, Bhandawat & Wilson 2010, Neuron — нормализация PN;
-  - Semmelhack & Wang 2009, Nature — DM1/VA2 и влечение;
-  - Stensmyr et al. 2012, Cell — DA2 и геосмин;
-  - Suh et al. 2004, Nature — CO₂;
-  - Ai et al. 2010, Nature — DP1m и кислоты.
+- Литература, на которую опираются допущения (PMID и DOI сверены с PubMed):
+  - Aso et al. 2014, eLife — валентность MBON. PMID 25535793, doi:10.7554/eLife.04577;
+  - Olsen, Bhandawat & Wilson 2010, Neuron — нормализация PN. PMID 20435004, doi:10.1016/j.neuron.2010.04.009;
+  - Semmelhack & Wang 2009, Nature — DM1/VA2 и влечение. PMID 19396157, doi:10.1038/nature07983;
+  - Stensmyr et al. 2012, Cell — DA2 и геосмин. PMID 23217715, doi:10.1016/j.cell.2012.09.046;
+  - Suh et al. 2004, Nature — CO₂. PMID 15372051, doi:10.1038/nature02980;
+  - Ai et al. 2010, Nature — DP1m и кислоты. PMID 21085119, doi:10.1038/nature09537.
+- Спайковая модель и бенчмарки — список в [docs/SCIENCE.md](docs/SCIENCE.md#литература).

@@ -1,0 +1,1419 @@
+{
+ "graph": "malecns_min1",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.22,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "seed": 2,
+ "psp_kernel_peak": 0.15749013123685915,
+ "window_ms": [
+  1500,
+  2000
+ ],
+ "n_persistent": 80,
+ "loops": [
+  {
+   "neurons": [
+    {
+     "id": "908183",
+     "instance": "IN19B043_R",
+     "nt": "acetylcholine",
+     "hz": 22
+    },
+    {
+     "id": "908143",
+     "instance": "IN19B067_R",
+     "nt": "acetylcholine",
+     "hz": 24
+    },
+    {
+     "id": "906554",
+     "instance": "IN19B043_L",
+     "nt": "acetylcholine",
+     "hz": 18
+    },
+    {
+     "id": "904161",
+     "instance": "IN19B067_L",
+     "nt": "acetylcholine",
+     "hz": 14
+    },
+    {
+     "id": "807534",
+     "instance": "IN19B067_L",
+     "nt": "acetylcholine",
+     "hz": 22
+    },
+    {
+     "id": "805489",
+     "instance": "IN19B040_R",
+     "nt": "acetylcholine",
+     "hz": 90
+    },
+    {
+     "id": "805244",
+     "instance": "IN19B040_L",
+     "nt": "acetylcholine",
+     "hz": 90
+    },
+    {
+     "id": "805532",
+     "instance": "IN19B040_R",
+     "nt": "acetylcholine",
+     "hz": 90
+    },
+    {
+     "id": "804556",
+     "instance": "IN19B043_L",
+     "nt": "acetylcholine",
+     "hz": 28
+    },
+    {
+     "id": "802139",
+     "instance": "IN19B067_L",
+     "nt": "acetylcholine",
+     "hz": 14
+    },
+    {
+     "id": "805227",
+     "instance": "IN19B040_L",
+     "nt": "acetylcholine",
+     "hz": 88
+    },
+    {
+     "id": "13442",
+     "instance": "DNg33_R",
+     "nt": "acetylcholine",
+     "hz": 178
+    },
+    {
+     "id": "13317",
+     "instance": "DNg33_L",
+     "nt": "acetylcholine",
+     "hz": 180
+    }
+   ],
+   "edges": [
+    {
+     "from": "DNg33_L",
+     "to": "DNg33_R",
+     "synapses": 773,
+     "peak_psp_mv": 26.8
+    },
+    {
+     "from": "DNg33_R",
+     "to": "DNg33_L",
+     "synapses": 723,
+     "peak_psp_mv": 25.1
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B040_L",
+     "synapses": 101,
+     "peak_psp_mv": 3.5
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B040_R",
+     "synapses": 93,
+     "peak_psp_mv": 3.2
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B040_R",
+     "synapses": 86,
+     "peak_psp_mv": 3
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B040_L",
+     "synapses": 86,
+     "peak_psp_mv": 3
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B040_L",
+     "synapses": 76,
+     "peak_psp_mv": 2.6
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B040_L",
+     "synapses": 74,
+     "peak_psp_mv": 2.6
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B040_L",
+     "synapses": 71,
+     "peak_psp_mv": 2.5
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B040_L",
+     "synapses": 70,
+     "peak_psp_mv": 2.4
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B040_R",
+     "synapses": 66,
+     "peak_psp_mv": 2.3
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B040_R",
+     "synapses": 63,
+     "peak_psp_mv": 2.2
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B040_R",
+     "synapses": 61,
+     "peak_psp_mv": 2.1
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B040_R",
+     "synapses": 54,
+     "peak_psp_mv": 1.9
+    },
+    {
+     "from": "DNg33_L",
+     "to": "IN19B040_L",
+     "synapses": 40,
+     "peak_psp_mv": 1.4
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B043_L",
+     "synapses": 35,
+     "peak_psp_mv": 1.2
+    },
+    {
+     "from": "DNg33_L",
+     "to": "IN19B040_L",
+     "synapses": 31,
+     "peak_psp_mv": 1.1
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_R",
+     "synapses": 29,
+     "peak_psp_mv": 1
+    },
+    {
+     "from": "DNg33_L",
+     "to": "IN19B040_R",
+     "synapses": 28,
+     "peak_psp_mv": 1
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B043_R",
+     "synapses": 26,
+     "peak_psp_mv": 0.9
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_R",
+     "synapses": 25,
+     "peak_psp_mv": 0.9
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_L",
+     "synapses": 24,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B043_R",
+     "synapses": 24,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B043_L",
+     "synapses": 24,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "DNg33_R",
+     "to": "IN19B040_L",
+     "synapses": 24,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B043_L",
+     "synapses": 23,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_L",
+     "synapses": 23,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_L",
+     "synapses": 23,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_L",
+     "synapses": 22,
+     "peak_psp_mv": 0.8
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B043_L",
+     "synapses": 21,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_L",
+     "synapses": 21,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B043_L",
+     "synapses": 20,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_L",
+     "synapses": 20,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_L",
+     "synapses": 19,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B043_L",
+     "synapses": 19,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B043_R",
+     "synapses": 19,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "DNg33_R",
+     "to": "IN19B040_L",
+     "synapses": 19,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "DNg33_R",
+     "to": "IN19B040_R",
+     "synapses": 19,
+     "peak_psp_mv": 0.7
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B043_L",
+     "synapses": 18,
+     "peak_psp_mv": 0.6
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_L",
+     "synapses": 17,
+     "peak_psp_mv": 0.6
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_R",
+     "synapses": 16,
+     "peak_psp_mv": 0.6
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_R",
+     "synapses": 16,
+     "peak_psp_mv": 0.6
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_L",
+     "synapses": 15,
+     "peak_psp_mv": 0.5
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_L",
+     "synapses": 15,
+     "peak_psp_mv": 0.5
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B067_L",
+     "synapses": 14,
+     "peak_psp_mv": 0.5
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "IN19B043_R",
+     "synapses": 14,
+     "peak_psp_mv": 0.5
+    },
+    {
+     "from": "DNg33_L",
+     "to": "IN19B040_R",
+     "synapses": 13,
+     "peak_psp_mv": 0.5
+    },
+    {
+     "from": "DNg33_R",
+     "to": "IN19B040_R",
+     "synapses": 12,
+     "peak_psp_mv": 0.4
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B067_L",
+     "synapses": 11,
+     "peak_psp_mv": 0.4
+    },
+    {
+     "from": "IN19B040_L",
+     "to": "IN19B043_L",
+     "synapses": 11,
+     "peak_psp_mv": 0.4
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_R",
+     "synapses": 6,
+     "peak_psp_mv": 0.2
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B040_L",
+     "synapses": 5,
+     "peak_psp_mv": 0.2
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B067_L",
+     "synapses": 5,
+     "peak_psp_mv": 0.2
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_L",
+     "synapses": 5,
+     "peak_psp_mv": 0.2
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_R",
+     "synapses": 5,
+     "peak_psp_mv": 0.2
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_L",
+     "synapses": 4,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B067_L",
+     "synapses": 3,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_R",
+     "synapses": 3,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_L",
+     "synapses": 3,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_L",
+     "synapses": 3,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_L",
+     "synapses": 3,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_R",
+     "synapses": 3,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B043_R",
+     "to": "IN19B040_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B043_R",
+     "to": "IN19B067_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B040_R",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B040_R",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B067_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B043_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_R",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B040_R",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B067_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B067_L",
+     "synapses": 2,
+     "peak_psp_mv": 0.1
+    },
+    {
+     "from": "IN19B043_R",
+     "to": "IN19B067_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B043_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B040_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_R",
+     "to": "IN19B043_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B040_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B040_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B040_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B067_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B067_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B043_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B040_R",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B040_R",
+     "to": "DNg33_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B067_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B043_L",
+     "to": "IN19B043_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    },
+    {
+     "from": "IN19B067_L",
+     "to": "IN19B043_L",
+     "synapses": 1,
+     "peak_psp_mv": 0
+    }
+   ]
+  }
+ ],
+ "drivers": [
+  {
+   "id": "13317",
+   "instance": "DNg33_L",
+   "nt": "acetylcholine",
+   "hz": 180,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 723
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "15514",
+   "instance": "AN27X013_R",
+   "nt": null,
+   "hz": 178,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 236
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 197
+    }
+   ]
+  },
+  {
+   "id": "13442",
+   "instance": "DNg33_R",
+   "nt": "acetylcholine",
+   "hz": 178,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 773
+    }
+   ]
+  },
+  {
+   "id": "10150",
+   "instance": "AN27X013_R",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 222
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 197
+    }
+   ]
+  },
+  {
+   "id": "12398",
+   "instance": "AN27X013_L",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 239
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 147
+    }
+   ]
+  },
+  {
+   "id": "20831",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 203
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 197
+    }
+   ]
+  },
+  {
+   "id": "511823",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 193
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 149
+    }
+   ]
+  },
+  {
+   "id": "511828",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 214
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 176
+    }
+   ]
+  },
+  {
+   "id": "523675",
+   "instance": "AN27X013_L",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 234
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 147
+    }
+   ]
+  },
+  {
+   "id": "524761",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 215
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 106
+    }
+   ]
+  },
+  {
+   "id": "808183",
+   "instance": "IN09A005_L",
+   "nt": null,
+   "hz": 120,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 201
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 171
+    },
+    {
+     "from": "IN05B013_R",
+     "synapses": -1
+    }
+   ]
+  },
+  {
+   "id": "58394",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "hz": 118,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 149
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 114
+    }
+   ]
+  },
+  {
+   "id": "235061",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "hz": 118,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 143
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 118
+    }
+   ]
+  },
+  {
+   "id": "549229",
+   "instance": "EA27X006_R",
+   "nt": null,
+   "hz": 118,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 141
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 107
+    }
+   ]
+  },
+  {
+   "id": "802955",
+   "instance": "EA27X006_L",
+   "nt": null,
+   "hz": 118,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 147
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 103
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "936810",
+   "instance": "IN09A005_R",
+   "nt": null,
+   "hz": 118,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 135
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 127
+    },
+    {
+     "from": "INXXX319_L",
+     "synapses": -3
+    }
+   ]
+  },
+  {
+   "id": "801998",
+   "instance": "DLMn c-f_R",
+   "nt": null,
+   "hz": 92,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_R",
+     "synapses": 199
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 187
+    },
+    {
+     "from": "IN19B067_R",
+     "synapses": 147
+    }
+   ]
+  },
+  {
+   "id": "574357",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "hz": 90,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 99
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 92
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "805244",
+   "instance": "IN19B040_L",
+   "nt": "acetylcholine",
+   "hz": 90,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B040_R",
+     "synapses": 101
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 86
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 71
+    }
+   ]
+  },
+  {
+   "id": "805489",
+   "instance": "IN19B040_R",
+   "nt": "acetylcholine",
+   "hz": 90,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B040_L",
+     "synapses": 93
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 86
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 54
+    }
+   ]
+  },
+  {
+   "id": "805532",
+   "instance": "IN19B040_R",
+   "nt": "acetylcholine",
+   "hz": 90,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B040_L",
+     "synapses": 66
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 63
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 61
+    }
+   ]
+  },
+  {
+   "id": "813076",
+   "instance": "IN09A005_L",
+   "nt": null,
+   "hz": 90,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 116
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 86
+    }
+   ]
+  },
+  {
+   "id": "813104",
+   "instance": "IN09A005_R",
+   "nt": null,
+   "hz": 90,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 115
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 92
+    }
+   ]
+  },
+  {
+   "id": "70651",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "hz": 88,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 109
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 106
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "174420",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "hz": 88,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 107
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 102
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "195264",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "hz": 88,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 108
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 100
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "805227",
+   "instance": "IN19B040_L",
+   "nt": "acetylcholine",
+   "hz": 88,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B040_R",
+     "synapses": 76
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 74
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 70
+    }
+   ]
+  },
+  {
+   "id": "801970",
+   "instance": "DLMn a, b_L",
+   "nt": null,
+   "hz": 86,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B067_L",
+     "synapses": 117
+    },
+    {
+     "from": "IN19B043_R",
+     "synapses": 95
+    },
+    {
+     "from": "IN19B067_L",
+     "synapses": 92
+    }
+   ]
+  },
+  {
+   "id": "1050014552",
+   "instance": "DLMn c-f_R",
+   "nt": null,
+   "hz": 84,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_R",
+     "synapses": 135
+    },
+    {
+     "from": "IN19B067_L",
+     "synapses": 128
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 107
+    }
+   ]
+  },
+  {
+   "id": "800718",
+   "instance": "DLMn c-f_L",
+   "nt": null,
+   "hz": 82,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_L",
+     "synapses": 185
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 180
+    },
+    {
+     "from": "IN19B043_R",
+     "synapses": 131
+    }
+   ]
+  },
+  {
+   "id": "801295",
+   "instance": "DLMn a, b_R",
+   "nt": null,
+   "hz": 82,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_L",
+     "synapses": 139
+    },
+    {
+     "from": "IN19B067_L",
+     "synapses": 129
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 122
+    }
+   ]
+  },
+  {
+   "id": "801895",
+   "instance": "DLMn c-f_L",
+   "nt": null,
+   "hz": 82,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_L",
+     "synapses": 144
+    },
+    {
+     "from": "IN19B043_R",
+     "synapses": 126
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 123
+    }
+   ]
+  },
+  {
+   "id": "800056",
+   "instance": "DVMn 1a-c_R",
+   "nt": "glutamate",
+   "hz": 74,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B067_R",
+     "synapses": 60
+    },
+    {
+     "from": "IN19B043_R",
+     "synapses": 59
+    },
+    {
+     "from": "IN19B040_L",
+     "synapses": 57
+    }
+   ]
+  },
+  {
+   "id": "812884",
+   "instance": "IN09A005_L",
+   "nt": null,
+   "hz": 72,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_R",
+     "synapses": 62
+    },
+    {
+     "from": "DNg33_L",
+     "synapses": 59
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 1
+    }
+   ]
+  },
+  {
+   "id": "222777",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "hz": 70,
+   "strongest_live_inputs": [
+    {
+     "from": "DNg33_L",
+     "synapses": 73
+    },
+    {
+     "from": "DNg33_R",
+     "synapses": 66
+    }
+   ]
+  },
+  {
+   "id": "801816",
+   "instance": "DVMn 1a-c_R",
+   "nt": "glutamate",
+   "hz": 70,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B040_L",
+     "synapses": 60
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 51
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 47
+    }
+   ]
+  },
+  {
+   "id": "800890",
+   "instance": "DLMn c-f_L",
+   "nt": null,
+   "hz": 68,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_L",
+     "synapses": 161
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 142
+    },
+    {
+     "from": "IN19B043_R",
+     "synapses": 138
+    }
+   ]
+  },
+  {
+   "id": "802544",
+   "instance": "DLMn c-f_R",
+   "nt": null,
+   "hz": 68,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_R",
+     "synapses": 135
+    },
+    {
+     "from": "IN19B067_L",
+     "synapses": 133
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 128
+    }
+   ]
+  },
+  {
+   "id": "932796",
+   "instance": "DVMn 1a-c_L",
+   "nt": "glutamate",
+   "hz": 68,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_L",
+     "synapses": 57
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 56
+    },
+    {
+     "from": "IN19B040_R",
+     "synapses": 49
+    }
+   ]
+  },
+  {
+   "id": "803013",
+   "instance": "DLMn c-f_L",
+   "nt": null,
+   "hz": 66,
+   "strongest_live_inputs": [
+    {
+     "from": "IN19B043_L",
+     "synapses": 123
+    },
+    {
+     "from": "IN19B043_L",
+     "synapses": 96
+    },
+    {
+     "from": "IN19B067_R",
+     "synapses": 96
+    }
+   ]
+  }
+ ]
+}

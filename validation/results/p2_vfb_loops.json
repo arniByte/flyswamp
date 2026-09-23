@@ -1,0 +1,246 @@
+{
+ "source": "Virtual Fly Brain MCP (claude.ai connector), tool query_connectivity, weight >= 1, exclude_dbs [hb, fafb], queried 2026-09-23; get_predicted_neurotransmitters (split_by_dataset) and get_known_neurotransmitters on the same day",
+ "note": "Transcribed from the tool responses: the container cannot reach vfb3-mcp.virtualflybrain.org, so these calls cannot be scripted from validation/. MANC rows carry MANC 1.2.1 names that VFB files under the MaleCNS class (IN10B001_T2 as IN10B003, IN08B003_T2 as IN08B004, AN27X004 as AN27X013, AN09A004 as AN09A005, DNg33 as 'TBD'). BANC returned no DNg33 rows. Dataset symbols: mc MaleCNS v1.0, mv MANC 1.2.1, BANC v888, fw FlyWire 783.",
+ "classes": {
+  "IN10B003": "FBbt_20009573",
+  "IN08B004": "FBbt_20009406",
+  "DNg33": "FBbt_00047625",
+  "AN27X013": "FBbt_20008096",
+  "AN09A005": "FBbt_20007917",
+  "DLM motor neuron": "FBbt_00048112"
+ },
+ "connections": [
+  {
+   "pre": "IN10B003",
+   "post": "IN08B004",
+   "synapses": {
+    "mc": 687,
+    "mv": 740,
+    "BANC": 246
+   },
+   "per_pair": {
+    "mc": [
+     205,
+     196,
+     174,
+     112
+    ],
+    "mv": [
+     212,
+     196,
+     182,
+     150
+    ],
+    "BANC": [
+     108,
+     87,
+     33,
+     18
+    ]
+   }
+  },
+  {
+   "pre": "IN08B004",
+   "post": "IN10B003",
+   "synapses": {
+    "mc": 554,
+    "mv": 610,
+    "BANC": 221
+   },
+   "per_pair": {
+    "mc": [
+     229,
+     217,
+     62,
+     42,
+     2,
+     2
+    ],
+    "mv": [
+     246,
+     238,
+     65,
+     61
+    ],
+    "BANC": [
+     85,
+     73,
+     36,
+     27
+    ]
+   }
+  },
+  {
+   "pre": "IN10B003",
+   "post": "IN10B003",
+   "synapses": {
+    "mc": 9,
+    "mv": 45,
+    "BANC": 150
+   },
+   "per_pair": {
+    "mc": [
+     6,
+     3
+    ],
+    "mv": [
+     23,
+     22
+    ],
+    "BANC": [
+     97,
+     53
+    ]
+   },
+   "note": "BANC rows are autapses (same neuron id)"
+  },
+  {
+   "pre": "DNg33",
+   "post": "DNg33",
+   "synapses": {
+    "mc": 1496,
+    "mv": 899,
+    "fw": 108
+   },
+   "per_pair": {
+    "mc": [
+     773,
+     723
+    ],
+    "mv": [
+     489,
+     410
+    ],
+    "fw": [
+     56,
+     52
+    ]
+   },
+   "note": "left-right pair in every dataset; MANC holds only the nerve cord part, FlyWire only the brain part"
+  },
+  {
+   "pre": "DNg33",
+   "post": "AN27X013",
+   "synapses": {
+    "mc": 1619,
+    "mv": 197
+   }
+  },
+  {
+   "pre": "AN27X013",
+   "post": "DNg33",
+   "synapses": {
+    "mc": 66,
+    "mv": 9
+   }
+  },
+  {
+   "pre": "DNg33",
+   "post": "AN09A005",
+   "synapses": {
+    "mc": 2939,
+    "mv": 330
+   }
+  },
+  {
+   "pre": "AN09A005",
+   "post": "DNg33",
+   "synapses": {
+    "mc": 100,
+    "mv": 2
+   }
+  },
+  {
+   "pre": "DNg33",
+   "post": "DLM motor neuron",
+   "synapses": {}
+  },
+  {
+   "pre": "AN27X013",
+   "post": "DLM motor neuron",
+   "synapses": {}
+  },
+  {
+   "pre": "AN09A005",
+   "post": "DLM motor neuron",
+   "synapses": {
+    "mc": 2
+   }
+  }
+ ],
+ "neurotransmitters": {
+  "IN10B003": {
+   "known": "acetylcholine",
+   "predicted": {
+    "mc": [
+     "acetylcholine",
+     2,
+     0.97
+    ],
+    "mv": [
+     "acetylcholine",
+     2,
+     0.95
+    ]
+   }
+  },
+  "IN08B004": {
+   "known": "acetylcholine",
+   "predicted": {
+    "mc": [
+     "acetylcholine",
+     4,
+     0.965
+    ],
+    "mv": [
+     "acetylcholine",
+     2,
+     0.96
+    ]
+   }
+  },
+  "DNg33": {
+   "known": null,
+   "predicted": {
+    "mc": [
+     "acetylcholine",
+     2,
+     0.75
+    ],
+    "mv": [
+     "acetylcholine",
+     2,
+     0.8
+    ],
+    "fw": [
+     "acetylcholine",
+     1,
+     0.57
+    ]
+   }
+  },
+  "AN27X013": {
+   "known": "glutamate",
+   "known_basis": "FBbt definition: 'Its predicted neurotransmitter is glutamate (Eckstein et al., 2024)'",
+   "predicted": {
+    "mc": [
+     "serotonin",
+     4,
+     0.59
+    ]
+   }
+  },
+  "AN09A005": {
+   "known": "glutamate",
+   "known_basis": "FBbt definition: 'Its predicted neurotransmitter is glutamate (Eckstein et al., 2024)'",
+   "predicted": {
+    "mc": [
+     "serotonin",
+     11,
+     0.659
+    ]
+   }
+  }
+ },
+ "predicted_format": "[transmitter, instances, mean confidence]"
+}

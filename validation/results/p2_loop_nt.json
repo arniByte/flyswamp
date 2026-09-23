@@ -1,0 +1,1642 @@
+{
+ "source": "MaleCNS v1.0 flat connectome, synapse confidence >= 0.5, Traced neurons",
+ "types": [
+  "IN10B003",
+  "IN08B004",
+  "DNg33",
+  "AN27X013",
+  "AN09A005",
+  "DLMn a, b",
+  "DLMn c-f"
+ ],
+ "neurons": [
+  {
+   "bodyId": "10150",
+   "type": "AN27X013",
+   "instance": "AN27X013_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.617,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.589,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "12398",
+   "type": "AN27X013",
+   "instance": "AN27X013_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.592,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.589,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "13317",
+   "type": "DNg33",
+   "instance": "DNg33_L",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.73,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.753,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "13442",
+   "type": "DNg33",
+   "instance": "DNg33_R",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.778,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.753,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "15514",
+   "type": "AN27X013",
+   "instance": "AN27X013_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.591,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.589,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "20831",
+   "type": "AN09A005",
+   "instance": "AN09A005_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.567,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "58394",
+   "type": "AN09A005",
+   "instance": "AN09A005_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.709,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "70651",
+   "type": "AN09A005",
+   "instance": "AN09A005_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.61,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "174420",
+   "type": "AN09A005",
+   "instance": "AN09A005_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.722,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "195264",
+   "type": "AN09A005",
+   "instance": "AN09A005_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.722,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "222777",
+   "type": "AN09A005",
+   "instance": "AN09A005_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.708,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "235061",
+   "type": "AN09A005",
+   "instance": "AN09A005_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.704,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "511823",
+   "type": "AN09A005",
+   "instance": "AN09A005_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.555,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "511828",
+   "type": "AN09A005",
+   "instance": "AN09A005_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.631,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "523675",
+   "type": "AN27X013",
+   "instance": "AN27X013_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.57,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.589,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "524761",
+   "type": "AN09A005",
+   "instance": "AN09A005_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.632,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "574357",
+   "type": "AN09A005",
+   "instance": "AN09A005_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "serotonin",
+   "predicted_nt_confidence": 0.739,
+   "celltype_predicted_nt": "serotonin",
+   "celltype_predicted_nt_confidence": 0.636,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "800300",
+   "type": "IN08B004",
+   "instance": "IN08B004_R",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.969,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.97,
+   "ground_truth": "acetylcholine"
+  },
+  {
+   "bodyId": "800382",
+   "type": "IN10B003",
+   "instance": "IN10B003_L",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.97,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.97,
+   "ground_truth": "acetylcholine"
+  },
+  {
+   "bodyId": "800503",
+   "type": "IN08B004",
+   "instance": "IN08B004_L",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.97,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.97,
+   "ground_truth": "acetylcholine"
+  },
+  {
+   "bodyId": "800718",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.396,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "800890",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.57,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "801295",
+   "type": "DLMn a, b",
+   "instance": "DLMn a, b_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.504,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.376,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "801895",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.479,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "801970",
+   "type": "DLMn a, b",
+   "instance": "DLMn a, b_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.322,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.376,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "801998",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.398,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "802544",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.587,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "803013",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_L",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.411,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "803048",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.468,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  },
+  {
+   "bodyId": "805191",
+   "type": "IN08B004",
+   "instance": "IN08B004_L",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.965,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.97,
+   "ground_truth": "acetylcholine"
+  },
+  {
+   "bodyId": "903855",
+   "type": "IN08B004",
+   "instance": "IN08B004_R",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.972,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.97,
+   "ground_truth": "acetylcholine"
+  },
+  {
+   "bodyId": "913931",
+   "type": "IN10B003",
+   "instance": "IN10B003_R",
+   "consensus_nt": "acetylcholine",
+   "predicted_nt": "acetylcholine",
+   "predicted_nt_confidence": 0.97,
+   "celltype_predicted_nt": "acetylcholine",
+   "celltype_predicted_nt_confidence": 0.97,
+   "ground_truth": "acetylcholine"
+  },
+  {
+   "bodyId": "1050014552",
+   "type": "DLMn c-f",
+   "instance": "DLMn c-f_R",
+   "consensus_nt": "unclear",
+   "predicted_nt": "unclear",
+   "predicted_nt_confidence": 0.496,
+   "celltype_predicted_nt": "unclear",
+   "celltype_predicted_nt_confidence": 0.45,
+   "ground_truth": null
+  }
+ ],
+ "type_pairs": [
+  {
+   "pre": "AN09A005",
+   "post": "AN09A005",
+   "synapses": 136,
+   "connections": 47
+  },
+  {
+   "pre": "AN09A005",
+   "post": "AN27X013",
+   "synapses": 74,
+   "connections": 19
+  },
+  {
+   "pre": "AN09A005",
+   "post": "DLMn a, b",
+   "synapses": 1,
+   "connections": 1
+  },
+  {
+   "pre": "AN09A005",
+   "post": "DLMn c-f",
+   "synapses": 7,
+   "connections": 6
+  },
+  {
+   "pre": "AN09A005",
+   "post": "DNg33",
+   "synapses": 102,
+   "connections": 22
+  },
+  {
+   "pre": "AN09A005",
+   "post": "IN08B004",
+   "synapses": 1,
+   "connections": 1
+  },
+  {
+   "pre": "AN27X013",
+   "post": "AN09A005",
+   "synapses": 72,
+   "connections": 18
+  },
+  {
+   "pre": "AN27X013",
+   "post": "AN27X013",
+   "synapses": 41,
+   "connections": 11
+  },
+  {
+   "pre": "AN27X013",
+   "post": "DNg33",
+   "synapses": 66,
+   "connections": 8
+  },
+  {
+   "pre": "DLMn a, b",
+   "post": "DLMn a, b",
+   "synapses": 6,
+   "connections": 2
+  },
+  {
+   "pre": "DLMn a, b",
+   "post": "DLMn c-f",
+   "synapses": 18,
+   "connections": 8
+  },
+  {
+   "pre": "DLMn c-f",
+   "post": "DLMn a, b",
+   "synapses": 21,
+   "connections": 8
+  },
+  {
+   "pre": "DLMn c-f",
+   "post": "DLMn c-f",
+   "synapses": 90,
+   "connections": 26
+  },
+  {
+   "pre": "DNg33",
+   "post": "AN09A005",
+   "synapses": 2939,
+   "connections": 22
+  },
+  {
+   "pre": "DNg33",
+   "post": "AN27X013",
+   "synapses": 1619,
+   "connections": 8
+  },
+  {
+   "pre": "DNg33",
+   "post": "DNg33",
+   "synapses": 1496,
+   "connections": 2
+  },
+  {
+   "pre": "IN08B004",
+   "post": "AN09A005",
+   "synapses": 1,
+   "connections": 1
+  },
+  {
+   "pre": "IN08B004",
+   "post": "IN08B004",
+   "synapses": 94,
+   "connections": 4
+  },
+  {
+   "pre": "IN08B004",
+   "post": "IN10B003",
+   "synapses": 555,
+   "connections": 7
+  },
+  {
+   "pre": "IN10B003",
+   "post": "IN08B004",
+   "synapses": 687,
+   "connections": 4
+  },
+  {
+   "pre": "IN10B003",
+   "post": "IN10B003",
+   "synapses": 9,
+   "connections": 2
+  }
+ ],
+ "neuron_pairs": [
+  {
+   "pre": "DNg33_L 13317",
+   "post": "DNg33_R 13442",
+   "synapses": 773
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "DNg33_L 13317",
+   "synapses": 723
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN27X013_L 12398",
+   "synapses": 239
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN27X013_R 15514",
+   "synapses": 236
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN27X013_L 523675",
+   "synapses": 234
+  },
+  {
+   "pre": "IN08B004_L 800503",
+   "post": "IN10B003_L 800382",
+   "synapses": 229
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN27X013_R 10150",
+   "synapses": 222
+  },
+  {
+   "pre": "IN08B004_R 903855",
+   "post": "IN10B003_R 913931",
+   "synapses": 217
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_L 524761",
+   "synapses": 215
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_L 511828",
+   "synapses": 214
+  },
+  {
+   "pre": "IN10B003_R 913931",
+   "post": "IN08B004_R 903855",
+   "synapses": 205
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_R 20831",
+   "synapses": 203
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN27X013_R 15514",
+   "synapses": 197
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_R 20831",
+   "synapses": 197
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN27X013_R 10150",
+   "synapses": 197
+  },
+  {
+   "pre": "IN10B003_R 913931",
+   "post": "IN08B004_L 800503",
+   "synapses": 196
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_R 511823",
+   "synapses": 193
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_L 511828",
+   "synapses": 176
+  },
+  {
+   "pre": "IN10B003_L 800382",
+   "post": "IN08B004_L 800503",
+   "synapses": 174
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_R 58394",
+   "synapses": 149
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_R 511823",
+   "synapses": 149
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN27X013_L 12398",
+   "synapses": 147
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN27X013_L 523675",
+   "synapses": 147
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_R 235061",
+   "synapses": 143
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_R 235061",
+   "synapses": 118
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_R 58394",
+   "synapses": 114
+  },
+  {
+   "pre": "IN10B003_L 800382",
+   "post": "IN08B004_R 903855",
+   "synapses": 112
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_L 70651",
+   "synapses": 109
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_L 195264",
+   "synapses": 108
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_R 174420",
+   "synapses": 107
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_L 70651",
+   "synapses": 106
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_L 524761",
+   "synapses": 106
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_R 174420",
+   "synapses": 102
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_L 195264",
+   "synapses": 100
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_L 574357",
+   "synapses": 99
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_L 574357",
+   "synapses": 92
+  },
+  {
+   "pre": "DNg33_L 13317",
+   "post": "AN09A005_R 222777",
+   "synapses": 73
+  },
+  {
+   "pre": "DNg33_R 13442",
+   "post": "AN09A005_R 222777",
+   "synapses": 66
+  },
+  {
+   "pre": "IN08B004_L 800503",
+   "post": "IN10B003_R 913931",
+   "synapses": 62
+  },
+  {
+   "pre": "IN08B004_R 903855",
+   "post": "IN08B004_L 800503",
+   "synapses": 59
+  },
+  {
+   "pre": "IN08B004_R 903855",
+   "post": "IN10B003_L 800382",
+   "synapses": 42
+  },
+  {
+   "pre": "IN08B004_L 800503",
+   "post": "IN08B004_R 903855",
+   "synapses": 32
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "DNg33_R 13442",
+   "synapses": 16
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN09A005_L 511828",
+   "synapses": 15
+  },
+  {
+   "pre": "DLMn c-f_R 802544",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 12
+  },
+  {
+   "pre": "DLMn c-f_L 801895",
+   "post": "DLMn c-f_L 800890",
+   "synapses": 12
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "AN09A005_R 58394",
+   "synapses": 11
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN27X013_R 15514",
+   "synapses": 10
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN27X013_R 10150",
+   "synapses": 10
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "DNg33_L 13317",
+   "synapses": 10
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "DNg33_L 13317",
+   "synapses": 9
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "DNg33_L 13317",
+   "synapses": 9
+  },
+  {
+   "pre": "DLMn c-f_R 802544",
+   "post": "DLMn c-f_R 803048",
+   "synapses": 9
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "DNg33_L 13317",
+   "synapses": 9
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "DNg33_R 13442",
+   "synapses": 9
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN09A005_L 524761",
+   "synapses": 9
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "DNg33_L 13317",
+   "synapses": 9
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "AN09A005_L 195264",
+   "synapses": 8
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN09A005_L 511828",
+   "synapses": 8
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "DNg33_R 13442",
+   "synapses": 8
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "DNg33_R 13442",
+   "synapses": 7
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN27X013_L 12398",
+   "synapses": 7
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "DNg33_L 13317",
+   "synapses": 7
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "DNg33_R 13442",
+   "synapses": 7
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN09A005_L 511828",
+   "synapses": 7
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN09A005_L 511828",
+   "synapses": 6
+  },
+  {
+   "pre": "IN10B003_L 800382",
+   "post": "IN10B003_R 913931",
+   "synapses": 6
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn a, b_L 801970",
+   "synapses": 6
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN09A005_L 574357",
+   "synapses": 6
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "DNg33_R 13442",
+   "synapses": 6
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "AN27X013_R 10150",
+   "synapses": 6
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "AN27X013_L 523675",
+   "synapses": 6
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN09A005_R 174420",
+   "synapses": 6
+  },
+  {
+   "pre": "DLMn c-f_R 1050014552",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 6
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN27X013_R 10150",
+   "synapses": 5
+  },
+  {
+   "pre": "DLMn c-f_L 803013",
+   "post": "DLMn c-f_L 801895",
+   "synapses": 5
+  },
+  {
+   "pre": "DLMn c-f_R 802544",
+   "post": "DLMn a, b_L 801970",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "DNg33_L 13317",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "AN09A005_R 20831",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "AN27X013_R 15514",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "DNg33_R 13442",
+   "synapses": 5
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "AN09A005_L 511828",
+   "synapses": 5
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN27X013_R 10150",
+   "synapses": 5
+  },
+  {
+   "pre": "DLMn a, b_R 801295",
+   "post": "DLMn a, b_L 801970",
+   "synapses": 5
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn c-f_L 801895",
+   "synapses": 5
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN09A005_R 511823",
+   "synapses": 5
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN09A005_R 20831",
+   "synapses": 5
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN27X013_L 12398",
+   "synapses": 5
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "DNg33_R 13442",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "AN27X013_L 523675",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "AN27X013_R 10150",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "AN09A005_L 574357",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "DNg33_R 13442",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "DNg33_L 13317",
+   "synapses": 5
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN09A005_R 58394",
+   "synapses": 5
+  },
+  {
+   "pre": "DLMn a, b_R 801295",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 4
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "DNg33_L 13317",
+   "synapses": 4
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN09A005_R 20831",
+   "synapses": 4
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN27X013_R 15514",
+   "synapses": 4
+  },
+  {
+   "pre": "DLMn c-f_R 801998",
+   "post": "DLMn c-f_R 802544",
+   "synapses": 4
+  },
+  {
+   "pre": "DLMn c-f_R 802544",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "AN09A005_L 574357",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "DNg33_R 13442",
+   "synapses": 4
+  },
+  {
+   "pre": "DLMn c-f_R 1050014552",
+   "post": "DLMn c-f_R 802544",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "DNg33_R 13442",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "DNg33_L 13317",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "AN09A005_R 174420",
+   "synapses": 4
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN27X013_L 523675",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "DNg33_R 13442",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "AN09A005_R 235061",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN27X013_L 523675",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN09A005_R 511823",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN09A005_R 20831",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN27X013_L 12398",
+   "synapses": 4
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN09A005_L 511828",
+   "synapses": 4
+  },
+  {
+   "pre": "DLMn c-f_R 803048",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 3
+  },
+  {
+   "pre": "DLMn a, b_R 801295",
+   "post": "DLMn c-f_L 800718",
+   "synapses": 3
+  },
+  {
+   "pre": "DLMn a, b_R 801295",
+   "post": "DLMn c-f_L 800890",
+   "synapses": 3
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn c-f_L 803013",
+   "synapses": 3
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn c-f_R 802544",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "DNg33_L 13317",
+   "synapses": 3
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN27X013_R 10150",
+   "synapses": 3
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN27X013_R 15514",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "AN09A005_L 195264",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN09A005_L 195264",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "AN09A005_R 58394",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "AN09A005_L 70651",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "AN09A005_R 58394",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "AN09A005_L 70651",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN09A005_L 70651",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "DNg33_R 13442",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN09A005_R 235061",
+   "synapses": 3
+  },
+  {
+   "pre": "IN10B003_R 913931",
+   "post": "IN10B003_L 800382",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "DNg33_L 13317",
+   "synapses": 3
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "AN27X013_L 12398",
+   "synapses": 3
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN27X013_R 15514",
+   "synapses": 3
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "AN09A005_R 20831",
+   "synapses": 3
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "AN27X013_R 10150",
+   "synapses": 3
+  },
+  {
+   "pre": "DLMn c-f_R 1050014552",
+   "post": "DLMn c-f_R 803048",
+   "synapses": 3
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN09A005_R 511823",
+   "synapses": 2
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "AN27X013_L 12398",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "AN09A005_L 70651",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "AN09A005_L 511828",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN27X013_L 523675",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "DNg33_L 13317",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN09A005_R 174420",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN09A005_R 222777",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "DNg33_L 13317",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "AN09A005_R 235061",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "AN09A005_R 235061",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "DLMn c-f_L 800890",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "AN09A005_R 58394",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "DNg33_R 13442",
+   "synapses": 2
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN09A005_L 524761",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN09A005_L 524761",
+   "synapses": 2
+  },
+  {
+   "pre": "IN08B004_R 800300",
+   "post": "IN10B003_L 800382",
+   "synapses": 2
+  },
+  {
+   "pre": "IN08B004_R 800300",
+   "post": "IN10B003_R 913931",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn a, b_R 801295",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn c-f_L 800890",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn a, b_R 801295",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn a, b_R 801295",
+   "post": "DLMn c-f_L 803013",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 801895",
+   "post": "DLMn a, b_L 801970",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn a, b_L 801970",
+   "post": "DLMn c-f_R 802544",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn a, b_L 801970",
+   "post": "DLMn c-f_L 800890",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 803013",
+   "post": "DLMn a, b_R 801295",
+   "synapses": 2
+  },
+  {
+   "pre": "DLMn c-f_L 803013",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 2
+  },
+  {
+   "pre": "IN08B004_L 805191",
+   "post": "IN08B004_R 800300",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN09A005_R 58394",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN09A005_R 235061",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN27X013_L 12398",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN09A005_L 574357",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN27X013_R 10150",
+   "synapses": 2
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN27X013_L 523675",
+   "synapses": 2
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN09A005_L 195264",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 58394",
+   "post": "AN09A005_R 222777",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN09A005_L 574357",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN27X013_L 523675",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 70651",
+   "post": "AN09A005_R 222777",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN27X013_R 15514",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "DNg33_R 13442",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 20831",
+   "post": "AN27X013_L 12398",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "AN09A005_L 70651",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "DLMn a, b_R 801295",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "DLMn c-f_L 801895",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "DLMn c-f_R 802544",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 174420",
+   "post": "AN09A005_L 195264",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN09A005_L 70651",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN09A005_R 235061",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "AN27X013_L 523675",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 195264",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 222777",
+   "post": "AN09A005_R 174420",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "AN09A005_L 195264",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "AN09A005_R 222777",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 235061",
+   "post": "AN09A005_L 574357",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_R 511823",
+   "post": "AN09A005_L 524761",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "AN27X013_L 12398",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 511828",
+   "post": "AN09A005_L 524761",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "AN09A005_L 524761",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_R 15514",
+   "post": "AN09A005_R 511823",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_L 523675",
+   "post": "AN09A005_L 574357",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 524761",
+   "post": "IN08B004_L 800503",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "DNg33_L 13317",
+   "synapses": 1
+  },
+  {
+   "pre": "AN09A005_L 574357",
+   "post": "DLMn c-f_L 801895",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN09A005_R 511823",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_L 12398",
+   "post": "AN09A005_R 20831",
+   "synapses": 1
+  },
+  {
+   "pre": "IN08B004_R 800300",
+   "post": "IN08B004_L 805191",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn c-f_L 801895",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn a, b_L 801970",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn c-f_R 803048",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 800718",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 800890",
+   "post": "DLMn c-f_L 800718",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 801895",
+   "post": "DLMn a, b_R 801295",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 801895",
+   "post": "DLMn c-f_R 803048",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_L 801895",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn a, b_L 801970",
+   "post": "DLMn c-f_L 800718",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn a, b_L 801970",
+   "post": "DLMn a, b_R 801295",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn a, b_L 801970",
+   "post": "DLMn c-f_R 803048",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_R 801998",
+   "post": "DLMn c-f_R 1050014552",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_R 803048",
+   "post": "DLMn c-f_R 801998",
+   "synapses": 1
+  },
+  {
+   "pre": "IN08B004_L 805191",
+   "post": "IN10B003_R 913931",
+   "synapses": 1
+  },
+  {
+   "pre": "IN08B004_R 903855",
+   "post": "AN09A005_L 524761",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN09A005_L 524761",
+   "synapses": 1
+  },
+  {
+   "pre": "AN27X013_R 10150",
+   "post": "AN09A005_R 235061",
+   "synapses": 1
+  },
+  {
+   "pre": "DLMn c-f_R 1050014552",
+   "post": "DLMn c-f_L 803013",
+   "synapses": 1
+  }
+ ]
+}
