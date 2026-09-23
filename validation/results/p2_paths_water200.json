@@ -1,0 +1,1431 @@
+{
+ "stimulus": "water",
+ "hz": 200,
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "datasets": [
+  {
+   "name": "FlyWire 783",
+   "params": {
+    "dt": 0.1,
+    "vRest": -52,
+    "vReset": -52,
+    "vThresh": -45,
+    "tauMem": 20,
+    "tauSyn": 5,
+    "tRefractory": 2.2,
+    "delay": 1.8,
+    "wSyn": 0.275,
+    "poissonScale": 250,
+    "restEpsilon": 0.000001
+   },
+   "stimulated": 18,
+   "mn9": {
+    "MN9_R": 29.6,
+    "MN9_L": 11.799999999999999
+   },
+   "answering": "MN9_R",
+   "layer1": [
+    {
+     "type": "CB0062",
+     "synapses": 315,
+     "neurons": 2,
+     "hz": 91.6
+    },
+    {
+     "type": "CB0008",
+     "synapses": 305,
+     "neurons": 2,
+     "hz": 105.10000000000001
+    },
+    {
+     "type": "CB0192",
+     "synapses": 297,
+     "neurons": 2,
+     "hz": 56.1
+    },
+    {
+     "type": "DNg67",
+     "synapses": 282,
+     "neurons": 2,
+     "hz": 91
+    },
+    {
+     "type": "CB0407",
+     "synapses": 282,
+     "neurons": 2,
+     "hz": 79.79999999999998
+    },
+    {
+     "type": "LB3",
+     "synapses": 247,
+     "neurons": 40,
+     "hz": 0.30500000000000005
+    },
+    {
+     "type": "AN_GNG_30",
+     "synapses": 210,
+     "neurons": 1,
+     "hz": 101.6
+    },
+    {
+     "type": "CB0964",
+     "synapses": 136,
+     "neurons": 3,
+     "hz": 36.6
+    },
+    {
+     "type": "CB0118",
+     "synapses": 123,
+     "neurons": 2,
+     "hz": 40.7
+    },
+    {
+     "type": "VP5+Z_adPN",
+     "synapses": 89,
+     "neurons": 1,
+     "hz": 117.4
+    },
+    {
+     "type": "CB0616",
+     "synapses": 76,
+     "neurons": 2,
+     "hz": 13.899999999999999
+    },
+    {
+     "type": "DNpe030",
+     "synapses": 73,
+     "neurons": 2,
+     "hz": 35.8
+    },
+    {
+     "type": "CB0248",
+     "synapses": 66,
+     "neurons": 2,
+     "hz": 19.8
+    },
+    {
+     "type": "CB0360",
+     "synapses": 66,
+     "neurons": 2,
+     "hz": 15.399999999999999
+    },
+    {
+     "type": "CB0811",
+     "synapses": 59,
+     "neurons": 4,
+     "hz": 11.000000000000004
+    },
+    {
+     "type": "CB0501",
+     "synapses": 59,
+     "neurons": 1,
+     "hz": 47.6
+    },
+    {
+     "type": "CB0438",
+     "synapses": 47,
+     "neurons": 2,
+     "hz": 26.099999999999994
+    },
+    {
+     "type": "CB0366",
+     "synapses": 43,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0445",
+     "synapses": 39,
+     "neurons": 1,
+     "hz": 42.00000000000001
+    },
+    {
+     "type": "CB0393",
+     "synapses": 38,
+     "neurons": 1,
+     "hz": 0.2
+    },
+    {
+     "type": "Z_vPNml1",
+     "synapses": 38,
+     "neurons": 2,
+     "hz": 33.2
+    },
+    {
+     "type": "AN_GNG_68",
+     "synapses": 37,
+     "neurons": 1,
+     "hz": 24.8
+    },
+    {
+     "type": "CB0552",
+     "synapses": 35,
+     "neurons": 1,
+     "hz": 21.200000000000003
+    },
+    {
+     "type": "AN_multi_117",
+     "synapses": 34,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB3615",
+     "synapses": 29,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB0499",
+     "synapses": 28,
+     "neurons": 1,
+     "hz": 31.800000000000004
+    },
+    {
+     "type": "CB0583",
+     "synapses": 27,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB0011",
+     "synapses": 26,
+     "neurons": 2,
+     "hz": 0.30000000000000004
+    },
+    {
+     "type": "CB0521",
+     "synapses": 26,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0881",
+     "synapses": 24,
+     "neurons": 1,
+     "hz": 36.2
+    },
+    {
+     "type": "CB0437",
+     "synapses": 23,
+     "neurons": 1,
+     "hz": 46.599999999999994
+    },
+    {
+     "type": "LB2d",
+     "synapses": 20,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "AN_multi_112",
+     "synapses": 20,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0426",
+     "synapses": 18,
+     "neurons": 1,
+     "hz": 1.8000000000000003
+    },
+    {
+     "type": "CB1097",
+     "synapses": 17,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "AN_GNG_PRW_2",
+     "synapses": 17,
+     "neurons": 2,
+     "hz": 0.30000000000000004
+    },
+    {
+     "type": "CB0573",
+     "synapses": 15,
+     "neurons": 2,
+     "hz": 12.100000000000001
+    },
+    {
+     "type": "CB0137",
+     "synapses": 14,
+     "neurons": 2,
+     "hz": 0.1
+    },
+    {
+     "type": "CB0902",
+     "synapses": 12,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0099",
+     "synapses": 12,
+     "neurons": 1,
+     "hz": 0
+    }
+   ],
+   "drivers": [
+    {
+     "type": "CB0553",
+     "synapses": 427,
+     "drive": 9343.6,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "DNge062",
+     "synapses": 567,
+     "drive": 4605,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0493",
+     "synapses": 292,
+     "drive": 1400.4,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "DNge051",
+     "synapses": -255,
+     "drive": -1224,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0465",
+     "synapses": -454,
+     "drive": -933.2,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "DNge080",
+     "synapses": 158,
+     "drive": 634.8,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "DNge059",
+     "synapses": 33,
+     "drive": 376.40000000000003,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0419",
+     "synapses": -4,
+     "drive": -132,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "DNge031",
+     "synapses": -8,
+     "drive": -73.2,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0824",
+     "synapses": 20,
+     "drive": 72,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB3958",
+     "synapses": 26,
+     "drive": 57.199999999999996,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0855",
+     "synapses": 4,
+     "drive": 50.4,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "DNg90",
+     "synapses": -75,
+     "drive": -45.00000000000001,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0207",
+     "synapses": 5,
+     "drive": 33,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0573",
+     "synapses": 2,
+     "drive": 24.200000000000003,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "DNge042",
+     "synapses": 5,
+     "drive": 23,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0839",
+     "synapses": -7,
+     "drive": -22.400000000000002,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0811",
+     "synapses": 5,
+     "drive": 18.000000000000004,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0858",
+     "synapses": 0,
+     "drive": 15.799999999999997,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0051",
+     "synapses": 1,
+     "drive": 14.2,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0055",
+     "synapses": -4,
+     "drive": -12,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0863",
+     "synapses": -2,
+     "drive": -10.799999999999999,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0438",
+     "synapses": -1,
+     "drive": -8.799999999999999,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0473",
+     "synapses": 1,
+     "drive": 8.2,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0845",
+     "synapses": 4,
+     "drive": 8,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0460",
+     "synapses": -9,
+     "drive": -7.2,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB4058",
+     "synapses": -10,
+     "drive": -6,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0507",
+     "synapses": 14,
+     "drive": 5.6000000000000005,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0832",
+     "synapses": -1,
+     "drive": -5.2,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0603",
+     "synapses": 1,
+     "drive": 4.8,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0434",
+     "synapses": 24,
+     "drive": 4.4,
+     "active": 1,
+     "neurons": 2
+    },
+    {
+     "type": "CB0896",
+     "synapses": -1,
+     "drive": -3.6,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0030",
+     "synapses": -1,
+     "drive": -3,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0762",
+     "synapses": -1,
+     "drive": -2.5999999999999996,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "DNge106",
+     "synapses": 1,
+     "drive": 2.1999999999999997,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0875",
+     "synapses": 1,
+     "drive": 2,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "DNge043",
+     "synapses": -3,
+     "drive": -1.8000000000000003,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0190",
+     "synapses": 3,
+     "drive": 1.2000000000000002,
+     "active": 1,
+     "neurons": 2
+    },
+    {
+     "type": "CB0827",
+     "synapses": -40,
+     "drive": -0.8,
+     "active": 1,
+     "neurons": 2
+    },
+    {
+     "type": "CB0538",
+     "synapses": -1,
+     "drive": -0.4,
+     "active": 1,
+     "neurons": 1
+    }
+   ],
+   "responding": 345
+  },
+  {
+   "name": "MaleCNS v1.0",
+   "params": {
+    "dt": 0.1,
+    "vRest": -52,
+    "vReset": -52,
+    "vThresh": -45,
+    "tauMem": 20,
+    "tauSyn": 5,
+    "tRefractory": 2.2,
+    "delay": 1.8,
+    "wSyn": 0.2,
+    "poissonScale": 250,
+    "restEpsilon": 0.000001
+   },
+   "stimulated": 12,
+   "mn9": {
+    "MN9_L": 0,
+    "MN9_R": 0
+   },
+   "answering": "MN9_L",
+   "layer1": [
+    {
+     "type": "CB0062",
+     "synapses": 343,
+     "neurons": 2,
+     "hz": 91.39999999999999
+    },
+    {
+     "type": "CB0008",
+     "synapses": 273,
+     "neurons": 2,
+     "hz": 82.1
+    },
+    {
+     "type": "DNg67",
+     "synapses": 255,
+     "neurons": 2,
+     "hz": 69.4
+    },
+    {
+     "type": "AN_GNG_30",
+     "synapses": 205,
+     "neurons": 2,
+     "hz": 36.7
+    },
+    {
+     "type": "DNpe030",
+     "synapses": 172,
+     "neurons": 2,
+     "hz": 50.8
+    },
+    {
+     "type": "AN_GNG_68",
+     "synapses": 159,
+     "neurons": 2,
+     "hz": 38.9
+    },
+    {
+     "type": "CB0964",
+     "synapses": 133,
+     "neurons": 2,
+     "hz": 39.60000000000001
+    },
+    {
+     "type": "LB3",
+     "synapses": 114,
+     "neurons": 22,
+     "hz": 0
+    },
+    {
+     "type": "CB0438",
+     "synapses": 111,
+     "neurons": 2,
+     "hz": 46.4
+    },
+    {
+     "type": "CB0118",
+     "synapses": 110,
+     "neurons": 2,
+     "hz": 22.299999999999997
+    },
+    {
+     "type": "CB0366",
+     "synapses": 81,
+     "neurons": 2,
+     "hz": 15.999999999999998
+    },
+    {
+     "type": "CB0501",
+     "synapses": 77,
+     "neurons": 2,
+     "hz": 25.4
+    },
+    {
+     "type": "CB0393",
+     "synapses": 66,
+     "neurons": 1,
+     "hz": 0.4
+    },
+    {
+     "type": "VP5+Z_adPN",
+     "synapses": 64,
+     "neurons": 1,
+     "hz": 58.6
+    },
+    {
+     "type": "AN_multi_117",
+     "synapses": 57,
+     "neurons": 2,
+     "hz": 8.400000000000002
+    },
+    {
+     "type": "AN_GNG_21",
+     "synapses": 49,
+     "neurons": 2,
+     "hz": 12.1
+    },
+    {
+     "type": "CB0360",
+     "synapses": 48,
+     "neurons": 2,
+     "hz": 0.6
+    },
+    {
+     "type": "CB0811",
+     "synapses": 44,
+     "neurons": 4,
+     "hz": 0
+    },
+    {
+     "type": "CB0444",
+     "synapses": 39,
+     "neurons": 1,
+     "hz": 22
+    },
+    {
+     "type": "CB0248",
+     "synapses": 36,
+     "neurons": 2,
+     "hz": 3.7
+    },
+    {
+     "type": "CB0616",
+     "synapses": 34,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB0445",
+     "synapses": 33,
+     "neurons": 2,
+     "hz": 1.7999999999999998
+    },
+    {
+     "type": "CB3615",
+     "synapses": 32,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB0583",
+     "synapses": 27,
+     "neurons": 2,
+     "hz": 0.1
+    },
+    {
+     "type": "CB0192",
+     "synapses": 27,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB0407",
+     "synapses": 25,
+     "neurons": 1,
+     "hz": 13.399999999999999
+    },
+    {
+     "type": "mAL_m10",
+     "synapses": 24,
+     "neurons": 1,
+     "hz": 1.8000000000000003
+    },
+    {
+     "type": "CB0099",
+     "synapses": 23,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB3674",
+     "synapses": 21,
+     "neurons": 1,
+     "hz": 15.399999999999999
+    },
+    {
+     "type": "OA-VUMa2",
+     "synapses": 20,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "DNg48",
+     "synapses": 20,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0521",
+     "synapses": 19,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "Z_vPNml1",
+     "synapses": 17,
+     "neurons": 2,
+     "hz": 0.2
+    },
+    {
+     "type": "CB0137",
+     "synapses": 17,
+     "neurons": 1,
+     "hz": 5.2
+    },
+    {
+     "type": "DNge075",
+     "synapses": 17,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0225",
+     "synapses": 16,
+     "neurons": 2,
+     "hz": 1
+    },
+    {
+     "type": "CB0461",
+     "synapses": 15,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0426",
+     "synapses": 14,
+     "neurons": 1,
+     "hz": 0
+    },
+    {
+     "type": "CB0011",
+     "synapses": 14,
+     "neurons": 2,
+     "hz": 0
+    },
+    {
+     "type": "CB0552",
+     "synapses": 13,
+     "neurons": 1,
+     "hz": 0
+    }
+   ],
+   "drivers": [
+    {
+     "type": "DNge031",
+     "synapses": -8,
+     "drive": -223,
+     "active": 1,
+     "neurons": 2
+    },
+    {
+     "type": "DNge042",
+     "synapses": 4,
+     "drive": 51.99999999999999,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0573",
+     "synapses": -10,
+     "drive": -35,
+     "active": 2,
+     "neurons": 2
+    },
+    {
+     "type": "CB0602",
+     "synapses": 2,
+     "drive": 18.799999999999997,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0213",
+     "synapses": -1,
+     "drive": -12.000000000000002,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0177",
+     "synapses": 1,
+     "drive": 10.600000000000001,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0740",
+     "synapses": -1,
+     "drive": -6.4,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB3916",
+     "synapses": -1,
+     "drive": -5.6000000000000005,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0393",
+     "synapses": 7,
+     "drive": 2.8000000000000003,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0484",
+     "synapses": -1,
+     "drive": -1,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "CB0863",
+     "synapses": -5,
+     "drive": -0.8,
+     "active": 1,
+     "neurons": 2
+    },
+    {
+     "type": "AN_GNG_16",
+     "synapses": -1,
+     "drive": -0.4,
+     "active": 1,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_109",
+     "synapses": -4,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "ANXXX071",
+     "synapses": 5,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    },
+    {
+     "type": "AN_GNG_19",
+     "synapses": -9,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_199",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_4",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_multi_51",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN10B009",
+     "synapses": 3,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_multi_124",
+     "synapses": -5,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_36",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_12",
+     "synapses": -18,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_3",
+     "synapses": 2,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_38",
+     "synapses": -15,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_25",
+     "synapses": 3,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN_GNG_203",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "AN08B113",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0055",
+     "synapses": -6,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    },
+    {
+     "type": "PS100",
+     "synapses": -1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0557",
+     "synapses": -3,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB4058",
+     "synapses": -6,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0574",
+     "synapses": 1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0792",
+     "synapses": -1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0216",
+     "synapses": 401,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    },
+    {
+     "type": "CB0587",
+     "synapses": 8,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    },
+    {
+     "type": "CB0493",
+     "synapses": 418,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    },
+    {
+     "type": "CB0503",
+     "synapses": -1,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0788",
+     "synapses": -2,
+     "drive": 0,
+     "active": 0,
+     "neurons": 1
+    },
+    {
+     "type": "CB0851",
+     "synapses": -3,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    },
+    {
+     "type": "CB0896",
+     "synapses": -4,
+     "drive": 0,
+     "active": 0,
+     "neurons": 2
+    }
+   ],
+   "responding": 673
+  }
+ ],
+ "mn9_drivers_by_flywire_type": [
+  {
+   "type": "CB0553",
+   "fw_hz": 13.6,
+   "fw_synapses_to_mn9": 427,
+   "fw_drive": 9343.6,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 355,
+   "mc_drive": 0
+  },
+  {
+   "type": "DNge062",
+   "fw_hz": 4.5,
+   "fw_synapses_to_mn9": 567,
+   "fw_drive": 4605,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 520,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0493",
+   "fw_hz": 7.200000000000001,
+   "fw_synapses_to_mn9": 292,
+   "fw_drive": 1400.4,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 418,
+   "mc_drive": 0
+  },
+  {
+   "type": "DNge051",
+   "fw_hz": 4.8,
+   "fw_synapses_to_mn9": -255,
+   "fw_drive": -1224,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": -212,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0465",
+   "fw_hz": 4.1,
+   "fw_synapses_to_mn9": -454,
+   "fw_drive": -933.2,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": -373,
+   "mc_drive": 0
+  },
+  {
+   "type": "DNge080",
+   "fw_hz": 4.2,
+   "fw_synapses_to_mn9": 158,
+   "fw_drive": 634.8,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 197,
+   "mc_drive": 0
+  },
+  {
+   "type": "DNge059",
+   "fw_hz": 12.9,
+   "fw_synapses_to_mn9": 33,
+   "fw_drive": 376.40000000000003,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 46,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0419",
+   "fw_hz": 16.6,
+   "fw_synapses_to_mn9": -4,
+   "fw_drive": -132,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 0,
+   "mc_drive": 0
+  },
+  {
+   "type": "DNge031",
+   "fw_hz": 15,
+   "fw_synapses_to_mn9": -8,
+   "fw_drive": -73.2,
+   "mc_hz": 22.3,
+   "mc_synapses_to_mn9": -8,
+   "mc_drive": -223
+  },
+  {
+   "type": "CB0824",
+   "fw_hz": 2.1,
+   "fw_synapses_to_mn9": 20,
+   "fw_drive": 72,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 18,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB3958",
+   "fw_hz": 2.1999999999999997,
+   "fw_synapses_to_mn9": 26,
+   "fw_drive": 57.199999999999996,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 0,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0855",
+   "fw_hz": 7,
+   "fw_synapses_to_mn9": 4,
+   "fw_drive": 50.4,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 8,
+   "mc_drive": 0
+  },
+  {
+   "type": "DNg90",
+   "fw_hz": 0.30000000000000004,
+   "fw_synapses_to_mn9": -75,
+   "fw_drive": -45.00000000000001,
+   "mc_hz": 2.8000000000000003,
+   "mc_synapses_to_mn9": -34,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0207",
+   "fw_hz": 3.3,
+   "fw_synapses_to_mn9": 5,
+   "fw_drive": 33,
+   "mc_hz": 7.3999999999999995,
+   "mc_synapses_to_mn9": -8,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0573",
+   "fw_hz": 12.100000000000001,
+   "fw_synapses_to_mn9": 2,
+   "fw_drive": 24.200000000000003,
+   "mc_hz": 3.5,
+   "mc_synapses_to_mn9": -10,
+   "mc_drive": -35
+  },
+  {
+   "type": "DNge042",
+   "fw_hz": 11.5,
+   "fw_synapses_to_mn9": 5,
+   "fw_drive": 23,
+   "mc_hz": 6.499999999999999,
+   "mc_synapses_to_mn9": 4,
+   "mc_drive": 51.99999999999999
+  },
+  {
+   "type": "CB0839",
+   "fw_hz": 1.6,
+   "fw_synapses_to_mn9": -7,
+   "fw_drive": -22.400000000000002,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": -3,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0811",
+   "fw_hz": 11.000000000000004,
+   "fw_synapses_to_mn9": 5,
+   "fw_drive": 18.000000000000004,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 0,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0858",
+   "fw_hz": 11.5,
+   "fw_synapses_to_mn9": 0,
+   "fw_drive": 15.799999999999997,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 9,
+   "mc_drive": 0
+  },
+  {
+   "type": "CB0051",
+   "fw_hz": 7.1,
+   "fw_synapses_to_mn9": 1,
+   "fw_drive": 14.2,
+   "mc_hz": 0,
+   "mc_synapses_to_mn9": 0,
+   "mc_drive": 0
+  }
+ ],
+ "layer1_by_flywire_type": [
+  {
+   "type": "CB0062",
+   "fw_synapses": 315,
+   "fw_hz": 91.6,
+   "mc_synapses": 343,
+   "mc_hz": 91.39999999999999
+  },
+  {
+   "type": "CB0008",
+   "fw_synapses": 305,
+   "fw_hz": 105.10000000000001,
+   "mc_synapses": 273,
+   "mc_hz": 82.1
+  },
+  {
+   "type": "CB0192",
+   "fw_synapses": 297,
+   "fw_hz": 56.1,
+   "mc_synapses": 27,
+   "mc_hz": 0
+  },
+  {
+   "type": "DNg67",
+   "fw_synapses": 282,
+   "fw_hz": 91,
+   "mc_synapses": 255,
+   "mc_hz": 69.4
+  },
+  {
+   "type": "CB0407",
+   "fw_synapses": 282,
+   "fw_hz": 79.79999999999998,
+   "mc_synapses": 25,
+   "mc_hz": 13.399999999999999
+  },
+  {
+   "type": "LB3",
+   "fw_synapses": 247,
+   "fw_hz": 0.30500000000000005,
+   "mc_synapses": 114,
+   "mc_hz": 26.54022988505747
+  },
+  {
+   "type": "AN_GNG_30",
+   "fw_synapses": 210,
+   "fw_hz": 101.6,
+   "mc_synapses": 205,
+   "mc_hz": 36.7
+  },
+  {
+   "type": "CB0964",
+   "fw_synapses": 136,
+   "fw_hz": 36.6,
+   "mc_synapses": 133,
+   "mc_hz": 19.800000000000004
+  },
+  {
+   "type": "CB0118",
+   "fw_synapses": 123,
+   "fw_hz": 40.7,
+   "mc_synapses": 110,
+   "mc_hz": 22.299999999999997
+  },
+  {
+   "type": "VP5+Z_adPN",
+   "fw_synapses": 89,
+   "fw_hz": 117.4,
+   "mc_synapses": 64,
+   "mc_hz": 40.5
+  },
+  {
+   "type": "CB0616",
+   "fw_synapses": 76,
+   "fw_hz": 13.899999999999999,
+   "mc_synapses": 34,
+   "mc_hz": 0
+  },
+  {
+   "type": "DNpe030",
+   "fw_synapses": 73,
+   "fw_hz": 35.8,
+   "mc_synapses": 172,
+   "mc_hz": 50.8
+  },
+  {
+   "type": "CB0248",
+   "fw_synapses": 66,
+   "fw_hz": 19.8,
+   "mc_synapses": 36,
+   "mc_hz": 3.7
+  },
+  {
+   "type": "CB0360",
+   "fw_synapses": 66,
+   "fw_hz": 15.399999999999999,
+   "mc_synapses": 48,
+   "mc_hz": 0.6
+  },
+  {
+   "type": "CB0811",
+   "fw_synapses": 59,
+   "fw_hz": 11.000000000000004,
+   "mc_synapses": 44,
+   "mc_hz": 0
+  },
+  {
+   "type": "CB0501",
+   "fw_synapses": 59,
+   "fw_hz": 47.6,
+   "mc_synapses": 77,
+   "mc_hz": 25.4
+  },
+  {
+   "type": "CB0438",
+   "fw_synapses": 47,
+   "fw_hz": 26.099999999999994,
+   "mc_synapses": 111,
+   "mc_hz": 46.4
+  },
+  {
+   "type": "CB0366",
+   "fw_synapses": 43,
+   "fw_hz": 0,
+   "mc_synapses": 81,
+   "mc_hz": 15.999999999999998
+  },
+  {
+   "type": "CB0445",
+   "fw_synapses": 39,
+   "fw_hz": 42.00000000000001,
+   "mc_synapses": 33,
+   "mc_hz": 1.7999999999999998
+  },
+  {
+   "type": "CB0393",
+   "fw_synapses": 38,
+   "fw_hz": 0.2,
+   "mc_synapses": 66,
+   "mc_hz": 0.2
+  }
+ ]
+}

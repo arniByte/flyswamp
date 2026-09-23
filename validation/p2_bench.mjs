@@ -5,9 +5,11 @@
 //   bitter        bitter alone                                                MN9 should stay quiet
 //   water         water GRNs at 200 Hz (at 150 Hz FlyWire MN9 barely answers)  Shiu Fig. 4
 //   offset        sugar for 1 s, then 1 s without input: activity must die out
-// MN9 is read on both sides and the stronger one counts, because the side that answers differs between
-// FlyWire and MaleCNS (docs/SCIENCE.md, P2). The FlyWire 630 run of the same suite with our engine, which
-// matches the authors' Brian2 model (P1), is the reference the MaleCNS criteria are relative to.
+// MN9 is read on both sides and the stronger one counts. In FlyWire the Shiu GRN sets are left-side and
+// the contralateral MN9_R answers most. MaleCNS MN9_R has a tenth of the input synapses of MN9_L
+// (water_grn_targets.py), so the MaleCNS suite mirrors the arrangement: right GRNs, contralateral MN9_L.
+// The FlyWire 630 run of the same suite with our engine, which matches the authors' Brian2 model (P1), is
+// the reference the MaleCNS criteria are relative to.
 //
 // --shuffle SEED rewires the graph before running: every connection keeps its presynaptic neuron and
 // signed weight, and the postsynaptic ends are permuted over all connections. In- and out-degree of every
@@ -16,7 +18,7 @@
 // usage: node validation/p2_bench.mjs <graph_prefix> flywire|malecns <seeds> [out.json] [--shuffle SEED]
 //        seeds as "1-5" or "3,7,9"; LIF_PARAMS='{"wSyn":0.2}' and DENSE=1 as in the other scripts;
 //        BITTER_HZ (default 100) and WATER_HZ (default 200) set those rates; BENCH=sugar,offset runs a subset;
-//        STIM_SIDE=L|R|both picks the MaleCNS GRNs (default L).
+//        STIM_SIDE=L|R|both picks the MaleCNS GRNs (default R).
 import fs from 'node:fs';
 import { loadGraph } from './run_lif.mjs';
 import { indexOf } from '../web/src/sim/graph.js';
@@ -34,7 +36,7 @@ const HZ = 150, BITTER_HZ = Number(process.env.BITTER_HZ ?? 100), WATER_HZ = Num
 const here = new URL('.', import.meta.url).pathname;
 
 // stimulus sets: FlyWire 630 ids from the authors' notebook; MaleCNS sets carried over by connectivity
-// (map_flywire_to_malecns.py), left labellar GRNs as in malecns_sugar.mjs
+// (map_flywire_to_malecns.py), right labellar GRNs (see above)
 let sets, mn9Ids;
 if (which === 'flywire') {
   const s = JSON.parse(fs.readFileSync(`${here}reference/shiu_neuron_sets.json`, 'utf8')).sets;
@@ -44,7 +46,7 @@ if (which === 'flywire') {
   mn9Ids = Object.fromEntries(s.ids_mn9.map((id) => [`MN9_${typed[id].side[0].toUpperCase()}`, id]));
 } else {
   const s = JSON.parse(fs.readFileSync(`${here}reference/shiu_neuron_sets_malecns.json`, 'utf8')).sets;
-  const side = process.env.STIM_SIDE ?? 'L';
+  const side = process.env.STIM_SIDE ?? 'R';
   const pick = (rows) => rows.filter((r) => (side === 'both' || r.side === side) && /^LB/.test(r.type ?? '')).map((r) => r.bodyId);
   sets = { sugar: pick(s.neu_sugar), bitter: pick(s.neu_bitter), water: pick(s.neu_water) };
   mn9Ids = null;
@@ -105,7 +107,7 @@ function offset() {
 
 const res = {
   graph: header.source, prefix: prefix.split('/').pop(), which, seeds, shuffle_seed: shuffleSeed,
-  params: net.p, dense: net.dense, poisson_hz: HZ, bitter_hz: BITTER_HZ, water_hz: WATER_HZ, stim_side: process.env.STIM_SIDE ?? 'L',
+  params: net.p, dense: net.dense, poisson_hz: HZ, bitter_hz: BITTER_HZ, water_hz: WATER_HZ, stim_side: which === 'malecns' ? process.env.STIM_SIDE ?? 'R' : 'as in the notebook',
   stimulus_sizes: Object.fromEntries(Object.entries(idx).map(([k, v]) => [k, v.length])), benchmarks: {},
 };
 const run = (name, fn) => { if (!only || only.has(name)) res.benchmarks[name] = fn(); };
