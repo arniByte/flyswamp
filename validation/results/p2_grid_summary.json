@@ -1,0 +1,121 @@
+{
+ "reference": {
+  "sugar": 86.2,
+  "responding": 382.4,
+  "suppression": 0.6705336426914154,
+  "water": 30.8
+ },
+ "criteria": "docs/ROADMAP.md, P2 calibration plan",
+ "rows": [
+  {
+   "w": 0.18,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 81.2,
+   "responding": 724.4,
+   "suppression": 1,
+   "bitter_hz": 0,
+   "water_hz": 30.6,
+   "quiet": "7/20"
+  },
+  {
+   "w": 0.2,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": true
+   },
+   "passes_all": true,
+   "sugar_hz": 87.2,
+   "responding": 934.4,
+   "suppression": 0.9954128440366973,
+   "bitter_hz": 0,
+   "water_hz": 40,
+   "quiet": "20/20"
+  },
+  {
+   "w": 0.22,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 96.2,
+   "responding": 1166.2,
+   "suppression": 0.9812889812889813,
+   "bitter_hz": 0,
+   "water_hz": 46.6,
+   "quiet": "18/20"
+  },
+  {
+   "w": 0.25,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 105.2,
+   "responding": 2713.8,
+   "suppression": 0.8307984790874525,
+   "bitter_hz": 1.8,
+   "water_hz": 41.4,
+   "quiet": "0/20"
+  },
+  {
+   "w": 0.275,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": false
+   },
+   "passes_all": false,
+   "sugar_hz": 102.2,
+   "responding": 8639.4,
+   "suppression": null,
+   "bitter_hz": null,
+   "water_hz": null,
+   "quiet": null
+  }
+ ],
+ "chosen": {
+  "w": 0.2,
+  "b": 0,
+  "tau": null,
+  "pass": {
+   "sugar": true,
+   "bitter_veto": true,
+   "bitter_alone": true,
+   "water": true,
+   "offset": true
+  },
+  "passes_all": true,
+  "sugar_hz": 87.2,
+  "responding": 934.4,
+  "suppression": 0.9954128440366973,
+  "bitter_hz": 0,
+  "water_hz": 40,
+  "quiet": "20/20"
+ }
+}

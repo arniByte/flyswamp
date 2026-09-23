@@ -1,0 +1,114 @@
+{
+ "graph": "MaleCNS v1.0 connectome (FlyEM/HHMI Janelia, University of Cambridge, MRC LMB, Google Research), CC-BY 4.0, https://male-cns.janelia.org/; Traced neurons, synapse confidence >= 0.5, >= 1 synapses per connection",
+ "prefix": "malecns_min1",
+ "which": "malecns",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shuffle_seed": null,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.18,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "dense": false,
+ "poisson_hz": 150,
+ "bitter_hz": 100,
+ "water_hz": 200,
+ "stim_side": "R",
+ "stimulus_sizes": {
+  "sugar": 27,
+  "bitter": 19,
+  "water": 13
+ },
+ "benchmarks": {
+  "sugar": {
+   "mn9": {
+    "MN9_L": [
+     81.2,
+     4.494441010848846
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     81.2,
+     4.494441010848846
+    ]
+   },
+   "responding": [
+    724.4,
+    57.413413066982876
+   ],
+   "total_spikes": [
+    14793,
+    550.5597151989964
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 85,
+      "MN9_R": 0
+     },
+     "responding": 732,
+     "spikes": 14598
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 86,
+      "MN9_R": 0
+     },
+     "responding": 762,
+     "spikes": 15011
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 81,
+      "MN9_R": 0
+     },
+     "responding": 625,
+     "spikes": 14358
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 79,
+      "MN9_R": 0
+     },
+     "responding": 738,
+     "spikes": 15652
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 75,
+      "MN9_R": 0
+     },
+     "responding": 765,
+     "spikes": 14346
+    }
+   ]
+  }
+ },
+ "wall_s": 45.577185762,
+ "wall_s_per_sim_s": 9.1154371524
+}

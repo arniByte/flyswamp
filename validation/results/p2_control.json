@@ -1,0 +1,37 @@
+{
+ "reference": {
+  "sugar": 86.2,
+  "responding": 382.4,
+  "suppression": 0.6705336426914154,
+  "water": 30.8
+ },
+ "set": {
+  "w": 0.2,
+  "b": 0,
+  "tau": null
+ },
+ "rows": [
+  {
+   "shuffle": 1,
+   "sugar_hz": 0,
+   "water_hz": 0,
+   "sugar_passes": false,
+   "water_passes": false
+  },
+  {
+   "shuffle": 2,
+   "sugar_hz": 0,
+   "water_hz": 0,
+   "sugar_passes": false,
+   "water_passes": false
+  },
+  {
+   "shuffle": 3,
+   "sugar_hz": 0,
+   "water_hz": 0,
+   "sugar_passes": false,
+   "water_passes": false
+  }
+ ],
+ "control_fails_as_required": true
+}
