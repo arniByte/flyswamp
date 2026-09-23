@@ -2,6 +2,7 @@
 // spike counts in the same schema, for compare.mjs.
 // usage: node validation/run_lif.mjs <graph_prefix> <reference.json> <out.json> [trials] [seed] [poisson_hz]
 // poisson_hz overrides the reference's rate, to test what rate a reference was actually run at.
+// LIF_PARAMS='{"dt":0.2}' overrides engine parameters (see SHIU_2024 in lif.js).
 import fs from 'node:fs';
 import { parseCSR, indexOf } from '../web/src/sim/graph.js';
 import { LIFNetwork } from '../web/src/sim/lif.js';
@@ -18,7 +19,7 @@ function main() {
   if (hzArg) ref.poisson_rate_hz = Number(hzArg);
   const trials = Number(trialsArg ?? ref.n_trials), seed = Number(seedArg ?? 1);
   const { header, graph } = loadGraph(prefix);
-  const net = new LIFNetwork(graph);
+  const net = new LIFNetwork(graph, JSON.parse(process.env.LIF_PARAMS ?? '{}'));
   net.setPoisson(indexOf(graph, ref.stimulated), ref.poisson_rate_hz);
   const counts = new Map();
   const t0 = performance.now();

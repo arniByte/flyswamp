@@ -1,0 +1,73 @@
+{
+ "graph": "MaleCNS v1.0 connectome (FlyEM/HHMI Janelia, University of Cambridge, MRC LMB, Google Research), CC-BY 4.0, https://male-cns.janelia.org/; Traced neurons, synapse confidence >= 0.5, >= 1 synapses per connection",
+ "unclear_nt": "drop",
+ "nnz": 24975257,
+ "stimulus": {
+  "neurons": [
+   "71254",
+   "78240",
+   "85806",
+   "93290",
+   "128129",
+   "152400",
+   "178321",
+   "204726",
+   "236475",
+   "261450",
+   "262567",
+   "312102",
+   "512551",
+   "512552",
+   "531237",
+   "933317",
+   "158893964",
+   "285495498",
+   "581710868",
+   "766547228",
+   "816904261",
+   "884238775"
+  ],
+  "hz": 150
+ },
+ "trials": 5,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.18,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "dense": true,
+ "mn9": {
+  "MN9_L": [
+   46.6,
+   5.029910535983717
+  ],
+  "MN9_R": [
+   0,
+   0
+  ]
+ },
+ "responding_neurons": 676.8,
+ "spikes_per_s_by_superclass": {
+  "cb_intrinsic": 3885.6,
+  "cb_sensory": 3219.4,
+  "vnc_intrinsic": 1536.2,
+  "descending_neuron": 1454.6,
+  "vnc_motor": 528,
+  "ascending_neuron": 428,
+  "cb_motor": 218.8,
+  "visual_centrifugal": 93.8,
+  "ol_intrinsic": 47.2,
+  "visual_projection": 33.2,
+  "efferent_ascending": 29.6,
+  "unknown": 0.2
+ },
+ "wall_s_per_sim_s": 8.941578253000001
+}

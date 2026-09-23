@@ -1,0 +1,62 @@
+{
+ "graph": "malecns_min1",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.15446934917634353,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "spikes_per_100ms": [
+  524,
+  621,
+  541,
+  512,
+  624,
+  634,
+  540,
+  619,
+  629,
+  502,
+  3,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "stimulus_off_after_bin": 10,
+ "last_bin_spikes": 0,
+ "passes": true,
+ "neurons_active_after_offset": 3,
+ "top_after_offset": [
+  {
+   "id": "11484",
+   "instance": "GNG107_L",
+   "nt": "gaba",
+   "spikes": 1
+  },
+  {
+   "id": "13943",
+   "instance": "GNG501_L",
+   "nt": "glutamate",
+   "spikes": 1
+  },
+  {
+   "id": "766547228",
+   "instance": "LB3b_L",
+   "nt": "acetylcholine",
+   "spikes": 1
+  }
+ ]
+}

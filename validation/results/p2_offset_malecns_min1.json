@@ -1,0 +1,224 @@
+{
+ "graph": "malecns_min1",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "spikes_per_100ms": [
+  4272,
+  8802,
+  6680,
+  6807,
+  7219,
+  6727,
+  7374,
+  6673,
+  7037,
+  6978,
+  5222,
+  5394,
+  5355,
+  5145,
+  5211,
+  4970,
+  4671,
+  4974,
+  5032,
+  4863
+ ],
+ "stimulus_off_after_bin": 10,
+ "last_bin_spikes": 4863,
+ "passes": false,
+ "neurons_active_after_offset": 1452,
+ "top_after_offset": [
+  {
+   "id": "800439",
+   "instance": "INXXX137_L",
+   "nt": "acetylcholine",
+   "spikes": 224
+  },
+  {
+   "id": "800571",
+   "instance": "INXXX149_R",
+   "nt": "acetylcholine",
+   "spikes": 203
+  },
+  {
+   "id": "902502",
+   "instance": "INXXX181_R",
+   "nt": "acetylcholine",
+   "spikes": 202
+  },
+  {
+   "id": "801369",
+   "instance": "INXXX137_R",
+   "nt": "acetylcholine",
+   "spikes": 201
+  },
+  {
+   "id": "801390",
+   "instance": "INXXX181_L",
+   "nt": "acetylcholine",
+   "spikes": 201
+  },
+  {
+   "id": "800664",
+   "instance": "MNad64_L",
+   "nt": "gaba",
+   "spikes": 199
+  },
+  {
+   "id": "801158",
+   "instance": "MNad64_R",
+   "nt": "gaba",
+   "spikes": 199
+  },
+  {
+   "id": "904047",
+   "instance": "INXXX149_L",
+   "nt": "acetylcholine",
+   "spikes": 197
+  },
+  {
+   "id": "936838",
+   "instance": null,
+   "nt": null,
+   "spikes": 194
+  },
+  {
+   "id": "523675",
+   "instance": "AN27X013_L",
+   "nt": null,
+   "spikes": 193
+  },
+  {
+   "id": "10150",
+   "instance": "AN27X013_R",
+   "nt": null,
+   "spikes": 192
+  },
+  {
+   "id": "15514",
+   "instance": "AN27X013_R",
+   "nt": null,
+   "spikes": 192
+  },
+  {
+   "id": "13317",
+   "instance": "DNg33_L",
+   "nt": "acetylcholine",
+   "spikes": 192
+  },
+  {
+   "id": "13442",
+   "instance": "DNg33_R",
+   "nt": "acetylcholine",
+   "spikes": 192
+  },
+  {
+   "id": "903484",
+   "instance": "EN00B003_M",
+   "nt": "octopamine",
+   "spikes": 191
+  },
+  {
+   "id": "902844",
+   "instance": "INXXX197_L",
+   "nt": "gaba",
+   "spikes": 191
+  },
+  {
+   "id": "903021",
+   "instance": "INXXX197_R",
+   "nt": "gaba",
+   "spikes": 191
+  },
+  {
+   "id": "12398",
+   "instance": "AN27X013_L",
+   "nt": null,
+   "spikes": 187
+  },
+  {
+   "id": "814470",
+   "instance": null,
+   "nt": null,
+   "spikes": 187
+  },
+  {
+   "id": "802096",
+   "instance": "INXXX149_R",
+   "nt": "acetylcholine",
+   "spikes": 185
+  },
+  {
+   "id": "808454",
+   "instance": null,
+   "nt": null,
+   "spikes": 183
+  },
+  {
+   "id": "815445",
+   "instance": null,
+   "nt": null,
+   "spikes": 183
+  },
+  {
+   "id": "805280",
+   "instance": "INXXX293_L",
+   "nt": null,
+   "spikes": 183
+  },
+  {
+   "id": "808456",
+   "instance": null,
+   "nt": null,
+   "spikes": 180
+  },
+  {
+   "id": "820520",
+   "instance": "INXXX293_R",
+   "nt": null,
+   "spikes": 177
+  },
+  {
+   "id": "909643",
+   "instance": null,
+   "nt": null,
+   "spikes": 176
+  },
+  {
+   "id": "816976",
+   "instance": null,
+   "nt": null,
+   "spikes": 172
+  },
+  {
+   "id": "803015",
+   "instance": "EN00B020_M",
+   "nt": "octopamine",
+   "spikes": 171
+  },
+  {
+   "id": "800930",
+   "instance": null,
+   "nt": null,
+   "spikes": 170
+  },
+  {
+   "id": "511828",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "spikes": 169
+  }
+ ]
+}

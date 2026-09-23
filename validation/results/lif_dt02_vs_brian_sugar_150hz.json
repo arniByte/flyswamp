@@ -1,0 +1,41 @@
+{
+ "a": "flyswamp web/src/sim/lif.js",
+ "b": "Shiu et al. 2024 model.py, unmodified",
+ "neurons": 441,
+ "active_1hz": {
+  "a": 362,
+  "b": 365
+ },
+ "pearson_means": 0.9997212681398152,
+ "split_half": {
+  "within": 0.9994934494426027,
+  "cross": 0.999466378927878
+ },
+ "mn9": {
+  "a": [
+   83.23333333333333,
+   5.263297336325843
+  ],
+  "b": [
+   83.16666666666667,
+   5.2920456466698
+  ],
+  "z": 0.04892269867950503
+ },
+ "bonferroni_z": 3.86010919167002,
+ "outliers": 1,
+ "top_outliers": [
+  {
+   "id": "720575940637790527",
+   "a": 0.6,
+   "b": 1.5333333333333334,
+   "z": -3.9462137220031592
+  }
+ ],
+ "gates": {
+  "mn9_z_below_3": true,
+  "cross_ge_within_minus_0_02": true,
+  "outliers_le_1pct": true
+ },
+ "pass": true
+}
