@@ -9,7 +9,7 @@ import { World, DT } from './sim/world.js';
 import { makeActivityMapper } from './sim/activity.js';
 import { Fly } from './render/fly.js';
 import { BrainView } from './render/brain.js';
-import { Swamp } from './render/swamp.js';
+import { Swamp, FOG } from './render/swamp.js';
 import { Props } from './render/props.js';
 import { Plumes } from './render/plumes.js';
 import { CameraRig } from './render/cameras.js';
@@ -27,7 +27,7 @@ renderer.setPixelRatio(LITE ? 1 : Math.min(devicePixelRatio, 2));
 renderer.shadowMap.enabled = !LITE;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.15;
+renderer.toneMappingExposure = 1.35;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(42, 1, 0.4, 6000);
@@ -121,7 +121,7 @@ function setMode(m) {
   camera.layers.set(0);
   if (xray) camera.layers.enable(BRAIN_LAYER);
   brain.setContext({ cloud: true, shells: true, neuropils: m === 'brain' });
-  scene.background.set(m === 'brain' ? 0x020405 : 0x0b1714);
+  scene.background.set(m === 'brain' ? 0x020405 : FOG);
   // neurons are already luminous: softer bloom when they fill the screen
   Object.assign(bloom, xray ? { strength: 0.32, threshold: 0.88, radius: 0.35 } : { strength: 0.55, threshold: 0.72, radius: 0.45 });
   rig.setMode(m, flyFocus(focus));

@@ -1,9 +1,10 @@
-// Night swamp at insect scale (millimetres): sky dome, reflective water, lily pads, reeds, fireflies.
+// Swamp at dusk, insect scale (millimetres): sky dome, reflective water, lily pads, reeds, fireflies.
+// Blue-hour palette: dark enough for the fireflies and the x-ray to read, light enough to see the swamp.
 import * as THREE from 'three';
 import { mulberry32 } from '../sim/rng.js';
 
-const SKY = { zenith: 0x05080f, horizon: 0x1c3a3f, glow: 0x3d6b62 };
-const FOG = 0x0b1714;
+const SKY = { zenith: 0x1c2e4c, horizon: 0x6e8f98, glow: 0xa6c6bc };
+export const FOG = 0x34504e;
 
 function skyDome() {
   const mat = new THREE.ShaderMaterial({
@@ -105,7 +106,7 @@ export class Swamp {
     this.group = new THREE.Group();
     scene.add(this.group);
     const rand = mulberry32(seed);
-    scene.fog = new THREE.FogExp2(FOG, 0.0021);
+    scene.fog = new THREE.FogExp2(FOG, 0.0016);
     scene.background = new THREE.Color(FOG);
 
     this.sky = skyDome();
@@ -116,10 +117,10 @@ export class Swamp {
     envScene.add(skyDome());
     const pmrem = new THREE.PMREMGenerator(renderer);
     scene.environment = pmrem.fromScene(envScene, 0.02).texture;
-    scene.environmentIntensity = 0.55;
+    scene.environmentIntensity = 0.9;
 
-    const hemi = new THREE.HemisphereLight(0x6a8fa6, 0x1a1208, 0.75);
-    const moon = new THREE.DirectionalLight(0xbcd6ff, 1.6);
+    const hemi = new THREE.HemisphereLight(0x9fb8c8, 0x3a3020, 1.6);
+    const moon = new THREE.DirectionalLight(0xdfe8ff, 2.2);
     moon.position.set(-450, 380, -800);
     moon.castShadow = true;
     moon.shadow.mapSize.set(2048, 2048);
@@ -142,8 +143,8 @@ export class Swamp {
     const water = new THREE.Mesh(
       new THREE.CircleGeometry(2600, 96).rotateX(-Math.PI / 2),
       new THREE.MeshPhysicalMaterial({
-        color: 0x0c1a17, roughness: 0.08, metalness: 0.0, normalMap: this.normalMap, normalScale: new THREE.Vector2(0.35, 0.35),
-        clearcoat: 1, clearcoatRoughness: 0.05, envMapIntensity: 1.4,
+        color: 0x2e4a40, roughness: 0.16, metalness: 0.0, normalMap: this.normalMap, normalScale: new THREE.Vector2(0.35, 0.35),
+        clearcoat: 1, clearcoatRoughness: 0.08, envMapIntensity: 1.2,
       }),
     );
     water.receiveShadow = true;
