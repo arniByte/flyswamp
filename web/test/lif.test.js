@@ -26,17 +26,21 @@ function randomGraph(n, perNeuron, seed) {
   return makeGraph(n, edges);
 }
 
-test('membrane follows the exact solution of the linear system', () => {
-  const net = new LIFNetwork(makeGraph(1, []));
+test('membrane follows the exact solution of the linear system, step by step and in the lazy catch-up', () => {
   const { vRest, tauMem: tm, tauSyn: ts, dt } = SHIU_2024;
   const g0 = 4, u0 = 1.5;
-  net.v[0] = vRest + u0; net.g[0] = g0; net._activate(0);
-  for (let k = 1; k <= 300; k++) {
-    net.step();
-    const t = k * dt, K = (g0 * ts) / (ts - tm);
-    const u = u0 * Math.exp(-t / tm) + K * (Math.exp(-t / ts) - Math.exp(-t / tm));
-    assert.ok(Math.abs(net.v[0] - vRest - u) < 1e-12, `step ${k}`);
-    assert.ok(Math.abs(net.g[0] - g0 * Math.exp(-t / ts)) < 1e-12);
+  for (const dense of [true, false]) {
+    const net = new LIFNetwork(makeGraph(1, []));
+    net.dense = dense;
+    net.v[0] = vRest + u0; net.g[0] = g0; net._activate(0);
+    for (let k = 1; k <= 300; k++) {
+      net.step();
+      const t = k * dt, K = (g0 * ts) / (ts - tm);
+      const u = u0 * Math.exp(-t / tm) + K * (Math.exp(-t / ts) - Math.exp(-t / tm));
+      assert.ok(Math.abs(net.potential(0) - vRest - u) < 1e-12, `${dense ? 'dense' : 'lazy'} step ${k}`);
+      if (dense) assert.ok(Math.abs(net.g[0] - g0 * Math.exp(-t / ts)) < 1e-12);
+    }
+    if (!dense) assert.equal(net.nActive, 0, 'a neuron that cannot reach threshold leaves the active list');
   }
 });
 
@@ -74,7 +78,7 @@ test('input reaching a refractory neuron is dropped, as Brian2 conditional write
   assert.equal(net.counts[0], 50);
 });
 
-test('sparse update gives the same spikes as updating every neuron', () => {
+test('lazy update gives the same spikes as updating every neuron', () => {
   const graph = randomGraph(400, 60, 7);
   const drive = Array.from({ length: 20 }, (_, i) => i * 7);
   const run = (dense) => {
@@ -117,18 +121,21 @@ test('adaptation is off by default: adaptB 0 gives the same spikes as the plain 
   assert.deepEqual(run({}), run({ adaptB: 0, tauAdapt: 50 }));
 });
 
-test('adaptation current follows the exact solution of the linear system', () => {
+test('adaptation current follows the exact solution of the linear system, step by step and in the lazy catch-up', () => {
   const tauAdapt = 150;
-  const net = new LIFNetwork(makeGraph(1, []), { adaptB: 1, tauAdapt });
   const { vRest, tauMem: tm, tauSyn: ts, dt } = SHIU_2024;
   const g0 = 4, u0 = 1.5, a0 = 3;
-  net.v[0] = vRest + u0; net.g[0] = g0; net.adapt[0] = a0; net._activate(0);
-  for (let k = 1; k <= 300; k++) {
-    net.step();
-    const t = k * dt, K = (g0 * ts) / (ts - tm), Ka = (a0 * tauAdapt) / (tauAdapt - tm);
-    const u = u0 * Math.exp(-t / tm) + K * (Math.exp(-t / ts) - Math.exp(-t / tm)) - Ka * (Math.exp(-t / tauAdapt) - Math.exp(-t / tm));
-    assert.ok(Math.abs(net.v[0] - vRest - u) < 1e-12, `step ${k}`);
-    assert.ok(Math.abs(net.adapt[0] - a0 * Math.exp(-t / tauAdapt)) < 1e-12);
+  for (const dense of [true, false]) {
+    const net = new LIFNetwork(makeGraph(1, []), { adaptB: 1, tauAdapt });
+    net.dense = dense;
+    net.v[0] = vRest + u0; net.g[0] = g0; net.adapt[0] = a0; net._activate(0);
+    for (let k = 1; k <= 300; k++) {
+      net.step();
+      const t = k * dt, K = (g0 * ts) / (ts - tm), Ka = (a0 * tauAdapt) / (tauAdapt - tm);
+      const u = u0 * Math.exp(-t / tm) + K * (Math.exp(-t / ts) - Math.exp(-t / tm)) - Ka * (Math.exp(-t / tauAdapt) - Math.exp(-t / tm));
+      assert.ok(Math.abs(net.potential(0) - vRest - u) < 1e-12, `${dense ? 'dense' : 'lazy'} step ${k}`);
+      if (dense) assert.ok(Math.abs(net.adapt[0] - a0 * Math.exp(-t / tauAdapt)) < 1e-12);
+    }
   }
 });
 
@@ -146,7 +153,7 @@ test('adaptation slows a driven neuron, but not the neuron with the Poisson inpu
   assert.ok(adapted[1] < 0.8 * plain[1], `neuron 1: ${adapted[1]} vs ${plain[1]}`);
 });
 
-test('sparse update gives the same spikes as updating every neuron, with adaptation on', () => {
+test('lazy update gives the same spikes as updating every neuron, with adaptation on', () => {
   const graph = randomGraph(400, 60, 7);
   const drive = Array.from({ length: 20 }, (_, i) => i * 7);
   const run = (dense) => {

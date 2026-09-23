@@ -1,0 +1,16 @@
+{
+ "graph": "malecns_min1",
+ "neurons": 165122,
+ "connections": 24975257,
+ "simulated_ms": 2000,
+ "params": {
+  "wSyn": 0.2
+ },
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "node": "v22.22.2",
+ "lazy_s_per_sim_s": 0.23615324549999997,
+ "dense_s_per_sim_s": 9.7519916275,
+ "lazy_mean_updated_per_step": 997.39785,
+ "spikes": 39489,
+ "identical_spikes": true
+}

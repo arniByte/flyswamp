@@ -30,7 +30,7 @@
 - **SessionStart hook** (`.claude/hooks/session-start.sh`) в веб-сессиях ставит `web/node_modules` и `pipeline/requirements.txt`. Этого хватает для `npm test`, игры и пайплайна.
 - **`scripts/setup.sh`** восстанавливает всё остальное на закреплённых коммитах: эталонные репозитории, `.venv-ref` (Brian2 2.9, numpy < 2.3), данные MaleCNS, графы `flywire630` и `malecns_min1`. Запускать перед работой с `validation/` или `pipeline/build_graph.py`. Отдельные шаги: `scripts/setup.sh refs venv`.
 - **Память 16 ГБ.** Таблицу весов MaleCNS (1 ГБ feather, 152 M строк) читать один раз, через `memory_map` и фильтры pyarrow. Эталон Brian2 занимает ~3 ГБ на воркер: не больше 3 воркеров и ничего тяжёлого параллельно, иначе OOM-killer убьёт прогон.
-- **Скорость.** Эталон Brian2: ~13 мин на 30 проб на 3 ядрах. Наш движок: FlyWire — 0,6× реального времени, целый MaleCNS — 9 с на секунду симуляции (`DENSE=1`).
+- **Скорость.** Эталон Brian2: ~13 мин на 30 проб на 3 ядрах. Наш движок с ленивым обновлением (по умолчанию): FlyWire — 0,09 с, целый MaleCNS — 0,24 с на секунду симуляции (`validation/speed.mjs`). `DENSE=1` — полный пошаговый режим для сверки, ~9 с на секунду.
 
 Ловушки, на которые уже наступили:
 - **`pkill -f шаблон`** убивает и собственный шелл, если шаблон есть в его командной строке. Используй `pgrep`, затем `kill PID`.
@@ -41,7 +41,7 @@
 ## Команды
 
 ```bash
-cd web && npm test                                   # 13 тестов
+cd web && npm test                                   # 17 тестов
 cd web && npm run dev                                # игра
 node scripts/experiment.mjs 15 4                     # headless-эксперименты прототипа
 node validation/run_lif.mjs .cache/graphs/flywire630 validation/reference/sugar_150hz.json out.json   # движок на эталонном стимуле

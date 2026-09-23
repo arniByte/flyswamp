@@ -8,9 +8,13 @@
 // As in Brian2, `(unless refractory)` makes v and g conditional writes: synaptic and Poisson input
 // reaching a neuron that is refractory, or that spiked this step, is dropped, not stored.
 //
-// Only neurons away from rest are updated. A neuron whose |v - v_0| and |g| both fall below
-// `restEpsilon` is put back exactly at rest; this is the one deviation from the reference and is
-// checked by test/lif.test.js (dense and sparse runs give identical spikes).
+// Lazy update. Between inputs a neuron follows the linear system in closed form, and without new input
+// v - v_0 never exceeds max(v - v_0, g) (v relaxes towards g while g decays; adaptation only lowers v).
+// So a neuron that is not refractory, not Poisson-driven and has both below the threshold gap cannot
+// spike until its next input: it leaves the active list, and when input arrives its skipped updates are
+// applied at once (powers of the per-step factors). Only neurons that can reach threshold are updated
+// every step. The results equal the step-by-step update up to rounding; test/lif.test.js checks that the
+// spikes are identical to the dense path, which updates every neuron every step.
 //
 // Optional extension, off by default so the default engine stays the exact port (EXTENSIONS):
 //   spike-frequency adaptation, adaptB > 0: an adaptation current a in voltage units,
@@ -30,7 +34,6 @@ export const SHIU_2024 = {
   delay: 1.8, // ms, Paul et al. 2015
   wSyn: 0.275, // mV per synapse, the model's one free parameter
   poissonScale: 250, // Poisson event = wSyn · poissonScale
-  restEpsilon: 1e-6, // mV, see header
 };
 
 // Extensions beyond Shiu et al. 2024; the defaults switch them off
@@ -51,7 +54,12 @@ export class LIFNetwork {
     this.sfa = p.adaptB > 0;
     if (this.sfa && Math.abs(p.tauAdapt - p.tauMem) < 1e-9) throw new Error('tauAdapt must differ from tauMem');
     this.E = Math.exp(-p.dt / p.tauAdapt);
-    this.D = (p.tauAdapt / (p.tauAdapt - p.tauMem)) * (this.E - this.A);
+    this.kB = p.tauSyn / (p.tauSyn - p.tauMem);
+    this.kD = p.tauAdapt / (p.tauAdapt - p.tauMem);
+    this.D = this.kD * (this.E - this.A);
+    // powers of the per-step factors for the closed-form catch-up of frozen neurons
+    this.powA = powers(this.A); this.powC = powers(this.C); this.powE = powers(this.E);
+    this.gap = p.vThresh - p.vRest - 1e-9; // below this, v - v_0 and g cannot bring a spike
     this.delaySteps = Math.round(p.delay / p.dt);
     this.refSteps = Math.round(p.tRefractory / p.dt);
     if (this.delaySteps < 1) throw new Error('delay must be at least one step');
@@ -59,6 +67,7 @@ export class LIFNetwork {
     this.g = new Float64Array(n);
     this.adapt = new Float64Array(n);
     this.lastSpike = new Int32Array(n);
+    this.tLast = new Int32Array(n); // last step whose state update the neuron has received
     this.refractory = new Int32Array(n);
     this.silenced = new Uint8Array(n);
     this.active = new Int32Array(n);
@@ -81,6 +90,7 @@ export class LIFNetwork {
     this.g.fill(0);
     this.adapt.fill(0);
     this.lastSpike.fill(-(1 << 30));
+    this.tLast.fill(-1);
     this.refractory.fill(this.refSteps);
     for (const i of this.poisson.ids) this.refractory[i] = 0;
     this.inActive.fill(0);
@@ -110,7 +120,29 @@ export class LIFNetwork {
   }
 
   _activate(i) {
-    if (!this.inActive[i]) { this.inActive[i] = 1; this.active[this.nActive++] = i; }
+    if (!this.inActive[i]) { this._advance(i, this.stepIndex - 1); this.inActive[i] = 1; this.active[this.nActive++] = i; }
+  }
+
+  // Applies the state updates a frozen neuron skipped, up to and including step s.
+  _advance(i, s) {
+    const k = s - this.tLast[i];
+    this.tLast[i] = s;
+    if (k <= 0) return;
+    const Ak = pow(this.powA, this.A, k), Ck = pow(this.powC, this.C, k), u = this.v[i] - this.p.vRest, gi = this.g[i];
+    let un = u * Ak + gi * this.kB * (Ck - Ak);
+    if (this.sfa) { const Ek = pow(this.powE, this.E, k); un -= this.adapt[i] * this.kD * (Ek - Ak); this.adapt[i] *= Ek; }
+    this.v[i] = this.p.vRest + un;
+    this.g[i] = gi * Ck;
+  }
+
+  // Membrane potential of neuron i now, without changing its state (frozen neurons are behind).
+  potential(i) {
+    const k = this.stepIndex - 1 - this.tLast[i];
+    if (k <= 0 || this.inActive[i]) return this.v[i];
+    const Ak = pow(this.powA, this.A, k), Ck = pow(this.powC, this.C, k);
+    let un = (this.v[i] - this.p.vRest) * Ak + this.g[i] * this.kB * (Ck - Ak);
+    if (this.sfa) un -= this.adapt[i] * this.kD * (pow(this.powE, this.E, k) - Ak);
+    return this.p.vRest + un;
   }
 
   run(ms) {
@@ -119,8 +151,9 @@ export class LIFNetwork {
   }
 
   step() {
-    const { v, g, adapt, lastSpike, refractory, active, inActive, pinned, spikes, A, B, C, D, E, sfa } = this;
-    const { vRest, vReset, vThresh, restEpsilon, wSyn, adaptB } = this.p;
+    const { v, g, adapt, lastSpike, tLast, refractory, active, inActive, pinned, spikes, A, B, C, D, E, sfa, gap } = this;
+    const { vRest, vReset, vThresh, wSyn, adaptB } = this.p;
+    const lazy = !this.dense;
     const s = this.stepIndex;
     if (this.dense && this.nActive < this.n) for (let i = 0; i < this.n; i++) this._activate(i);
 
@@ -135,10 +168,10 @@ export class LIFNetwork {
         if (v[i] > vThresh) { spikes[ns++] = i; lastSpike[i] = s; }
       }
       if (sfa) adapt[i] *= E;
-      if (!this.dense && !pinned[i] && Math.abs(v[i] - vRest) < restEpsilon && Math.abs(g[i]) < restEpsilon &&
-          (!sfa || Math.abs(adapt[i]) < restEpsilon)) {
-        v[i] = vRest; g[i] = 0; adapt[i] = 0; inActive[i] = 0;
-      } else active[keep++] = i;
+      tLast[i] = s;
+      // freeze only if the next steps are not refractory, so the closed-form catch-up applies to them
+      if (lazy && !pinned[i] && s + 1 - lastSpike[i] >= refractory[i] && v[i] - vRest < gap && g[i] < gap) inActive[i] = 0;
+      else active[keep++] = i;
     }
     this.nActive = keep;
 
@@ -151,8 +184,8 @@ export class LIFNetwork {
       for (let e = indptr[pre], end = indptr[pre + 1]; e < end; e++) {
         const j = indices[e], since = s - lastSpike[j];
         if (since === 0 || since < refractory[j]) continue;
+        if (!inActive[j]) { this._advance(j, s); inActive[j] = 1; active[this.nActive++] = j; }
         g[j] += weight[e] * wSyn;
-        if (!inActive[j]) { inActive[j] = 1; active[this.nActive++] = j; }
       }
     }
     if (slot.ids.length < ns) slot.ids = new Int32Array(Math.max(ns, slot.ids.length * 2));
@@ -177,4 +210,17 @@ export class LIFNetwork {
     this.stepIndex = s + 1;
     return ns;
   }
+}
+
+const POW_STEPS = 1 << 15;
+
+function powers(x) {
+  const t = new Float64Array(POW_STEPS);
+  t[0] = 1;
+  for (let k = 1; k < POW_STEPS; k++) t[k] = t[k - 1] * x;
+  return t;
+}
+
+function pow(table, x, k) {
+  return k < POW_STEPS ? table[k] : Math.pow(x, k);
 }

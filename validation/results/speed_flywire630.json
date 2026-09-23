@@ -1,0 +1,14 @@
+{
+ "graph": "flywire630",
+ "neurons": 127400,
+ "connections": 14687178,
+ "simulated_ms": 2000,
+ "params": {},
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "node": "v22.22.2",
+ "lazy_s_per_sim_s": 0.09294099850000001,
+ "dense_s_per_sim_s": 7.7130818185,
+ "lazy_mean_updated_per_step": 341.67625,
+ "spikes": 27531,
+ "identical_spikes": true
+}
