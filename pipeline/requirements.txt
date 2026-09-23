@@ -1,0 +1,9 @@
+numpy
+pandas
+pyarrow
+scipy
+scikit-image
+tensorstore
+trimesh
+fast-simplification
+mujoco

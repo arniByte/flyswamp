@@ -1,0 +1,337 @@
+{
+ "graph": "malecns_min1",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.22,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "stimulus_off_after_bin": 10,
+ "runs": [
+  {
+   "seed": 1,
+   "spikes_per_100ms": [
+    1143,
+    2549,
+    2683,
+    2332,
+    2237,
+    2186,
+    2042,
+    2115,
+    2126,
+    1528,
+    1416,
+    56,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 709
+  },
+  {
+   "seed": 2,
+   "spikes_per_100ms": [
+    1556,
+    2485,
+    2195,
+    3008,
+    2539,
+    2277,
+    2599,
+    1997,
+    2365,
+    3098,
+    1772,
+    867,
+    653,
+    567,
+    564,
+    564,
+    570,
+    551,
+    567,
+    562
+   ],
+   "quiet_at_end": false,
+   "neurons_active_after_offset": 745
+  },
+  {
+   "seed": 3,
+   "spikes_per_100ms": [
+    1924,
+    2533,
+    2599,
+    2278,
+    1879,
+    2192,
+    2601,
+    2441,
+    1507,
+    2944,
+    526,
+    153,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 262
+  },
+  {
+   "seed": 4,
+   "spikes_per_100ms": [
+    1398,
+    1848,
+    2600,
+    2181,
+    2641,
+    2894,
+    2118,
+    2148,
+    2225,
+    2820,
+    356,
+    52,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 121
+  },
+  {
+   "seed": 5,
+   "spikes_per_100ms": [
+    1909,
+    2604,
+    2322,
+    1915,
+    1816,
+    2481,
+    2230,
+    2430,
+    2692,
+    2880,
+    1148,
+    158,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 636
+  }
+ ],
+ "passes": false,
+ "top_after_offset": [
+  {
+   "id": "13317",
+   "instance": "DNg33_L",
+   "nt": "acetylcholine",
+   "spikes": 179
+  },
+  {
+   "id": "13442",
+   "instance": "DNg33_R",
+   "nt": "acetylcholine",
+   "spikes": 178
+  },
+  {
+   "id": "15514",
+   "instance": "AN27X013_R",
+   "nt": null,
+   "spikes": 177
+  },
+  {
+   "id": "10150",
+   "instance": "AN27X013_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "12398",
+   "instance": "AN27X013_L",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "20831",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "58394",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "235061",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "511823",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "511828",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "523675",
+   "instance": "AN27X013_L",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "524761",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "549229",
+   "instance": "EA27X006_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "802955",
+   "instance": "EA27X006_L",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "808183",
+   "instance": "IN09A005_L",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "936810",
+   "instance": "IN09A005_R",
+   "nt": null,
+   "spikes": 119
+  },
+  {
+   "id": "801998",
+   "instance": "DLMn c-f_R",
+   "nt": null,
+   "spikes": 91
+  },
+  {
+   "id": "805244",
+   "instance": "IN19B040_L",
+   "nt": "acetylcholine",
+   "spikes": 90
+  },
+  {
+   "id": "805489",
+   "instance": "IN19B040_R",
+   "nt": "acetylcholine",
+   "spikes": 90
+  },
+  {
+   "id": "70651",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "spikes": 89
+  },
+  {
+   "id": "174420",
+   "instance": "AN09A005_R",
+   "nt": null,
+   "spikes": 89
+  },
+  {
+   "id": "195264",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "spikes": 89
+  },
+  {
+   "id": "574357",
+   "instance": "AN09A005_L",
+   "nt": null,
+   "spikes": 89
+  },
+  {
+   "id": "805227",
+   "instance": "IN19B040_L",
+   "nt": "acetylcholine",
+   "spikes": 89
+  },
+  {
+   "id": "805532",
+   "instance": "IN19B040_R",
+   "nt": "acetylcholine",
+   "spikes": 89
+  },
+  {
+   "id": "813076",
+   "instance": "IN09A005_L",
+   "nt": null,
+   "spikes": 89
+  },
+  {
+   "id": "813104",
+   "instance": "IN09A005_R",
+   "nt": null,
+   "spikes": 89
+  },
+  {
+   "id": "801895",
+   "instance": "DLMn c-f_L",
+   "nt": null,
+   "spikes": 86
+  },
+  {
+   "id": "801970",
+   "instance": "DLMn a, b_L",
+   "nt": null,
+   "spikes": 86
+  },
+  {
+   "id": "1050014552",
+   "instance": "DLMn c-f_R",
+   "nt": null,
+   "spikes": 86
+  }
+ ]
+}

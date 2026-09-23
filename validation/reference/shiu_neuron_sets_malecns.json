@@ -1,0 +1,1296 @@
+{
+ "method": "Carry the Shiu et al. 2024 experiment sets from FlyWire 783 to MaleCNS v1.0 by connectivity.",
+ "min_cosine": 0.5,
+ "min_margin": 0.05,
+ "profile_keys": 790,
+ "sets": {
+  "neu_sugar": [
+   {
+    "bodyId": 33339,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.877,
+    "margin": 0.284,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 71254,
+    "type": "LB3b",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.692,
+    "margin": 0.252,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 72047,
+    "type": "LB4b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.819,
+    "margin": 0.331,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 72059,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.868,
+    "margin": 0.286,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 78240,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.909,
+    "margin": 0.372,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 85806,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.922,
+    "margin": 0.296,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 92440,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.893,
+    "margin": 0.266,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 93290,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.784,
+    "margin": 0.25,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 101087,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.929,
+    "margin": 0.328,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 120303,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.926,
+    "margin": 0.302,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 122806,
+    "type": "LB4b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.836,
+    "margin": 0.3,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 125405,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.91,
+    "margin": 0.298,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 128129,
+    "type": "LB4b",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.739,
+    "margin": 0.25,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 129171,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.898,
+    "margin": 0.294,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 142827,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.915,
+    "margin": 0.322,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 152400,
+    "type": "LB4b",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.794,
+    "margin": 0.323,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 158537,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.906,
+    "margin": 0.513,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 163597,
+    "type": "LB3b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.857,
+    "margin": 0.363,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 178321,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.866,
+    "margin": 0.318,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 183084,
+    "type": "LB3b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.839,
+    "margin": 0.284,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 187492,
+    "type": "LB3b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.844,
+    "margin": 0.287,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 199196,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.839,
+    "margin": 0.285,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 204726,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.874,
+    "margin": 0.427,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 209155,
+    "type": "LB3b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.795,
+    "margin": 0.315,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 215556,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.904,
+    "margin": 0.325,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 236475,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.731,
+    "margin": 0.13,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 261450,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.867,
+    "margin": 0.239,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 262567,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.647,
+    "margin": 0.052,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 312102,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.587,
+    "margin": 0.074,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 362381,
+    "type": null,
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.538,
+    "margin": 0.197,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 512551,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.895,
+    "margin": 0.295,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 512552,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.781,
+    "margin": 0.4,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 516218,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.794,
+    "margin": 0.228,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 531237,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.929,
+    "margin": 0.292,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 538117,
+    "type": "LB4b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.865,
+    "margin": 0.294,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 916953,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.765,
+    "margin": 0.26,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 923024,
+    "type": "LB4b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.669,
+    "margin": 0.105,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 933317,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.877,
+    "margin": 0.317,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 942168,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.837,
+    "margin": 0.374,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 957530,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.866,
+    "margin": 0.336,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 147619274,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.687,
+    "margin": 0.146,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 158893964,
+    "type": "LB3c",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.881,
+    "margin": 0.309,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 213650853,
+    "type": "LB3b",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.62,
+    "margin": 0.185,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 285495498,
+    "type": "LB2d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.619,
+    "margin": 0.159,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 338530985,
+    "type": "LB2d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.628,
+    "margin": 0.075,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 422510463,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_sugar",
+    "cosine": 0.836,
+    "margin": 0.284,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 581710868,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.693,
+    "margin": 0.108,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 766547228,
+    "type": "LB3b",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.507,
+    "margin": 0.193,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 816904261,
+    "type": "LB4b",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.727,
+    "margin": 0.2,
+    "assigned": "neu_sugar"
+   },
+   {
+    "bodyId": 884238775,
+    "type": "LB4b",
+    "side": "L",
+    "best": "neu_sugar",
+    "cosine": 0.665,
+    "margin": 0.172,
+    "assigned": "neu_sugar"
+   }
+  ],
+  "neu_water": [
+   {
+    "bodyId": 136183,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.912,
+    "margin": 0.409,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 140015,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.777,
+    "margin": 0.062,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 140619,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.91,
+    "margin": 0.45,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 140851,
+    "type": "LB3d",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.628,
+    "margin": 0.078,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 141663,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.925,
+    "margin": 0.426,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 159772,
+    "type": "LB3b",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.82,
+    "margin": 0.19,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 160435,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.898,
+    "margin": 0.345,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 166190,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.874,
+    "margin": 0.422,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 167663,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.83,
+    "margin": 0.432,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 178913,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.753,
+    "margin": 0.49,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 183061,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.73,
+    "margin": 0.49,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 187776,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.879,
+    "margin": 0.421,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 199308,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.88,
+    "margin": 0.347,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 202888,
+    "type": "LB3c",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.78,
+    "margin": 0.061,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 203234,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.699,
+    "margin": 0.503,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 210344,
+    "type": "LB3d",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.67,
+    "margin": 0.101,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 272263,
+    "type": "LB3b",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.763,
+    "margin": 0.124,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 374701,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.764,
+    "margin": 0.228,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 518542,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.877,
+    "margin": 0.348,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 557646,
+    "type": "LB3b",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.837,
+    "margin": 0.293,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 388541892,
+    "type": "LB3a",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.907,
+    "margin": 0.332,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 456838775,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.876,
+    "margin": 0.266,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 553738738,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.833,
+    "margin": 0.38,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 786482749,
+    "type": "LB3a",
+    "side": "L",
+    "best": "neu_water",
+    "cosine": 0.573,
+    "margin": 0.196,
+    "assigned": "neu_water"
+   },
+   {
+    "bodyId": 850920533,
+    "type": "LB2d",
+    "side": "R",
+    "best": "neu_water",
+    "cosine": 0.618,
+    "margin": 0.123,
+    "assigned": "neu_water"
+   }
+  ],
+  "neu_bitter": [
+   {
+    "bodyId": 54104,
+    "type": "LB1d",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.857,
+    "margin": 0.431,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 59198,
+    "type": "LgAG5",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.561,
+    "margin": 0.252,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 60056,
+    "type": "LgAG5",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.615,
+    "margin": 0.304,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 61311,
+    "type": "LgAG5",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.579,
+    "margin": 0.303,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 81741,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.741,
+    "margin": 0.285,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 107241,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.669,
+    "margin": 0.263,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 115666,
+    "type": "LB1a",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.828,
+    "margin": 0.499,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 125111,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.778,
+    "margin": 0.266,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 139178,
+    "type": "LB1d",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.87,
+    "margin": 0.386,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 144334,
+    "type": "LB1a",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.79,
+    "margin": 0.547,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 154544,
+    "type": "LB1a",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.866,
+    "margin": 0.496,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 163395,
+    "type": "LB1a",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.727,
+    "margin": 0.493,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 168492,
+    "type": "LB1a",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.729,
+    "margin": 0.513,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 173462,
+    "type": "LB1a",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.764,
+    "margin": 0.505,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 208885,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.721,
+    "margin": 0.259,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 256844,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.679,
+    "margin": 0.292,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 375038,
+    "type": "LB1a",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.709,
+    "margin": 0.484,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 511882,
+    "type": "LB1b",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.714,
+    "margin": 0.206,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 514546,
+    "type": "LB1b",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.731,
+    "margin": 0.233,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 514547,
+    "type": "LB1b",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.742,
+    "margin": 0.2,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 516654,
+    "type": "LgAG5",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.518,
+    "margin": 0.234,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 517255,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.755,
+    "margin": 0.231,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 518112,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.713,
+    "margin": 0.266,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522746,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.743,
+    "margin": 0.229,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522752,
+    "type": "LB1b",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.718,
+    "margin": 0.221,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522753,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.735,
+    "margin": 0.237,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522754,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.674,
+    "margin": 0.282,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522761,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.687,
+    "margin": 0.295,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522762,
+    "type": "LB1b",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.724,
+    "margin": 0.213,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 522841,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.711,
+    "margin": 0.272,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 533618,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.727,
+    "margin": 0.217,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 549024,
+    "type": "LB1d",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.833,
+    "margin": 0.464,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 556797,
+    "type": "LB1a",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.806,
+    "margin": 0.525,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 557937,
+    "type": "LB1a",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.685,
+    "margin": 0.535,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 912379,
+    "type": "LB1b",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.755,
+    "margin": 0.243,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 140334446,
+    "type": "LB1a",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.752,
+    "margin": 0.524,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 304136793,
+    "type": "LB1c",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.624,
+    "margin": 0.252,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 324178811,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.744,
+    "margin": 0.262,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 602736959,
+    "type": "LB1d",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.712,
+    "margin": 0.358,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 772366874,
+    "type": "LB1c",
+    "side": "L",
+    "best": "neu_bitter",
+    "cosine": 0.721,
+    "margin": 0.331,
+    "assigned": "neu_bitter"
+   },
+   {
+    "bodyId": 911389008,
+    "type": "LB1d",
+    "side": "R",
+    "best": "neu_bitter",
+    "cosine": 0.777,
+    "margin": 0.448,
+    "assigned": "neu_bitter"
+   }
+  ],
+  "neu_ir94e": [
+   {
+    "bodyId": 42028,
+    "type": "PhG15",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.53,
+    "margin": 0.173,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 44816,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.796,
+    "margin": 0.256,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 64399,
+    "type": "LgAG3",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.549,
+    "margin": 0.095,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 64607,
+    "type": "LgAG3",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.521,
+    "margin": 0.062,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 111660,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.864,
+    "margin": 0.347,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 137497,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.846,
+    "margin": 0.318,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 154359,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.795,
+    "margin": 0.341,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 175572,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.804,
+    "margin": 0.362,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 200001,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.827,
+    "margin": 0.354,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 209688,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.857,
+    "margin": 0.368,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 232730,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.74,
+    "margin": 0.159,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 517257,
+    "type": "PhG13",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.502,
+    "margin": 0.128,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 529229,
+    "type": "PhG15",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.503,
+    "margin": 0.176,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 534361,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.873,
+    "margin": 0.249,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 908747,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.84,
+    "margin": 0.299,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 919429,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.633,
+    "margin": 0.44,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 214700177,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.774,
+    "margin": 0.218,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 418840426,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.811,
+    "margin": 0.426,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 491986845,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.752,
+    "margin": 0.417,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 551057545,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.749,
+    "margin": 0.242,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 633272971,
+    "type": "LB1e",
+    "side": "L",
+    "best": "neu_ir94e",
+    "cosine": 0.581,
+    "margin": 0.18,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 792429427,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.755,
+    "margin": 0.358,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 912111327,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.869,
+    "margin": 0.31,
+    "assigned": "neu_ir94e"
+   },
+   {
+    "bodyId": 947005552,
+    "type": "LB1e",
+    "side": "R",
+    "best": "neu_ir94e",
+    "cosine": 0.782,
+    "margin": 0.335,
+    "assigned": "neu_ir94e"
+   }
+  ],
+  "ids_mn9": [
+   {
+    "bodyId": 10331,
+    "type": "MN9",
+    "side": null,
+    "best": "ids_mn9",
+    "cosine": 0.967,
+    "margin": 0.966,
+    "assigned": "ids_mn9"
+   },
+   {
+    "bodyId": 16949,
+    "type": "MN9",
+    "side": null,
+    "best": "ids_mn9",
+    "cosine": 0.783,
+    "margin": 0.771,
+    "assigned": "ids_mn9"
+   }
+  ]
+ }
+}

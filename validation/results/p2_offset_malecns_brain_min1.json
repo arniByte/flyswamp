@@ -1,0 +1,224 @@
+{
+ "graph": "malecns_brain_min1",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "spikes_per_100ms": [
+  1382,
+  2970,
+  23041,
+  85869,
+  86395,
+  86852,
+  86818,
+  86572,
+  86132,
+  86840,
+  85036,
+  84072,
+  84437,
+  84224,
+  84916,
+  84354,
+  85049,
+  84396,
+  84910,
+  84410
+ ],
+ "stimulus_off_after_bin": 10,
+ "last_bin_spikes": 84410,
+ "passes": false,
+ "neurons_active_after_offset": 11147,
+ "top_after_offset": [
+  {
+   "id": "10540",
+   "instance": "APL_R",
+   "nt": "gaba",
+   "spikes": 401
+  },
+  {
+   "id": "10977",
+   "instance": "APL_L",
+   "nt": "gaba",
+   "spikes": 400
+  },
+  {
+   "id": "11734",
+   "instance": "DPM_L",
+   "nt": "dopamine",
+   "spikes": 381
+  },
+  {
+   "id": "12569",
+   "instance": "DPM_R",
+   "nt": "dopamine",
+   "spikes": 378
+  },
+  {
+   "id": "11402",
+   "instance": "MBON11(y1pedc>a/B)_R",
+   "nt": "gaba",
+   "spikes": 359
+  },
+  {
+   "id": "10495",
+   "instance": "MBON05(y4>y1y2)_R",
+   "nt": "glutamate",
+   "spikes": 355
+  },
+  {
+   "id": "519371",
+   "instance": "MBON05(y4>y1y2)_L",
+   "nt": "glutamate",
+   "spikes": 350
+  },
+  {
+   "id": "10013",
+   "instance": "MBON01(y5B'2a)_R",
+   "nt": "glutamate",
+   "spikes": 347
+  },
+  {
+   "id": "520151",
+   "instance": "MBON01(y5B'2a)_L",
+   "nt": "glutamate",
+   "spikes": 347
+  },
+  {
+   "id": "523060",
+   "instance": "MBON09(y3B'1)_R",
+   "nt": "gaba",
+   "spikes": 347
+  },
+  {
+   "id": "18713",
+   "instance": "MBON09(y3B'1)_L",
+   "nt": "gaba",
+   "spikes": 346
+  },
+  {
+   "id": "19267",
+   "instance": "MBON09(y3B'1)_L",
+   "nt": "gaba",
+   "spikes": 345
+  },
+  {
+   "id": "10704",
+   "instance": "MBON11(y1pedc>a/B)_L",
+   "nt": "gaba",
+   "spikes": 341
+  },
+  {
+   "id": "21242",
+   "instance": "MBON09(y3B'1)_R",
+   "nt": "gaba",
+   "spikes": 337
+  },
+  {
+   "id": "12690",
+   "instance": "MBON06(B1>a)_L",
+   "nt": "glutamate",
+   "spikes": 334
+  },
+  {
+   "id": "11722",
+   "instance": "v2LN30_R",
+   "nt": null,
+   "spikes": 333
+  },
+  {
+   "id": "521526",
+   "instance": "MBON03(B'2mp)_R",
+   "nt": "glutamate",
+   "spikes": 333
+  },
+  {
+   "id": "11546",
+   "instance": "v2LN30_L",
+   "nt": null,
+   "spikes": 332
+  },
+  {
+   "id": "10463",
+   "instance": "lLN1_bc_L",
+   "nt": "acetylcholine",
+   "spikes": 327
+  },
+  {
+   "id": "10929",
+   "instance": "lLN2T_a(Tortuous)_R",
+   "nt": "acetylcholine",
+   "spikes": 327
+  },
+  {
+   "id": "10942",
+   "instance": "lLN2T_a(Tortuous)_R",
+   "nt": "acetylcholine",
+   "spikes": 326
+  },
+  {
+   "id": "11292",
+   "instance": "lLN1_bc_L",
+   "nt": "acetylcholine",
+   "spikes": 326
+  },
+  {
+   "id": "10079",
+   "instance": "MBON06(B1>a)_R",
+   "nt": "glutamate",
+   "spikes": 325
+  },
+  {
+   "id": "10905",
+   "instance": "lLN1_bc_L",
+   "nt": "acetylcholine",
+   "spikes": 325
+  },
+  {
+   "id": "11262",
+   "instance": "lLN1_bc_L",
+   "nt": "acetylcholine",
+   "spikes": 325
+  },
+  {
+   "id": "11900",
+   "instance": "PPL101(y1ped)_L",
+   "nt": "dopamine",
+   "spikes": 325
+  },
+  {
+   "id": "529429",
+   "instance": "lLN1_bc_L",
+   "nt": "acetylcholine",
+   "spikes": 325
+  },
+  {
+   "id": "11327",
+   "instance": "PPL101(y1ped)_R",
+   "nt": "dopamine",
+   "spikes": 324
+  },
+  {
+   "id": "11400",
+   "instance": "lLN1_bc_L",
+   "nt": "acetylcholine",
+   "spikes": 324
+  },
+  {
+   "id": "14182",
+   "instance": "PPL103(y2a'1)_R",
+   "nt": "dopamine",
+   "spikes": 324
+  }
+ ]
+}

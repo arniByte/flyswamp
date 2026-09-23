@@ -1,0 +1,8 @@
+# Environment of the Brian2 reference runs (validation/shiu_reference.py); Brian2 2.9 needs numpy < 2.3
+Brian2==2.9.0
+numpy==2.2.6
+pandas==3.0.6
+pyarrow==25.0.1
+joblib==1.6.0
+scipy==1.17.1
+sympy==1.14.0

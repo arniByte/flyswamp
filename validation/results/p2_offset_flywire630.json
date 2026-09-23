@@ -1,0 +1,283 @@
+{
+ "graph": "flywire630",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.275,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "stimulus_off_after_bin": 10,
+ "runs": [
+  {
+   "seed": 1,
+   "spikes_per_100ms": [
+    1147,
+    1481,
+    1209,
+    1169,
+    1424,
+    1376,
+    1382,
+    1133,
+    1427,
+    1305,
+    179,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 134
+  },
+  {
+   "seed": 2,
+   "spikes_per_100ms": [
+    1280,
+    1180,
+    1526,
+    1406,
+    1345,
+    1290,
+    1413,
+    1499,
+    1114,
+    1350,
+    83,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 76
+  },
+  {
+   "seed": 3,
+   "spikes_per_100ms": [
+    1342,
+    1358,
+    1436,
+    1364,
+    1417,
+    1253,
+    1201,
+    1372,
+    1412,
+    1234,
+    225,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 179
+  }
+ ],
+ "passes": true,
+ "top_after_offset": [
+  {
+   "id": "720575940615041430",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940618165019",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940623211725",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940629778554",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940630868793",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940632118156",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940660219265",
+   "instance": null,
+   "nt": null,
+   "spikes": 3
+  },
+  {
+   "id": "720575940607272649",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940610054980",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940612036837",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940615671106",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940616466260",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940617552057",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940619048827",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940619877396",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940620274085",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940620335269",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940621261296",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940621399899",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940621586854",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940623352063",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940625045180",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940625874992",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940625875504",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940626278974",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940627410451",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940628598121",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940628648809",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940629810748",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  },
+  {
+   "id": "720575940630683385",
+   "instance": null,
+   "nt": null,
+   "spikes": 2
+  }
+ ]
+}

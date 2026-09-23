@@ -1,0 +1,337 @@
+{
+ "graph": "malecns_min1",
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.2,
+  "poissonScale": 250,
+  "restEpsilon": 0.000001
+ },
+ "stimulus_off_after_bin": 10,
+ "runs": [
+  {
+   "seed": 1,
+   "spikes_per_100ms": [
+    884,
+    1724,
+    2206,
+    1700,
+    2117,
+    1962,
+    1947,
+    1792,
+    2211,
+    1989,
+    125,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 66
+  },
+  {
+   "seed": 2,
+   "spikes_per_100ms": [
+    1237,
+    1634,
+    1555,
+    1743,
+    1157,
+    1550,
+    1346,
+    1340,
+    1106,
+    2083,
+    427,
+    263,
+    7,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 197
+  },
+  {
+   "seed": 3,
+   "spikes_per_100ms": [
+    1256,
+    2095,
+    1341,
+    2131,
+    2303,
+    2060,
+    2023,
+    1880,
+    1910,
+    2018,
+    578,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 399
+  },
+  {
+   "seed": 4,
+   "spikes_per_100ms": [
+    1102,
+    1562,
+    1727,
+    2037,
+    2060,
+    2046,
+    1947,
+    1941,
+    2417,
+    1822,
+    482,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 319
+  },
+  {
+   "seed": 5,
+   "spikes_per_100ms": [
+    1332,
+    2139,
+    1380,
+    1667,
+    1399,
+    1851,
+    1566,
+    1386,
+    1572,
+    2030,
+    717,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "quiet_at_end": true,
+   "neurons_active_after_offset": 449
+  }
+ ],
+ "passes": true,
+ "top_after_offset": [
+  {
+   "id": "800503",
+   "instance": "IN08B004_L",
+   "nt": "acetylcholine",
+   "spikes": 9
+  },
+  {
+   "id": "801359",
+   "instance": "IN10B013_L",
+   "nt": "acetylcholine",
+   "spikes": 8
+  },
+  {
+   "id": "802138",
+   "instance": "IN10B013_R",
+   "nt": "acetylcholine",
+   "spikes": 7
+  },
+  {
+   "id": "903855",
+   "instance": "IN08B004_R",
+   "nt": "acetylcholine",
+   "spikes": 7
+  },
+  {
+   "id": "913931",
+   "instance": "IN10B003_R",
+   "nt": "acetylcholine",
+   "spikes": 7
+  },
+  {
+   "id": "10205",
+   "instance": "GNG003_M",
+   "nt": "gaba",
+   "spikes": 6
+  },
+  {
+   "id": "800382",
+   "instance": "IN10B003_L",
+   "nt": "acetylcholine",
+   "spikes": 6
+  },
+  {
+   "id": "16833",
+   "instance": "EA00B007_M",
+   "nt": null,
+   "spikes": 5
+  },
+  {
+   "id": "800827",
+   "instance": "IN12B003_R",
+   "nt": "gaba",
+   "spikes": 5
+  },
+  {
+   "id": "39880",
+   "instance": "IN27X001_L",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "519946",
+   "instance": "PS279_L",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "10676",
+   "instance": "DNg49_L",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "514489",
+   "instance": "DNg49(hb1405978277)_R",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "800041",
+   "instance": "IN27X001_R",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "800062",
+   "instance": "IN06B001_L",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "800156",
+   "instance": "IN13B011_R",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "800345",
+   "instance": "IN16B016_R",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "800769",
+   "instance": "IN19A017_L",
+   "nt": "acetylcholine",
+   "spikes": 4
+  },
+  {
+   "id": "800977",
+   "instance": "IN16B016_L",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "801050",
+   "instance": "IN13B006_R",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "801296",
+   "instance": "IN16B016_R",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "902501",
+   "instance": "IN12B003_L",
+   "nt": "gaba",
+   "spikes": 4
+  },
+  {
+   "id": "902667",
+   "instance": "IN16B016_L",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "911639",
+   "instance": "IN21A002_L",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "800589",
+   "instance": "Tr flexor MN_L",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "802232",
+   "instance": "Tr flexor MN_L",
+   "nt": "glutamate",
+   "spikes": 4
+  },
+  {
+   "id": "19612",
+   "instance": "ANXXX030_L",
+   "nt": "acetylcholine",
+   "spikes": 3
+  },
+  {
+   "id": "21527",
+   "instance": "AN19B010_L",
+   "nt": "acetylcholine",
+   "spikes": 3
+  },
+  {
+   "id": "11142",
+   "instance": "PS059_R",
+   "nt": "gaba",
+   "spikes": 3
+  },
+  {
+   "id": "11495",
+   "instance": "PS059_R",
+   "nt": "gaba",
+   "spikes": 3
+  }
+ ]
+}
