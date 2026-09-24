@@ -10,11 +10,15 @@ const STATE_TEXT = {
   escape: ['побег · DNp01', '#eaf6ff'],
 };
 const $ = (id) => document.getElementById(id);
+const plural = (n, one, few, many) => {
+  const d = n % 10, h = n % 100;
+  return d === 1 && h !== 11 ? one : d >= 2 && d <= 4 && (h < 12 || h > 14) ? few : many;
+};
 
 export class Hud {
   constructor() {
     this.el = {
-      state: $('state-text'), dot: $('state-dot'), clock: $('clock'), energy: $('energy-bar'), counts: $('spec-counts'),
+      state: $('state-text'), dot: $('state-dot'), clock: $('clock'), energy: $('energy-bar'), counts: $('spec-counts'), cns: $('cns-status'),
       kc: $('kc-pct'), kcBar: $('kc-bar'), app: $('mbon-app'), appBar: $('app-bar'), av: $('mbon-av'), avBar: $('av-bar'),
       pam: $('pam'), pamBar: $('pam-bar'), ppl: $('ppl'), pplBar: $('ppl-bar'), drive: $('drive'),
       eaten: $('c-eaten'), trapped: $('c-trapped'), strikes: $('c-strikes'), log: $('log'), chart: $('chart'),
@@ -37,6 +41,32 @@ export class Hud {
     const syn = Object.values(circuit.edges).reduce((s, e) => { for (let i = 2; i < e.length; i += 3) s += e[i]; return s; }, 0);
     this.el.counts.textContent = `в симуляции: ${n.toLocaleString('ru-RU')} нейронов · ${(syn / 1e6).toLocaleString('ru-RU', { maximumFractionDigits: 1 })} млн синапсов`;
     $('loading').classList.add('done');
+  }
+
+  cnsStatus(text) {
+    if (text === this._cnsText) return;
+    this._cnsText = text;
+    this.el.cns.hidden = !text;
+    this.el.cns.textContent = text ?? '';
+    // the label grew or shrank: keep the left panel just below it
+    const bottom = $('specimen').getBoundingClientRect().bottom;
+    document.documentElement.style.setProperty('--left-top', `${Math.max(176, Math.ceil(bottom) + 8)}px`);
+  }
+
+  // the whole CNS is running: the counts line now describes it, the rate-model panel is marked as a prototype
+  cnsReady(header) {
+    const n = header.n;
+    this.el.counts.textContent = `в симуляции: ${n.toLocaleString('ru-RU')} ${plural(n, 'нейрон', 'нейрона', 'нейронов')} · ${(header.nnz / 1e6).toLocaleString('ru-RU', { maximumFractionDigits: 1 })} млн связей`;
+    this.el.counts.title = `MaleCNS v1.0, связи от ${header.graph.endsWith('min2') ? 2 : 1} синапсов; LIF Shiu et al. 2024, w_syn ${header.engine.wSyn} mV (гейт P2)`;
+    document.body.classList.add('cns-live');
+  }
+
+  cnsUpdate(cns, speed) {
+    const slow = cns.factor < 0.8 * speed ? ` · отстаёт: ×${cns.factor.toFixed(1)} из ×${speed}` : '';
+    const taste = cns.tasting ? ' · вкус → GRN' : '';
+    this.cnsStatus(cns.status === 'работает'
+      ? `спайки: ${Math.round(cns.spikesPerSec).toLocaleString('ru-RU')}/с · MN9 хоботок ${cns.mn9Hz.toFixed(0)} Hz${taste}${slow}`
+      : `спайковый CNS: ${cns.status}`);
   }
 
   bind(handlers) {

@@ -4,7 +4,8 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { loadAssets } from './data.js';
+import { get, loadAssets } from './data.js';
+import { loadCNS } from './sim/cns.js';
 import { World, DT } from './sim/world.js';
 import { makeActivityMapper } from './sim/activity.js';
 import { Fly } from './render/fly.js';
@@ -164,11 +165,22 @@ canvas.addEventListener('pointermove', (e) => {
   ray.setFromCamera(ndc, camera);
   ray.layers.set(BRAIN_LAYER);
   const hit = ray.intersectObject(brain.somaPoints)[0];
-  if (!hit) return hud.tooltip(null);
+  if (!hit) return hoverLive(e);
   const i = hit.index, n = A.circuit.neurons;
   const g = brain.groups[brain.groupIndex[i]].name;
   hud.tooltip(`<b>${n.instance[i] || A.circuit.types[n.type[i]]}</b><br>${g} · ${A.circuit.nts[n.nt[i]]}<br>bodyId ${n.bodyId[i]} · активность ${(brain.act[4 * i] * 100).toFixed(0)}%`, e.clientX, e.clientY);
 });
+
+// the whole CNS: any of its 141 000 somas, throttled because the ray tests every point
+let hoverT = 0;
+function hoverLive(e) {
+  if (!brain.live || performance.now() - hoverT < 60) return hud.tooltip(null);
+  hoverT = performance.now();
+  const hit = ray.intersectObject(brain.cloud)[0];
+  if (!hit) return hud.tooltip(null);
+  const d = cns.describe(brain.liveNeuron(hit.index));
+  hud.tooltip(`<b>${d.name}</b><br>MaleCNS · ${d.region}<br>bodyId ${d.bodyId} · активность ${(d.activity * 100).toFixed(0)}%`, e.clientX, e.clientY);
+}
 
 function resize() {
   const w = innerWidth, h = innerHeight;
@@ -204,6 +216,16 @@ setMode(query.get('mode') ?? 'follow');
 if (query.has('warm')) rig.blend = 0.001;
 hud.ready(A.circuit);
 
+// The whole MaleCNS as a spiking network (P2-validated), loaded after the game starts
+let cns = null;
+loadCNS(get, (k, n) => hud.cnsStatus(`спайковый CNS: загрузка ${k}/${n}`)).then((c) => {
+  if (!c) return hud.cnsStatus('спайковый CNS: нет данных (scripts/setup.sh webgraph)');
+  cns = c;
+  brain.setLive(c);
+  hud.cnsReady(c.header);
+}).catch((err) => hud.cnsStatus(`спайковый CNS: ошибка · ${err.message}`));
+document.addEventListener('visibilitychange', () => cns?.pause(document.hidden));
+
 function frame(now) {
   frames++;
   const dt = Math.min(Math.max(0, (now - lastNow) / 1000), 0.05);
@@ -229,6 +251,11 @@ function frame(now) {
   fly.animate(dt, world.t, f.state, world.motor);
 
   if (simDt > 0) brain.update(simDt, collect(world.mb, world.motor), world.sense.u);
+  if (cns) {
+    cns.setWorld({ feeding: f.state === 'feed', speed });
+    cns.update(dt);
+    brain.updateLive();
+  }
   props.sync(world, simDt || 0);
   plumes.update(world, simDt);
   swamp.update(dt, fly.root.position);
@@ -249,6 +276,7 @@ function frame(now) {
   if ((hudT += dt) > 0.1) {
     hudT = 0;
     hud.update(world, readout());
+    if (cns) hud.cnsUpdate(cns, speed);
   }
 
   // main view
@@ -287,5 +315,5 @@ function frame(now) {
 }
 requestAnimationFrame(frame);
 
-window.__flyswamp = { world, get mode() { return mode; }, get frames() { return frames; }, useBloom, glName };
+window.__flyswamp = { world, get cns() { return cns; }, get mode() { return mode; }, get frames() { return frames; }, useBloom, glName };
 window.__shotInfo = window.__flyswamp;

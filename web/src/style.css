@@ -52,7 +52,7 @@ h2 { margin: 0 0 8px; font: 500 11px/1.2 var(--sans); letter-spacing: 0.09em; te
   position: absolute; background: var(--surface); border: 1px solid var(--line); padding: 12px 14px;
   backdrop-filter: blur(10px); width: 290px; max-height: calc(100% - 260px); overflow: auto;
 }
-.panel.left { left: var(--gutter); top: 176px; }
+.panel.left { left: var(--gutter); top: var(--left-top, 176px); } /* --left-top follows the specimen label, see hud.js */
 .panel.right { right: var(--gutter); top: calc(var(--gutter) + env(safe-area-inset-top, 0px)); width: 300px; max-height: calc(100% - 380px); }
 .panel h2 + * { margin-top: 0; }
 .panel h2:not(:first-child) { margin-top: 14px; }
@@ -158,3 +158,5 @@ body.placing #view { cursor: crosshair; }
 @media (prefers-reduced-motion: reduce) {
   .bar i, .meter i, .energy span, .loading { transition: none; }
 }
+.label .cns-status { max-width: 340px; color: #9fd6b8; }
+h2 .proto { margin-left: 6px; font-size: 10px; letter-spacing: 0; text-transform: none; color: #c9a45c; cursor: help; }

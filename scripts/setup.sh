@@ -1,13 +1,14 @@
 #!/bin/bash
 # Restore what git does not hold: reference repositories, the Brian2 reference environment, MaleCNS raw
-# data (~1.1 GB) and the packed connectome graphs. Idempotent: every step skips work already done.
-# usage: scripts/setup.sh [refs] [venv] [data] [graphs]      (no arguments = all four)
+# data (~1.1 GB), the packed connectome graphs and the game's whole-CNS graph (web/public/data/cns, 31 MB).
+# Idempotent: every step skips work already done.
+# usage: scripts/setup.sh [refs] [venv] [data] [graphs] [webgraph]      (no arguments = all five)
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CACHE="${FLYSWAMP_CACHE:-$ROOT/.cache}"
 REF="$CACHE/ref"
-STEPS="${*:-refs venv data graphs}"
+STEPS="${*:-refs venv data graphs webgraph}"
 has() { [[ " $STEPS " == *" $1 "* ]]; }
 
 # name  url  commit this project was validated against
@@ -54,6 +55,11 @@ fi
 if has graphs; then
   [ -f "$CACHE/graphs/flywire630.bin" ] || "$ROOT/.venv-ref/bin/python" "$ROOT/validation/pack_flywire630.py"
   [ -f "$CACHE/graphs/malecns_min1.bin" ] || (cd "$ROOT/pipeline" && python3 build_graph.py --min-syn 1 --out "$CACHE/graphs/malecns_min1")
+fi
+
+if has webgraph; then
+  [ -f "$CACHE/graphs/malecns_min2.bin" ] || (cd "$ROOT/pipeline" && python3 build_graph.py --min-syn 2 --out "$CACHE/graphs/malecns_min2")
+  [ -f "$ROOT/web/public/data/cns/cns.json" ] || (cd "$ROOT/pipeline" && python3 build_web_graph.py --graph malecns_min2 --w-syn 0.2)
 fi
 
 echo "setup done: $STEPS"

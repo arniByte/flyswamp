@@ -232,6 +232,68 @@ export class BrainView {
     this.group.add(this.cloud);
   }
 
+  // The whole CNS from the spiking model (sim/cns.js): every neuron with a soma position, dim in its region
+  // colour at rest, lit by its own spikes. Replaces the static soma cloud.
+  setLive(cns) {
+    const n = cns.n, has = cns.flags;
+    let m = 0;
+    for (let i = 0; i < n; i++) m += has[i] & 1;
+    const idx = new Uint32Array(m), pos = new Int16Array(3 * m), col = new Float32Array(3 * m);
+    const c = new THREE.Color();
+    for (let i = 0, k = 0; i < n; i++) {
+      if (!(has[i] & 1)) continue;
+      idx[k] = i;
+      pos.set(cns.position.subarray(3 * i, 3 * i + 3), 3 * k);
+      c.set(REGION_COLORS[cns.region[i]] ?? 0x555555);
+      col.set([c.r, c.g, c.b], 3 * k);
+      k++;
+    }
+    const act = new Float32Array(m);
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    geo.setAttribute('color', new THREE.BufferAttribute(col, 3));
+    geo.setAttribute('act', new THREE.BufferAttribute(act, 1).setUsage(THREE.DynamicDrawUsage));
+    const mat = new THREE.ShaderMaterial({
+      uniforms: { uSize: { value: 0.003 }, uStrength: { value: 0.07 }, uPx: this.px },
+      vertexShader: /* glsl */ `
+        uniform float uSize; uniform float uPx; uniform float uStrength; attribute vec3 color; attribute float act; varying vec3 vC;
+        void main() {
+          vec4 mv = modelViewMatrix * vec4(position, 1.0);
+          vC = mix(color * uStrength, vec3(1.0, 0.78, 0.45), min(act, 1.0));
+          gl_Position = projectionMatrix * mv;
+          gl_PointSize = max(1.0, uSize * (1.0 + 2.5 * act) * uPx / max(-mv.z, 1e-3));
+        }`,
+      fragmentShader: /* glsl */ `
+        varying vec3 vC;
+        void main() { vec2 p = gl_PointCoord * 2.0 - 1.0; float r = dot(p, p); if (r > 1.0) discard; gl_FragColor = vec4(vC * (1.0 - r), 1.0);
+#include <tonemapping_fragment>
+#include <colorspace_fragment> }`,
+      transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    });
+    const live = new THREE.Points(geo, mat);
+    live.scale.copy(this.cloud.scale);
+    live.frustumCulled = false;
+    live.renderOrder = 2;
+    live.layers.mask = this.cloud.layers.mask;
+    live.visible = this.cloud.visible;
+    this.cloud.visible = false;
+    this.group.remove(this.cloud);
+    this.cloud = live;
+    this.group.add(live);
+    this.live = { cns, idx, act, attr: geo.attributes.act };
+  }
+
+  updateLive() {
+    const L = this.live;
+    if (!L) return;
+    const src = L.cns.act, idx = L.idx, act = L.act;
+    for (let k = 0; k < idx.length; k++) act[k] = src[idx[k]];
+    L.attr.needsUpdate = true;
+  }
+
+  // graph index of the live-cloud point k
+  liveNeuron(k) { return this.live ? this.live.idx[k] : -1; }
+
   // DAN instance names carry their compartments, e.g. PAM01(y5)_L or PPL105(a'2a2)_R.
   _buildCompartmentMap() {
     const inst = this.circuit.neurons.instance;

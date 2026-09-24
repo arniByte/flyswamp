@@ -1,0 +1,35 @@
+{
+ "url": "http://localhost:4173/",
+ "mode": "worker",
+ "load_s": 6.612,
+ "runs": [
+  {
+   "speed": 1,
+   "drive": false,
+   "sim_s": 2.992,
+   "wall_s": 3.001600000000093,
+   "factor": 0.9968017057568987,
+   "mn9_l_hz": 0,
+   "spikes_per_sim_s": 0
+  },
+  {
+   "speed": 1,
+   "drive": true,
+   "sim_s": 5,
+   "wall_s": 5.000300000000046,
+   "factor": 0.9999400035997748,
+   "mn9_l_hz": 90.6,
+   "spikes_per_sim_s": 19294
+  },
+  {
+   "speed": 8,
+   "drive": true,
+   "sim_s": 13.218,
+   "wall_s": 5.000300000000046,
+   "factor": 2.6434413935163645,
+   "mn9_l_hz": 88.36435164170071,
+   "spikes_per_sim_s": 18982.37252231805
+  }
+ ],
+ "page_errors": []
+}

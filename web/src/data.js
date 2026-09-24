@@ -12,7 +12,7 @@ function fromBase64(text) {
   return out.buffer;
 }
 
-async function get(name, kind, onProgress) {
+export async function get(name, kind, onProgress) {
   const b64 = kind === 'bin' && B64;
   const r = await fetch(BASE + name + (b64 ? '.b64.txt' : ''));
   if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);

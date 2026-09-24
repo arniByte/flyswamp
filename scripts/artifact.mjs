@@ -28,11 +28,12 @@ fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 fs.writeFileSync(path.join(out, 'index.html'), html + '\n');
 const files = {};
-for (const dir of ['assets', 'data']) {
+for (const dir of ['assets', 'data', 'data/cns']) {
+  if (!fs.existsSync(path.join(dist, dir))) continue;
   for (const f of fs.readdirSync(path.join(dist, dir))) {
-    if (f.endsWith('.css')) continue;
+    if (f.endsWith('.css') || fs.statSync(path.join(dist, dir, f)).isDirectory()) continue;
     fs.mkdirSync(path.join(out, dir), { recursive: true });
-    const binary = /\.(bin|glb)$/.test(f);
+    const binary = /\.(bin|glb)(\.\d+)?$/.test(f); // cns.bin.0, cns.bin.1, ...: chunks of the whole-CNS graph
     const name = binary ? `${f}.b64.txt` : f;
     if (binary) fs.writeFileSync(path.join(out, dir, name), fs.readFileSync(path.join(dist, dir, f)).toString('base64'));
     else fs.copyFileSync(path.join(dist, dir, f), path.join(out, dir, name));

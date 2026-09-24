@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 web/dist-artifact/
 .venv*/
+web/public/data/cns/

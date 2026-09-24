@@ -28,7 +28,7 @@
 - `.venv-ref`.
 
 - **SessionStart hook** (`.claude/hooks/session-start.sh`) в веб-сессиях ставит `web/node_modules` и `pipeline/requirements.txt`. Этого хватает для `npm test`, игры и пайплайна.
-- **`scripts/setup.sh`** восстанавливает всё остальное на закреплённых коммитах: эталонные репозитории, `.venv-ref` (Brian2 2.9, numpy < 2.3), данные MaleCNS, графы `flywire630` и `malecns_min1`. Запускать перед работой с `validation/` или `pipeline/build_graph.py`. Отдельные шаги: `scripts/setup.sh refs venv`.
+- **`scripts/setup.sh`** восстанавливает всё остальное на закреплённых коммитах: эталонные репозитории, `.venv-ref` (Brian2 2.9, numpy < 2.3), данные MaleCNS, графы `flywire630` и `malecns_min1`, граф целого CNS для игры `web/public/data/cns` (шаг `webgraph`, через `malecns_min2`). Запускать перед работой с `validation/` или `pipeline/build_graph.py`. Отдельные шаги: `scripts/setup.sh refs venv`.
 - **Память 16 ГБ.** Таблицу весов MaleCNS (1 ГБ feather, 152 M строк) читать один раз, через `memory_map` и фильтры pyarrow. Эталон Brian2 занимает ~3 ГБ на воркер: не больше 3 воркеров и ничего тяжёлого параллельно, иначе OOM-killer убьёт прогон.
 - **Скорость.** Эталон Brian2: ~13 мин на 30 проб на 3 ядрах. Наш движок с ленивым обновлением (по умолчанию): FlyWire — 0,09 с, целый MaleCNS — 0,24 с на секунду симуляции (`validation/speed.mjs`). `DENSE=1` — полный пошаговый режим для сверки, ~9 с на секунду.
 
@@ -41,7 +41,7 @@
 ## Команды
 
 ```bash
-cd web && npm test                                   # 17 тестов
+cd web && npm test                                   # 19 тестов
 cd web && npm run dev                                # игра
 node scripts/experiment.mjs 15 4                     # headless-эксперименты прототипа
 node validation/run_lif.mjs .cache/graphs/flywire630 validation/reference/sugar_150hz.json out.json   # движок на эталонном стимуле
@@ -51,6 +51,8 @@ DENSE=1 node validation/malecns_sugar.mjs .cache/graphs/malecns_min1 150 5 out.j
 LIF_PARAMS='{"wSyn":0.22}' node validation/loop_anatomy.mjs .cache/graphs/malecns_min1 2 out.json   # какая петля держит активность после стимула
 python3 validation/loop_nt.py out.json               # NT и взаимные синапсы типов петель в MaleCNS
 LIF_PARAMS='{"wSyn":0.2}' node validation/p2_bench.mjs .cache/graphs/malecns_min1 malecns 1-5 out.json [--shuffle 1]   # набор бенчмарков P2 (эталон: ... flywire630 flywire 1-5)
+node validation/web_graph_check.mjs out.json         # браузерный граф CNS против исходного, sugar → MN9 через раннер игры
+(cd web && npx vite preview --port 4173) & node validation/web_live_check.mjs http://localhost:4173/ out.json   # CNS в собранной игре, headless
 LIF_PARAMS='{"wSyn":0.2}' ...                        # параметры движка для любого скрипта validation/
 ```
 
@@ -63,11 +65,11 @@ LIF_PARAMS='{"wSyn":0.2}' ...                        # параметры дви
   - SFA реализована (`adaptB`, `tauAdapt`, по умолчанию выкл.), в модели не участвует.
   - Осталось для P2: бенчмарки KC (Turner 2008) и looming (von Reyn 2014).
 - **Движок быстрый:** ленивое точное обновление, целый MaleCNS 0,24 с на секунду симуляции. P1 воспроизводится спайк в спайк.
-- **Следующие шаги** (план согласован с пользователем 2026-09-23):
-  - живой рентген целого CNS в игре: движок в Web Worker, вкус и запах из мира идут в настоящие GRN/ORN, рентген показывает спайки всех нейронов, поведение пока от контроллера (помечено каркасом);
+- **Целый CNS в игре работает** (2026-09-24, `docs/SCIENCE.md`, «Целый CNS в игре»): граф ≥ 2 синапсов в Web Worker, рентген показывает спайки 141 000 сом. Сахар при еде идёт в правые GRN на 150 Hz, MN9_L 90,6 Hz при ×1. На ×8 мозг держит только ×2,6. Запах в CNS пока не идёт: ждёт бенчмарка KC.
+- **Следующие шаги** (план согласован с пользователем 2026-09-23, вариант 1: в игру идёт только то, что прошло гейт):
+  - бенчмарк KC (Turner 2008), затем запах из мира в настоящие ORN; бенчмарк looming (von Reyn 2014);
   - P3 (DoOR) и P4 (обучение в спайковом MB) вместо rate-модели, затем P5 (DN управляют телом) и P6 (интерфейс, механики);
-  - бенчмарки KC и looming для P2.
-- **Игра пока на прототипной rate-модели** (`web/src/sim/brain.js`). Спайковый движок подключается в фазах P4–P5.
+- **Поведение и обучение пока на прототипной rate-модели** (`web/src/sim/brain.js`), в HUD помечено каркасом. Спайковый CNS берёт их на себя в фазах P4–P5.
 
 ## Коннекторы и сеть
 

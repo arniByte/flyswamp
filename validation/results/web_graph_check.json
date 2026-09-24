@@ -1,0 +1,16 @@
+{
+ "graph": "malecns_min2",
+ "gzip_mb": 29.183008,
+ "decode_ms": 840.797738,
+ "identical_csr": true,
+ "body_ids_match": true,
+ "sets_match_p2_bench": true,
+ "mn9_l_hz_seeds_1_5": [
+  79,
+  81,
+  96,
+  88,
+  82
+ ],
+ "mn9_l_mean_hz": 85.2
+}
