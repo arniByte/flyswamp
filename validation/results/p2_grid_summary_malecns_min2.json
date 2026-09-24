@@ -1,0 +1,126 @@
+{
+ "graph": "malecns_min2",
+ "reference": {
+  "sugar": 86.2,
+  "responding": 382.4,
+  "suppression": 0.6705336426914154,
+  "water": 30.8
+ },
+ "criteria": "docs/ROADMAP.md, P2 calibration plan",
+ "rows": [
+  {
+   "w": 0.2,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": true
+   },
+   "passes_all": true,
+   "sugar_hz": 85.2,
+   "responding": 902.8,
+   "suppression": 0.9953051643192489,
+   "bitter_hz": 0,
+   "water_hz": 44.2,
+   "quiet": "20/20"
+  },
+  {
+   "w": 0.21,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 90.2,
+   "responding": 1008.8,
+   "suppression": 0.9778270509977827,
+   "bitter_hz": 0,
+   "water_hz": 48.2,
+   "quiet": "18/20"
+  },
+  {
+   "w": 0.22,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 96.8,
+   "responding": 1247.6,
+   "suppression": 0.865702479338843,
+   "bitter_hz": 0.2,
+   "water_hz": 44.4,
+   "quiet": "16/20"
+  },
+  {
+   "w": 0.23,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 98.2,
+   "responding": 3517,
+   "suppression": 0.9775967413441955,
+   "bitter_hz": 0,
+   "water_hz": 44.6,
+   "quiet": "10/20"
+  },
+  {
+   "w": 0.24,
+   "b": 0,
+   "tau": null,
+   "pass": {
+    "sugar": true,
+    "bitter_veto": true,
+    "bitter_alone": true,
+    "water": true,
+    "offset": false
+   },
+   "passes_all": false,
+   "sugar_hz": 101,
+   "responding": 2049.6,
+   "suppression": 0.8831683168316832,
+   "bitter_hz": 2.6,
+   "water_hz": 45.2,
+   "quiet": "4/20"
+  }
+ ],
+ "chosen": {
+  "w": 0.2,
+  "b": 0,
+  "tau": null,
+  "pass": {
+   "sugar": true,
+   "bitter_veto": true,
+   "bitter_alone": true,
+   "water": true,
+   "offset": true
+  },
+  "passes_all": true,
+  "sugar_hz": 85.2,
+  "responding": 902.8,
+  "suppression": 0.9953051643192489,
+  "bitter_hz": 0,
+  "water_hz": 44.2,
+  "quiet": "20/20"
+ }
+}

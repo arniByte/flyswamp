@@ -1,0 +1,338 @@
+{
+ "graph": "MaleCNS v1.0 connectome (FlyEM/HHMI Janelia, University of Cambridge, MRC LMB, Google Research), CC-BY 4.0, https://male-cns.janelia.org/; Traced neurons, synapse confidence >= 0.5, >= 2 synapses per connection",
+ "prefix": "malecns_min2",
+ "which": "malecns",
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "shuffle_seed": null,
+ "params": {
+  "dt": 0.1,
+  "vRest": -52,
+  "vReset": -52,
+  "vThresh": -45,
+  "tauMem": 20,
+  "tauSyn": 5,
+  "tRefractory": 2.2,
+  "delay": 1.8,
+  "wSyn": 0.23,
+  "poissonScale": 250,
+  "adaptB": 0,
+  "tauAdapt": 200
+ },
+ "dense": false,
+ "poisson_hz": 150,
+ "bitter_hz": 100,
+ "water_hz": 200,
+ "stim_side": "R",
+ "stimulus_sizes": {
+  "sugar": 27,
+  "bitter": 19,
+  "water": 13
+ },
+ "benchmarks": {
+  "sugar": {
+   "mn9": {
+    "MN9_L": [
+     98.2,
+     5.449770637375485
+    ],
+    "MN9_R": [
+     0.2,
+     0.447213595499958
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     98.2,
+     5.449770637375485
+    ]
+   },
+   "responding": [
+    3517,
+    3508.7873973781884
+   ],
+   "total_spikes": [
+    74674.4,
+    83194.50019562591
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 103,
+      "MN9_R": 0
+     },
+     "responding": 1336,
+     "spikes": 24015
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 98,
+      "MN9_R": 0
+     },
+     "responding": 1578,
+     "spikes": 37197
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 101,
+      "MN9_R": 0
+     },
+     "responding": 9624,
+     "spikes": 222231
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 100,
+      "MN9_R": 1
+     },
+     "responding": 3378,
+     "spikes": 54347
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 89,
+      "MN9_R": 0
+     },
+     "responding": 1669,
+     "spikes": 35582
+    }
+   ]
+  },
+  "sugar_bitter": {
+   "mn9": {
+    "MN9_L": [
+     2.2,
+     2.16794833886788
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     2.2,
+     2.16794833886788
+    ]
+   },
+   "responding": [
+    2428.6,
+    3203.5893619501235
+   ],
+   "total_spikes": [
+    25550.2,
+    16810.948179683382
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 1,
+      "MN9_R": 0
+     },
+     "responding": 842,
+     "spikes": 17336
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 1,
+      "MN9_R": 0
+     },
+     "responding": 1269,
+     "spikes": 18065
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 2,
+      "MN9_R": 0
+     },
+     "responding": 8152,
+     "spikes": 55611
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 6,
+      "MN9_R": 0
+     },
+     "responding": 960,
+     "spikes": 18092
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 1,
+      "MN9_R": 0
+     },
+     "responding": 920,
+     "spikes": 18647
+    }
+   ]
+  },
+  "bitter": {
+   "mn9": {
+    "MN9_L": [
+     0,
+     0
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     0,
+     0
+    ]
+   },
+   "responding": [
+    3042.4,
+    2007.692282198644
+   ],
+   "total_spikes": [
+    13972.6,
+    4119.510626275893
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 3169,
+     "spikes": 13200
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 2258,
+     "spikes": 13302
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 6389,
+     "spikes": 20850
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 2280,
+     "spikes": 12800
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 0,
+      "MN9_R": 0
+     },
+     "responding": 1116,
+     "spikes": 9711
+    }
+   ]
+  },
+  "water": {
+   "mn9": {
+    "MN9_L": [
+     44.6,
+     7.92464510246358
+    ],
+    "MN9_R": [
+     0,
+     0
+    ]
+   },
+   "mn9_best": {
+    "side": "MN9_L",
+    "hz": [
+     44.6,
+     7.92464510246358
+    ]
+   },
+   "responding": [
+    1458.6,
+    136.3975806237046
+   ],
+   "total_spikes": [
+    12280.4,
+    774.631718947785
+   ],
+   "trials": [
+    {
+     "seed": 1,
+     "mn9": {
+      "MN9_L": 47,
+      "MN9_R": 0
+     },
+     "responding": 1643,
+     "spikes": 12539
+    },
+    {
+     "seed": 2,
+     "mn9": {
+      "MN9_L": 57,
+      "MN9_R": 0
+     },
+     "responding": 1382,
+     "spikes": 13142
+    },
+    {
+     "seed": 3,
+     "mn9": {
+      "MN9_L": 39,
+      "MN9_R": 0
+     },
+     "responding": 1395,
+     "spikes": 11566
+    },
+    {
+     "seed": 4,
+     "mn9": {
+      "MN9_L": 43,
+      "MN9_R": 0
+     },
+     "responding": 1315,
+     "spikes": 12784
+    },
+    {
+     "seed": 5,
+     "mn9": {
+      "MN9_L": 37,
+      "MN9_R": 0
+     },
+     "responding": 1558,
+     "spikes": 11371
+    }
+   ]
+  }
+ },
+ "bitter_suppression": 0.9775967413441955,
+ "wall_s": 6.311912819,
+ "wall_s_per_sim_s": 0.31559564095
+}

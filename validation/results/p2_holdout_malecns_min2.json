@@ -1,0 +1,27 @@
+{
+ "reference": {
+  "sugar": 86.2,
+  "responding": 382.4,
+  "suppression": 0.6705336426914154,
+  "water": 30.8
+ },
+ "row": {
+  "w": 0.2,
+  "b": 0,
+  "tau": null,
+  "pass": {
+   "sugar": true,
+   "bitter_veto": true,
+   "bitter_alone": true,
+   "water": true,
+   "offset": true
+  },
+  "passes_all": true,
+  "sugar_hz": 87.1,
+  "responding": 916.5,
+  "suppression": 0.9804822043628014,
+  "bitter_hz": 0,
+  "water_hz": 46.9,
+  "quiet": "50/50"
+ }
+}
