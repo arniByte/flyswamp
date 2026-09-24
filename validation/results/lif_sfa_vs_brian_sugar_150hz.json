@@ -1,0 +1,34 @@
+{
+ "a": "flyswamp web/src/sim/lif.js",
+ "b": "Shiu et al. 2024 model.py plus adaptation current b_a 2.0 mV, tau_a 200.0 ms",
+ "neurons": 427,
+ "active_1hz": {
+  "a": 284,
+  "b": 286
+ },
+ "pearson_means": 0.999795204154681,
+ "split_half": {
+  "within": 0.9995092447385442,
+  "cross": 0.9995478782630132
+ },
+ "mn9": {
+  "a": [
+   22.4,
+   2.159182476197239
+  ],
+  "b": [
+   21.633333333333333,
+   2.632467484599053
+  ],
+  "z": 1.233357229085084
+ },
+ "bonferroni_z": 3.8522176958681236,
+ "outliers": 0,
+ "top_outliers": [],
+ "gates": {
+  "mn9_z_below_3": true,
+  "cross_ge_within_minus_0_02": true,
+  "outliers_le_1pct": true
+ },
+ "pass": true
+}

@@ -5,17 +5,21 @@
 //                           sugar -> MN9 is not run further. Optional list restricts b (mV).
 //   holdout <w> <b> <tau>   the chosen set once on held-out seeds: MN9 benchmarks on 101-110, offset on 101-150
 //   control <w> <b> <tau>   the chosen set on three shuffled graphs (--shuffle 1..3), MN9 benchmarks on 101-105
-// usage: node validation/p2_grid.mjs grid|holdout|control ... [--workers 3]
+// usage: node validation/p2_grid.mjs grid|holdout|control ... [--workers 3] [--graph NAME] [--w 0.2,0.21]
+//        --graph picks .cache/graphs/NAME (default malecns_min1); results for other graphs get the name as suffix.
+//        --w replaces the w_syn values of the grid.
 import fs from 'node:fs';
 import { spawn } from 'node:child_process';
 
 const here = new URL('.', import.meta.url).pathname;
-const GRAPH = `${here}../.cache/graphs/malecns_min1`;
-const OUT = `${here}results/p2_grid`;
-const W = [0.18, 0.2, 0.22, 0.25, 0.275], B = [0, 0.5, 1, 2, 4], TAU = [50, 200, 1000];
 const args = process.argv.slice(2);
-const wi = args.indexOf('--workers');
-const WORKERS = wi >= 0 ? Number(args.splice(wi, 2)[1]) : 3;
+const opt = (name, fallback) => { const k = args.indexOf(name); return k >= 0 ? args.splice(k, 2)[1] : fallback; };
+const WORKERS = Number(opt('--workers', 3));
+const GRAPH_NAME = opt('--graph', 'malecns_min1');
+const W = opt('--w', '0.18,0.2,0.22,0.25,0.275').split(',').map(Number), B = [0, 0.5, 1, 2, 4], TAU = [50, 200, 1000];
+const GRAPH = `${here}../.cache/graphs/${GRAPH_NAME}`;
+const SUFFIX = GRAPH_NAME === 'malecns_min1' ? '' : `_${GRAPH_NAME}`;
+const OUT = `${here}results/p2_grid${SUFFIX}`;
 const [mode, ...rest] = args;
 
 const ref = JSON.parse(fs.readFileSync(`${here}results/p2_bench_flywire630.json`, 'utf8'));
@@ -85,17 +89,17 @@ if (mode === 'grid') {
   const bs = rest[0] ? rest[0].split(',').map(Number) : B;
   const sets = W.flatMap((w) => bs.flatMap((b) => (b ? TAU.map((tau) => ({ w, b, tau })) : [{ w, b: 0, tau: null }])));
   const rows = await pool(sets.map((s) => () => evaluate(s, '1-5', '1-20', '')));
-  const file = `${here}results/p2_grid_summary.json`;
+  const file = `${here}results/p2_grid_summary${SUFFIX}.json`;
   const old = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')).rows : [];
   const all = [...old.filter((o) => !rows.some((r) => label(r) === label(o))), ...rows];
   // selection rule from the plan: smallest b among passing sets, then MN9 closest to the reference
   const passing = all.filter((r) => r.passes_all).sort((a, c) => a.b - c.b || Math.abs(Math.log(a.sugar_hz / R.sugar)) - Math.abs(Math.log(c.sugar_hz / R.sugar)));
-  fs.writeFileSync(file, JSON.stringify({ reference: R, criteria: 'docs/ROADMAP.md, P2 calibration plan', rows: all, chosen: passing[0] ?? null }, null, 1));
+  fs.writeFileSync(file, JSON.stringify({ graph: GRAPH_NAME, reference: R, criteria: 'docs/ROADMAP.md, P2 calibration plan', rows: all, chosen: passing[0] ?? null }, null, 1));
   console.log(passing[0] ? `chosen: ${label(passing[0])}` : 'no set passes');
 } else if (mode === 'holdout') {
   const [w, b, tau] = rest.map(Number);
   const row = await evaluate({ w, b, tau: b ? tau : null }, '101-110', '101-150', 'holdout_');
-  fs.writeFileSync(`${here}results/p2_holdout.json`, JSON.stringify({ reference: R, row }, null, 1));
+  fs.writeFileSync(`${here}results/p2_holdout${SUFFIX}.json`, JSON.stringify({ reference: R, row }, null, 1));
 } else if (mode === 'control') {
   const [w, b, tau] = rest.map(Number), set = { w, b, tau: b ? tau : null };
   const rows = await pool([1, 2, 3].map((k) => async () => {
@@ -104,7 +108,7 @@ if (mode === 'grid') {
     return { shuffle: k, sugar_hz: b2.sugar.mn9_best.hz[0], water_hz: b2.water.mn9_best.hz[0], sugar_passes: CRITERIA.sugar(b2), water_passes: CRITERIA.water(b2) };
   }));
   const fails = rows.every((r) => !r.sugar_passes && !r.water_passes);
-  fs.writeFileSync(`${here}results/p2_control.json`, JSON.stringify({ reference: R, set, rows, control_fails_as_required: fails }, null, 1));
+  fs.writeFileSync(`${here}results/p2_control${SUFFIX}.json`, JSON.stringify({ reference: R, set, rows, control_fails_as_required: fails }, null, 1));
   console.log(rows.map((r) => `shuffle ${r.shuffle}: sugar ${r.sugar_hz.toFixed(1)}, water ${r.water_hz.toFixed(1)} Hz`).join('\n'));
   console.log(`control ${fails ? 'fails sugar and water as required' : 'PASSES a wiring benchmark — gate fails'}`);
 } else {
